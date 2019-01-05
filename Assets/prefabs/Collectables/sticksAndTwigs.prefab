@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 666066282010417487}
   - component: {fileID: 666066282010417480}
   - component: {fileID: 666066282010417481}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: sticksAndTwigs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
