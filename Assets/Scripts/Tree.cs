@@ -165,7 +165,7 @@ public class Tree : MonoBehaviour, IDestructable
         for (int i = 0; i < dropComponent.dropCount; i++)
         {
             var eachOffSet = height / dropComponent.dropCount;
-            dropComponent.DropItem(new Vector3(initialPosition.x - (directionMultiplier * (eachOffSet * i / 4)), initialPosition.y, initialPosition.z));
+            dropComponent.DropItem(new Vector3(initialPosition.x - (directionMultiplier * (eachOffSet * i / 5)), initialPosition.y, initialPosition.z));
         }
     }
 }
