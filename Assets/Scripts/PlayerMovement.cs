@@ -6,41 +6,44 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
 
-    public float runSpeed = 40f;
-
+    private float runSpeed = 40f;
+    public float RunSpeed;
     float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
+
+    void Start()
+    {
+        runSpeed = RunSpeed;
+    }
 
     // Update is called once per frame
     void Update()
     {
 
-		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-#if UNITY_STANDALONE || UNITY_WEBPLAYER
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
         if (Input.touchCount > 0)
         {
             var touch = Input.GetTouch(0);
-            //Debug.Log(touch.position.x);
-            if (touch.position.x < Screen.width / 8)
+
+			var direction = 0f;
+			if (touch.position.x < Screen.width / 8f)
             {
 
-                horizontalMove = -1f * runSpeed;
+                direction = -1f;
             }
-            else if (touch.position.x > Screen.width * (7 / 8))
+            else if (touch.position.x > (Screen.width * (7f / 8f)))
             {
-                horizontalMove = 1f * runSpeed;
+				direction = 1f;
             }
+
+			horizontalMove = direction * runSpeed;
+            
         }
         else
         {
             horizontalMove = 0f;
         }
-#endif
+
 
         if (Input.GetButtonDown("Jump"))
         {
