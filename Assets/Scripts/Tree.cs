@@ -9,7 +9,8 @@ public class Tree : MonoBehaviour, IDestructable
     private float healthAmount;
     private bool isDead;
     private Quaternion initialRotation;
-
+    private SmoothSineMovement sineMovement;
+    private int directionMultiplier = 1;
     public int lumberCount = 10;
     public float HealthAmount
     {
@@ -23,7 +24,6 @@ public class Tree : MonoBehaviour, IDestructable
             healthAmount = value;
         }
     }
-
     public bool IsDead
     {
         get
@@ -36,75 +36,134 @@ public class Tree : MonoBehaviour, IDestructable
             isDead = value;
         }
     }
+    public AudioSource audioSource;
+    public AudioClip chopAudioClip;
+    public AudioClip fallAudioClip;
+    public float volLowRange = .5f;
+    public float volHighRange = 1f;
 
 
     void Start()
     {
         initialRotation = transform.rotation;
+        audioSource = GetComponent<AudioSource>();
+        sineMovement = GetComponent<SmoothSineMovement>();
+        sineMovement.enabled = false;
     }
-
     public void TakeDamage(float damageAmount)
     {
-        var interactableComponent = GetComponent<Interactable>();
-        if (interactableComponent.IsCloseEnough())
+        if (isDead || healthAmount <= 0)
         {
-            healthAmount -= damageAmount;
-            if (healthAmount <= 0)
-            {
-                IsDead = true;
-                StartCoroutine(TurnOverAnimation());
-                //transform.eulerAngles = new Vector3(0, 0, 45);
-                //Destroy(gameObject);
-            }
+            return;
+        }
+
+        var interactableComponent = GetComponent<Interactable>();
+        if (!interactableComponent.IsCloseEnough())
+        {
+            return;
+        }
+
+        healthAmount -= damageAmount;
+
+        StartCoroutine(WaitAndChoppedAnimation(0.5f));
+
+        if (healthAmount <= 0)
+        {
+            IsDead = true;
+
+            Fall();
         }
     }
 
-
-
-    IEnumerator TurnOverAnimation()
+    private void PlayChopSoundEffect()
     {
-        var t = 0.0f;
+        float vol = Random.Range(volLowRange, volHighRange);
+        audioSource.PlayOneShot(chopAudioClip, vol);
+    }
 
+    private void Fall()
+    {
+        StartCoroutine(WaitAndFall(1f));
+    }
+
+    private void PlayFallSoundEffect()
+    {
+        float vol = Random.Range(volLowRange, volHighRange);
+        audioSource.PlayOneShot(fallAudioClip, vol);
+    }
+
+    IEnumerator WaitAndChoppedAnimation(float seconds)
+    {
+        PlayChopSoundEffect();
+        yield return new WaitForSeconds(seconds);
+        StartCoroutine(ChoppedAnimation());
+
+    }
+
+    IEnumerator ChoppedAnimation()
+    {
+        sineMovement.enabled = true;
+        yield return new WaitForSeconds(1.0f);
+        sineMovement.enabled = false;
+    }
+
+    IEnumerator WaitAndFall(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        StartCoroutine(FallingAnimation());
+        PlayFallSoundEffect();
+    }
+
+    IEnumerator FallingAnimation()
+    {
+        
+        var player = GameObject.FindWithTag("Player");
+        if (player.transform.position.x - transform.position.x < 0)
+        {
+            directionMultiplier = -1;
+        };
+
+
+        var t = 0.2f;
         // Just make the animation interval configurable for easier modification later
-        const float animationInterval = 0.01f;
+        const float animationInterval = 0.025f;
 
         // Loop until instructed otherwise
         while (true)
         {
             t += Time.deltaTime / 3;
-            // Do some nice animation
-            //transform.Rotate(Vector3.forward * (200 * Time.deltaTime));
-            var time = Mathf.SmoothStep(0.0f, 1.0f, Mathf.SmoothStep(0.0f, 1.0f, t));
-            transform.rotation = Quaternion.Lerp(initialRotation, Quaternion.Euler(0, 0, 90), time);
+            var time = Mathf.SmoothStep(1.0f, 0.0f, Mathf.SmoothStep(1.0f, 0.0f, t));
+            transform.rotation = Quaternion.Lerp(initialRotation, Quaternion.Euler(0, 0, directionMultiplier * 90), time);
 
             // Make the coroutine wait for a moment
             yield return new WaitForSeconds(animationInterval);
 
-            if (transform.rotation.eulerAngles.z >= 90)
+            if ((directionMultiplier > 0  && transform.rotation.eulerAngles.z >= 90) || (directionMultiplier < 0  && transform.rotation.eulerAngles.z <= 270))
             {
                 // Break the while loop, NOT the coroutine
                 break;
             }
         }
 
-        // Finally destroy tree      
-        DestroyTree();
+        OnFallingAnimationFinished();
     }
 
-    void DestroyTree()
+    private void OnFallingAnimationFinished()
     {
+        DropItems();
+        Destroy(gameObject);
+    }
 
+    private void DropItems()
+    {
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
         var height = sr.sprite.textureRect.height / 100;//100 because we consider each unit is 100px
         var initialPosition = transform.position;
-        Destroy(gameObject);
-
         var dropComponent = GetComponent<DropOnDeath>();
         for (int i = 0; i < dropComponent.dropCount; i++)
         {
             var eachOffSet = height / dropComponent.dropCount;
-            dropComponent.DropItem(new Vector3(initialPosition.x - (eachOffSet * i/4), initialPosition.y, initialPosition.z));
-            //dropComponent.DropItem(initialPosition);
+            dropComponent.DropItem(new Vector3(initialPosition.x - (directionMultiplier * (eachOffSet * i / 4)), initialPosition.y, initialPosition.z));
         }
     }
 }

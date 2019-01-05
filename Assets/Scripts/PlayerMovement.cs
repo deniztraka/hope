@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-		//horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
 #if UNITY_STANDALONE || UNITY_WEBPLAYER
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
@@ -42,8 +42,6 @@ public class PlayerMovement : MonoBehaviour
         }
 #endif
 
-
-
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
@@ -57,9 +55,6 @@ public class PlayerMovement : MonoBehaviour
         {
             crouch = false;
         }
-
-
-
     }
 
     void FixedUpdate()
