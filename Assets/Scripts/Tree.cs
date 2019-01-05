@@ -110,13 +110,15 @@ public class Tree : MonoBehaviour, IDestructable
     IEnumerator WaitAndFall(float seconds)
     {
         yield return new WaitForSeconds(seconds);
+        //to show it in front of trees
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -1.5f);
         StartCoroutine(FallingAnimation());
         PlayFallSoundEffect();
     }
 
     IEnumerator FallingAnimation()
     {
-        
+
         var player = GameObject.FindWithTag("Player");
         if (player.transform.position.x - transform.position.x < 0)
         {
@@ -138,7 +140,7 @@ public class Tree : MonoBehaviour, IDestructable
             // Make the coroutine wait for a moment
             yield return new WaitForSeconds(animationInterval);
 
-            if ((directionMultiplier > 0  && transform.rotation.eulerAngles.z >= 90) || (directionMultiplier < 0  && transform.rotation.eulerAngles.z <= 270))
+            if ((directionMultiplier > 0 && transform.rotation.eulerAngles.z >= 90) || (directionMultiplier < 0 && transform.rotation.eulerAngles.z <= 270))
             {
                 // Break the while loop, NOT the coroutine
                 break;

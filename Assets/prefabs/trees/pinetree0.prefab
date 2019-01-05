@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 400392056}
   - component: {fileID: 224561425}
   m_Layer: 11
-  m_Name: pinetree1
+  m_Name: pinetree0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65253e8d16c3a5c46a966dd6d6a06ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthAmount: 100
+  healthAmount: 140
   lumberCount: 4
   audioSource: {fileID: 400392056}
   chopAudioClip: {fileID: 8300000, guid: f22d409cec419464aaca4d0db81c25c8, type: 3}
