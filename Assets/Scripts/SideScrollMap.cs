@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SideScrollMap : MonoBehaviour
 {
@@ -32,6 +33,16 @@ public class SideScrollMap : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetKey("escape"))
+        {
+            Debug.Log("going to main menu");
+            //TODO: SAVE GAME HERE
+            SceneManager.LoadScene("MainMenuScene");
+        }
+    }
+
     private void SaveSideScrollMap()
     {
         //TODO: Save SideScrollMap
@@ -45,9 +56,9 @@ public class SideScrollMap : MonoBehaviour
         if (levelGenerationDataModel == null)
         {
             Debug.Log(string.Format("Could not find any asset with the path: '{0}'", path));
-           
+
         }
-         return levelGenerationDataModel;
+        return levelGenerationDataModel;
         // string[] assetGuids = AssetDatabase.FindAssets(filter, new[] { "Assets/Data/SideScrollMapTypes" });
         // if (assetGuids.Length == 0)
         // {
