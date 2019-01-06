@@ -30,7 +30,7 @@ public class TreeData : MonoBehaviour
             var randomTreeTypeIndex = Random.Range(0, treeTypes.Count);
             var randomXPosition = Random.Range(levelData.leftEdge, levelData.rightEdge);
 
-            treeList.Add(Instantiate(treeTypes[randomTreeTypeIndex], new Vector3(randomXPosition, 1.35f, -1), Quaternion.identity));
+            treeList.Add(Instantiate(treeTypes[randomTreeTypeIndex], new Vector3(randomXPosition, -0.45f, -1), Quaternion.identity));
         }
     }
 }
