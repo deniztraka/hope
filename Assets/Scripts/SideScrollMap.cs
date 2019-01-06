@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class SideScrollMap : MonoBehaviour
 {
-    private const string Format = "{0}";
+    private const string Format = "Data/SideScrollMapTypes/{0}";
     public SideScrollMapType SideScrollMapType;
     public int MapPositionX = -1;
     public int MapPositionY = -1;
@@ -19,37 +18,50 @@ public class SideScrollMap : MonoBehaviour
             //this is new map lets generate it
 
             var levelGenerationDataModel = GetLevelGenerationDataModel(SideScrollMapType);
+            if (levelGenerationDataModel == null)
+            {
+                return;
+            }
             CreateSideScrollMap(levelGenerationDataModel);
             SaveSideScrollMap();
         }
         else
         {
             //this map is already created lets build it again from save folder
-            
+
         }
     }
 
-    private void SaveSideScrollMap(){
+    private void SaveSideScrollMap()
+    {
         //TODO: Save SideScrollMap
     }
 
     private LevelGenerationDataModel GetLevelGenerationDataModel(SideScrollMapType sideScrollMapType)
     {
-        var filter = string.Format(Format, SideScrollMapType.ToString());
-        string[] assetGuids = AssetDatabase.FindAssets(filter, new[] { "Assets/Data/SideScrollMapTypes" });
-        if (assetGuids.Length == 0)
-        {
-            Debug.Log(string.Format("Could not find any asset with the filter of {0}", filter));
-            return null;
-        }
-        else if (assetGuids.Length > 1)
-        {
-            Debug.Log(string.Format("Found more than one level asset with the filter of {0}", filter));
-            return null;
-        }
+        var path = string.Format(Format, SideScrollMapType.ToString());
 
-        var assetPath = AssetDatabase.GUIDToAssetPath(assetGuids[0]);
-        return (LevelGenerationDataModel)AssetDatabase.LoadAssetAtPath(assetPath, typeof(LevelGenerationDataModel));
+        var levelGenerationDataModel = Resources.Load(string.Format(Format, SideScrollMapType.ToString())) as LevelGenerationDataModel;
+        if (levelGenerationDataModel == null)
+        {
+            Debug.Log(string.Format("Could not find any asset with the path: '{0}'", path));
+           
+        }
+         return levelGenerationDataModel;
+        // string[] assetGuids = AssetDatabase.FindAssets(filter, new[] { "Assets/Data/SideScrollMapTypes" });
+        // if (assetGuids.Length == 0)
+        // {
+        //     Debug.Log(string.Format("Could not find any asset with the filter of {0}", filter));
+        //     return null;
+        // }
+        // else if (assetGuids.Length > 1)
+        // {
+        //     Debug.Log(string.Format("Found more than one level asset with the filter of {0}", filter));
+        //     return null;
+        // }
+
+        // var assetPath = AssetDatabase.GUIDToAssetPath(assetGuids[0]);
+        // return (LevelGenerationDataModel)AssetDatabase.LoadAssetAtPath(assetPath, typeof(LevelGenerationDataModel));
     }
 
     private void CreateSideScrollMap(LevelGenerationDataModel levelGenerationDataModel)
