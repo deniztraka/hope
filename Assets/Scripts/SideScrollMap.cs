@@ -7,6 +7,7 @@ public class SideScrollMap : MonoBehaviour
 {
     private const string Format = "Data/SideScrollMapTypes/{0}";
     public SideScrollMapType SideScrollMapType;
+    public List<LevelGenerationDataModel> LevelGenerationDataModels;
     public int MapPositionX = -1;
     public int MapPositionY = -1;
     public bool IsVisitedBefore = false;
@@ -35,12 +36,7 @@ public class SideScrollMap : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey("escape"))
-        {
-            Debug.Log("going to main menu");
-            //TODO: SAVE GAME HERE
-            SceneManager.LoadScene("MainMenuScene");
-        }
+
     }
 
     private void SaveSideScrollMap()
@@ -50,29 +46,7 @@ public class SideScrollMap : MonoBehaviour
 
     private LevelGenerationDataModel GetLevelGenerationDataModel(SideScrollMapType sideScrollMapType)
     {
-        var path = string.Format(Format, SideScrollMapType.ToString());
-
-        var levelGenerationDataModel = Resources.Load(string.Format(Format, SideScrollMapType.ToString())) as LevelGenerationDataModel;
-        if (levelGenerationDataModel == null)
-        {
-            Debug.Log(string.Format("Could not find any asset with the path: '{0}'", path));
-
-        }
-        return levelGenerationDataModel;
-        // string[] assetGuids = AssetDatabase.FindAssets(filter, new[] { "Assets/Data/SideScrollMapTypes" });
-        // if (assetGuids.Length == 0)
-        // {
-        //     Debug.Log(string.Format("Could not find any asset with the filter of {0}", filter));
-        //     return null;
-        // }
-        // else if (assetGuids.Length > 1)
-        // {
-        //     Debug.Log(string.Format("Found more than one level asset with the filter of {0}", filter));
-        //     return null;
-        // }
-
-        // var assetPath = AssetDatabase.GUIDToAssetPath(assetGuids[0]);
-        // return (LevelGenerationDataModel)AssetDatabase.LoadAssetAtPath(assetPath, typeof(LevelGenerationDataModel));
+        return LevelGenerationDataModels.Find(model => model.name.Equals(sideScrollMapType.ToString()));
     }
 
     private void CreateSideScrollMap(LevelGenerationDataModel levelGenerationDataModel)

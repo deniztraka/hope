@@ -21,8 +21,8 @@ public class CameraFollowSmooth : MonoBehaviour
     void Update()
     {
         //var wantedPosition = player.transform.TransformPoint(0, height, -distance);
-        var wantedPosition = player.transform.position + offset;
-        
+        //var wantedPosition = player.transform.position + offset;
+        var wantedPosition = new Vector3(player.transform.position.x, 1.350019f, -3.4f);
         transform.position = Vector3.Lerp(transform.position, wantedPosition, Time.deltaTime * damping);
 
     }
