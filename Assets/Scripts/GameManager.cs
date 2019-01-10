@@ -19,7 +19,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return _instance; } }
 
     public List<SaveDataModel> Savables;
+    public List<Transform> Prefabs;
     public PlayerDataModel PlayerDataModel;
+    public LevelDataModel FirstMapModel;
 
     public static string SavePath
     {
@@ -52,8 +54,17 @@ public class GameManager : MonoBehaviour
         var directory = Directory.CreateDirectory(SavePath);
         directory.Create();
         directory.CreateSubdirectory("Player");
+        directory.CreateSubdirectory("Levels");
 
         PlayerDataModel.PlayerLastPosition = new Vector3(0f, -0.2183512f, -3f);
+        PlayerDataModel.LastMapPosition = new Vector2(25,25);
+        PlayerDataModel.SavePath = "/Save/Player/player.dat";
+
+        FirstMapModel.IsVisitedBefore = false;
+        FirstMapModel.SavePath = "/Save/Levels/Level_25-25.dat";
+        FirstMapModel.Position = new Vector2(25,25);
+        FirstMapModel.GeneratedObjects = new List<GeneratedItemDataModel>();
+
     }
 
     void OnBeforeSave()
@@ -95,12 +106,7 @@ public class GameManager : MonoBehaviour
     {
         Instance.Savables.ForEach(savableObject =>
         {
-            switch (savableObject.GetType().ToString())
-            {
-                case "PlayerDataModel":
-                    savableObject.Init(savableObject.OnLoad());
-                    break;
-            }
+            savableObject.Init(savableObject.OnLoad());
         });
     }
 }

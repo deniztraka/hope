@@ -52,6 +52,11 @@ public class Tree : MonoBehaviour, IDestructable
     }
     public void TakeDamage(float damageAmount)
     {
+        var results = Resources.FindObjectsOfTypeAll<ExitGameCanvasPopUp>();
+        var exitGameCanvas = results[0].gameObject;
+        exitGameCanvas.SetActive(true);
+
+
         if (isDead || healthAmount <= 0)
         {
             return;

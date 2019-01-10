@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,18 +9,20 @@ public class SideScrollMap : MonoBehaviour
     private const string Format = "Data/SideScrollMapTypes/{0}";
     public SideScrollMapType SideScrollMapType;
     public List<LevelGenerationDataModel> LevelGenerationDataModels;
+    public List<LevelDataModel> LevelDataModel;
     public int MapPositionX = -1;
     public int MapPositionY = -1;
     public bool IsVisitedBefore = false;
 
     void Start()
     {
+        var playerDataModel = GameManager.Instance.PlayerDataModel;
+        var levelDataModel = GameManager.Instance.Savables.Find(obj => obj.GetType() == typeof(LevelDataModel) && obj.name == string.Format("Level_{0}-{1}", playerDataModel.LastMapPosition.x, playerDataModel.LastMapPosition.y)) as LevelDataModel;
+        var levelGenerationDataModel = GetLevelGenerationDataModel(levelDataModel.LevelType);
 
-        if (MapPositionX < 0 || MapPositionY < 0 || !IsVisitedBefore)
+        if (!levelDataModel.IsVisitedBefore)
         {
             //this is new map lets generate it
-
-            var levelGenerationDataModel = GetLevelGenerationDataModel(SideScrollMapType);
             if (levelGenerationDataModel == null)
             {
                 return;
@@ -29,9 +32,27 @@ public class SideScrollMap : MonoBehaviour
         }
         else
         {
-            //this map is already created lets build it again from save folder
+            LoadSideScrollMap(levelDataModel, levelGenerationDataModel);
 
         }
+
+        // if (MapPositionX < 0 || MapPositionY < 0 || !IsVisitedBefore)
+        // {
+        //     //this is new map lets generate it
+
+
+        //     if (levelGenerationDataModel == null)
+        //     {
+        //         return;
+        //     }
+        //     CreateSideScrollMap(levelGenerationDataModel);
+        //     SaveSideScrollMap();
+        // }
+        // else
+        // {
+        //     LoadSideScrollMap(levelDataModel, levelGenerationDataModel);
+
+        // }
     }
 
     void Update()
@@ -41,12 +62,53 @@ public class SideScrollMap : MonoBehaviour
 
     private void SaveSideScrollMap()
     {
-        //TODO: Save SideScrollMap
+        var playerGameObject = GameObject.Find("Player");
+        var player = playerGameObject.GetComponent<Player>();
+        var lastMapPosition = player.PlayerDataModel.LastMapPosition;
+
+        var levelDataModel = GameManager.Instance.Savables.Find(obj => obj.GetType() == typeof(LevelDataModel) && obj.name == string.Format("Level_{0}-{1}", lastMapPosition.x, lastMapPosition.y)) as LevelDataModel;
+        var objectsContainer = GameObject.Find("ObjectsContainer");
+        levelDataModel.GeneratedObjects = new List<GeneratedItemDataModel>();
+
+
+        foreach (Transform child in objectsContainer.transform)
+        {
+            levelDataModel.GeneratedObjects.Add(
+                new GeneratedItemDataModel()
+                {
+                    Prefab = child.gameObject.name.Replace("(Clone)", string.Empty),
+                    Position = child.position
+                }
+            );
+        }
+        levelDataModel.Position = player.PlayerDataModel.LastMapPosition;
+        levelDataModel.IsVisitedBefore = true;
+
     }
 
     private LevelGenerationDataModel GetLevelGenerationDataModel(SideScrollMapType sideScrollMapType)
     {
         return LevelGenerationDataModels.Find(model => model.name.Equals(sideScrollMapType.ToString()));
+    }
+
+    private void LoadSideScrollMap(LevelDataModel levelDataModel, LevelGenerationDataModel levelGenerationDataModel)
+    {
+        var mapStaticObject = CreateStatics(levelGenerationDataModel);
+        var objectsContainer = GameObject.Find("ObjectsContainer");
+        LoadMapContent(levelDataModel, objectsContainer);
+    }
+
+    private void LoadMapContent(LevelDataModel levelDataModel, GameObject container)
+    {
+        foreach (var generatedObject in levelDataModel.GeneratedObjects)
+        {   
+            
+            var prefab = Resources.Load("Prefabs/" + generatedObject.Prefab, typeof(GameObject));
+            if (prefab != null)
+            {
+                Instantiate(prefab, generatedObject.Position, Quaternion.identity);
+            }
+        }
     }
 
     private void CreateSideScrollMap(LevelGenerationDataModel levelGenerationDataModel)

@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6196029c2de8b6640ab59322874d7ea1, type: 3}
-  m_Name: PlayerDataModel
+  m_Script: {fileID: 11500000, guid: 46647e92661069d45be952d163af81d0, type: 3}
+  m_Name: Level_25-25
   m_EditorClassIdentifier: 
-  savePath: 
-  PlayerLastPosition: {x: 0, y: 0, z: 0}
-  LastMapPosition: {x: 26, y: 25}
+  savePath: /Save/Levels/Level_25-25.dat
+  Position: {x: 25, y: 25}
+  LevelType: 0
+  IsVisitedBefore: 0
+  GeneratedObjects: []

@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
-        transform.position = PlayerDataModel.PlayerLastPosition;
+        LoadValues();
     }
 
     void Start(){
@@ -19,6 +19,10 @@ public class Player : MonoBehaviour
     public void OnBeforeSave()
     {
         PlayerDataModel.PlayerLastPosition = transform.position;
+    }
+
+    public void LoadValues(){
+        transform.position = PlayerDataModel.PlayerLastPosition;
     }
 
 }
