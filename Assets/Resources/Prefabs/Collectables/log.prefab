@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2567324496319364737}
   - component: {fileID: 2025459937091418576}
   - component: {fileID: 2305900941252239483}
+  - component: {fileID: 6882006801472266843}
   m_Layer: 11
   m_Name: log
   m_TagString: Untagged
@@ -225,3 +226,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6882006801472266843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5446841501879131580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc769c6b771f934a901fe80a2d81325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: a55925d2-6cf3-4c62-859a-8fdf726990d4
+  ItemDatabase: {fileID: 11400000, guid: 4fc7e6eb0b1b5a94a881200f209a292f, type: 2}
+  Item:
+    Id: 
+    Name: 
+    Description: 
+    Type: 0
+    GameObject: {fileID: 0}
+    Weight: 0
+    MaxStack: 0
+    Icon: {fileID: 0}

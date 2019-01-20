@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c934b2854760b469115001eb36f5b9, type: 3}
+  m_Name: ItemDataBase
+  m_EditorClassIdentifier: 
+  ItemTypeDatabase: {fileID: 11400000, guid: 8134d94ee1174b74b91b1c8bcd51ad53, type: 2}
+  ItemList:
+  - Id: a55925d2-6cf3-4c62-859a-8fdf726990d4
+    Name: Log
+    Description: Log
+    Type:
+      Name: 
+      Description: 
+    GameObject: {fileID: 5446841501879131580, guid: b3dd7b979da7db04984731ae55d13559,
+      type: 3}
+    Weight: 1
+    MaxStack: 1
+    Icon: {fileID: 21300000, guid: 644eedd1be08b9b48bae16f0edd2cbec, type: 3}
