@@ -16,8 +16,14 @@ namespace DTInventory.MonoBehaviours
 
         public Text ItemQuantityPanel;
 
+        public bool IsSelected;
+
+        public Sprite SelectedSprite;
+        public Sprite Sprite;
+
         private Item item;
         private ItemDatabase itemDatabase;
+        private bool hasItem;
 
         // Start is called before the first frame update
         void Start()
@@ -45,6 +51,8 @@ namespace DTInventory.MonoBehaviours
 
             var itemQuantityText = ItemQuantityPanel.GetComponent<Text>(); ;
             itemQuantityText.text = item.Quantity.ToString();
+            hasItem = true;
+
 
         }
 
@@ -53,5 +61,23 @@ namespace DTInventory.MonoBehaviours
         {
 
         }
+
+        public void ToggleSelect()
+        {
+            if(!hasItem){
+                return;
+            }
+
+            var slotWrapperPanelImage = transform.Find("SlotWrapperCanvas").Find("SlotWrapperPanel").GetComponent<Image>();
+            if (IsSelected)
+            {
+                slotWrapperPanelImage.sprite = Sprite;                
+            }
+            else
+            {
+                slotWrapperPanelImage.sprite = SelectedSprite;
+            }
+            IsSelected = !IsSelected;
+        }        
     }
 }

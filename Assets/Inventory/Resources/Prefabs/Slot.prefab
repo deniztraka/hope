@@ -191,10 +191,10 @@ RectTransform:
   m_Father: {fileID: 1140262729332515438}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 208.5, y: 376}
-  m_SizeDelta: {x: 417, y: 752}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1140262728995192922
 Canvas:
@@ -266,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1140262729332515438}
   - component: {fileID: 1140262729332515439}
+  - component: {fileID: 6450774555986867311}
   m_Layer: 0
   m_Name: Slot
   m_TagString: Untagged
@@ -309,6 +310,40 @@ MonoBehaviour:
   ItemName: 
   ItemTexturePanel: {fileID: 1140262730444321326}
   ItemQuantityPanel: {fileID: 1140262728567303930}
+  IsSelected: 0
+  SelectedSprite: {fileID: 21300000, guid: d7699336eb8251c4fa3bc18146ed8237, type: 3}
+  Sprite: {fileID: 21300000, guid: 34714653fc777cc458e31d357d91c3c7, type: 3}
+--- !u!114 &6450774555986867311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140262729332515433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1140262729332515439}
+          m_MethodName: ToggleSelect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1140262730444321320
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,8 +378,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 25.5, y: -132.1}
-  m_SizeDelta: {x: 51, y: -264.1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1140262730444321327
 CanvasRenderer:

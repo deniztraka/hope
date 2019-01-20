@@ -8,10 +8,12 @@ using DTInventory.ScriptableObjects;
 
 namespace DTInventory.MonoBehaviours
 {
-    
+
     public class InventoryBehavior : MonoBehaviour
     {
+        [SerializeField]
         private int sizeX;
+        [SerializeField]
         private int sizeY;
 
 
@@ -21,9 +23,13 @@ namespace DTInventory.MonoBehaviours
 
         public ItemDatabase ItemDatabase;
 
+        public GameObject SlotPrefab;
+
+        public Transform SlotsWrapper;
+
         public delegate void InventorySizeChangedEvent();
         public event InventorySizeChangedEvent OnInventorySizeChanged;
-        
+
         public int SizeX
         {
             get
@@ -64,6 +70,12 @@ namespace DTInventory.MonoBehaviours
             Inventory = new Inventory();
             SlotGrid = new Slot[SizeX, SizeY];
             OnInventorySizeChanged += InventorySizeChanged;
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                var slot = Instantiate(SlotPrefab, Vector3.zero, Quaternion.identity, SlotsWrapper);
+                // var slotRectTransform = slot.GetComponent<RectTransform>();
+                // slotRectTransform.position.Set(0,0,0);
+            }
 
         }
 
@@ -76,6 +88,24 @@ namespace DTInventory.MonoBehaviours
         private void InventorySizeChanged()
         {
             Debug.Log("changed");
+        }
+
+        public void ToggleActive()
+        {
+            if (gameObject.active)
+            {
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                gameObject.SetActive(true);
+            }
+        }
+
+        public void SetSize(int x, int y)
+        {
+            SizeX = x;
+            SizeY = y;
         }
     }
 }
