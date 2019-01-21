@@ -5,6 +5,7 @@ using DTInventory.Models;
 using UnityEngine;
 using UnityEngine.Events;
 using DTInventory.ScriptableObjects;
+using UnityEngine.EventSystems;
 
 namespace DTInventory.MonoBehaviours
 {
@@ -87,12 +88,6 @@ namespace DTInventory.MonoBehaviours
             
             gameObject.transform.localScale = new Vector3(0, 0, 0);
 
-
-        }
-
-        // Update is called once per frame        
-        void Update()
-        {
 
         }
 

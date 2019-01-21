@@ -5,6 +5,7 @@ using DTInventory.Models;
 using DTInventory.ScriptableObjects;
 using System;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace DTInventory.MonoBehaviours
 {
@@ -101,5 +102,7 @@ namespace DTInventory.MonoBehaviours
             var itemQuantityText = ItemQuantityPanel.GetComponent<Text>(); ;
             itemQuantityText.text = Item.Quantity.ToString();
         }
+
+        
     }
 }
