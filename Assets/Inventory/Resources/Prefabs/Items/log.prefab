@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2025459937091418576}
   - component: {fileID: 2305900941252239483}
   - component: {fileID: 6882006801472266843}
+  - component: {fileID: 2081674510823248914}
   m_Layer: 11
   m_Name: log
   m_TagString: Untagged
@@ -238,14 +239,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc769c6b771f934a901fe80a2d81325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: a55925d2-6cf3-4c62-859a-8fdf726990d4
   ItemDatabase: {fileID: 11400000, guid: 4fc7e6eb0b1b5a94a881200f209a292f, type: 2}
   Item:
-    Id: 
-    Name: 
-    Description: 
+    Id: a55925d2-6cf3-4c62-859a-8fdf726990d4
+    Name: Log
+    Description: Log
     Type: 0
-    GameObject: {fileID: 0}
-    Weight: 0
-    MaxStack: 0
-    Icon: {fileID: 0}
+    GameObject: {fileID: 5446841501879131580, guid: b3dd7b979da7db04984731ae55d13559,
+      type: 3}
+    Weight: 1
+    MaxStack: 1
+    Quantity: 1
+    Icon: {fileID: 21300000, guid: 644eedd1be08b9b48bae16f0edd2cbec, type: 3}
+--- !u!114 &2081674510823248914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5446841501879131580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6882006801472266843}
+          m_MethodName: OnClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []

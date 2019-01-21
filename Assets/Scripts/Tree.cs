@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DTInventory.MonoBehaviours;
 using UnityEngine;
 
 [RequireComponent(typeof(Interactable), typeof(Interactable))]
@@ -42,6 +43,8 @@ public class Tree : MonoBehaviour, IDestructable
     public float volLowRange = .5f;
     public float volHighRange = 1f;
 
+    public delegate void OnDeathEvent();
+    public event OnDeathEvent OnDeath;    
 
     void Start()
     {
@@ -52,11 +55,6 @@ public class Tree : MonoBehaviour, IDestructable
     }
     public void TakeDamage(float damageAmount)
     {
-        var results = Resources.FindObjectsOfTypeAll<ExitGameCanvasPopUp>();
-        var exitGameCanvas = results[0].gameObject;
-        exitGameCanvas.SetActive(true);
-
-
         if (isDead || healthAmount <= 0)
         {
             return;
@@ -157,20 +155,22 @@ public class Tree : MonoBehaviour, IDestructable
 
     private void OnFallingAnimationFinished()
     {
-        DropItems();
+        var deathEventBehaviour = gameObject.GetComponent<OnDeathEventBehaviour>();
+        deathEventBehaviour.DeathOccurred();
+        //DropItems();
         Destroy(gameObject);
     }
 
     private void DropItems()
-    {
-        SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
-        var height = sr.sprite.textureRect.height / 100;//100 because we consider each unit is 100px
-        var initialPosition = transform.position;
-        var dropComponent = GetComponent<DropOnDeath>();
-        for (int i = 0; i < dropComponent.dropCount; i++)
-        {
-            var eachOffSet = height / dropComponent.dropCount;
-            dropComponent.DropItem(new Vector3(initialPosition.x - (directionMultiplier * (eachOffSet * i / 5)), initialPosition.y, initialPosition.z));
-        }
+    {    
+        // SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
+        // var height = sr.sprite.textureRect.height / 100;//100 because we consider each unit is 100px
+        // var initialPosition = transform.position;
+        // var dropComponent = GetComponent<DropOnDeath>();
+        // for (int i = 0; i < dropComponent.dropCount; i++)
+        // {
+        //     var eachOffSet = height / dropComponent.dropCount;
+        //     dropComponent.DropItem(new Vector3(initialPosition.x - (directionMultiplier * (eachOffSet * i / 5)), initialPosition.y, initialPosition.z));
+        // }
     }
 }

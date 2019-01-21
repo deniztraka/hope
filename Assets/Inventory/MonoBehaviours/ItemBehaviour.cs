@@ -5,15 +5,15 @@ using DTInventory.Models;
 using DTInventory.ScriptableObjects;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace DTInventory.MonoBehaviours
 {
     public class ItemBehaviour : MonoBehaviour
     {
-        public string Id;
         public ItemDatabase ItemDatabase;
 
-        public Item Item;
+        public Item Item;        
 
         void Start()
         {
@@ -23,7 +23,19 @@ namespace DTInventory.MonoBehaviours
                 return;
             }
 
-            Item = ItemDatabase.getItemByID(Id);
+            Item = ItemDatabase.getItemByID(Item.Id);    
+                    
         }
+
+        public void OnClick(){
+            var playerObject = GameObject.FindGameObjectWithTag("Player");
+            var player = playerObject.GetComponent<Player>();
+            var pickupResult = player.PickUpItem(Item);
+            if(pickupResult){
+                Destroy(gameObject);
+            }
+
+        }
+
     }
 }

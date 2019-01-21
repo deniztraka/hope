@@ -67,36 +67,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1329632252280550618, guid: c68100abced63174f9c1e0663030712d,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300002, guid: 5e4eba07d6b45664fba61ba205ba8a13,
-        type: 3}
-    - target: {fileID: 1329632252280550599, guid: c68100abced63174f9c1e0663030712d,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 1329632252280550599, guid: c68100abced63174f9c1e0663030712d,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1329632252280550616, guid: c68100abced63174f9c1e0663030712d,
-        type: 3}
-      propertyPath: healthAmount
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 1329632252280550616, guid: c68100abced63174f9c1e0663030712d,
-        type: 3}
-      propertyPath: lumberCount
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1329632252280550596, guid: c68100abced63174f9c1e0663030712d,
         type: 3}
       propertyPath: dropCount
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647018500182227577, guid: c68100abced63174f9c1e0663030712d,
+        type: 3}
+      propertyPath: Drops.Array.data[0].Quantity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647018500182227577, guid: c68100abced63174f9c1e0663030712d,
+        type: 3}
+      propertyPath: Drops.Array.data[1].Quantity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c68100abced63174f9c1e0663030712d, type: 3}

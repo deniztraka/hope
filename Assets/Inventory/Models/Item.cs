@@ -21,6 +21,7 @@ namespace DTInventory.Models
             GameObject = gameObject;
             Weight = weight;
             MaxStack = maxStack;
+            Quantity = 1;
         }
         public Item() : base()
         {            

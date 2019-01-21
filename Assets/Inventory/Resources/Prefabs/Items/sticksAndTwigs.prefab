@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 666066282010417487}
   - component: {fileID: 666066282010417480}
   - component: {fileID: 666066282010417481}
+  - component: {fileID: 3458758920248128067}
+  - component: {fileID: 8524609205932142098}
   m_Layer: 11
   m_Name: sticksAndTwigs
   m_TagString: Untagged
@@ -225,3 +227,57 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3458758920248128067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666066282010417482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc769c6b771f934a901fe80a2d81325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemDatabase: {fileID: 11400000, guid: 4fc7e6eb0b1b5a94a881200f209a292f, type: 2}
+  Item:
+    Id: a0351873-093c-40da-ab12-870e54632f30
+    Name: 
+    Description: 
+    Type: 0
+    GameObject: {fileID: 0}
+    Weight: 0
+    MaxStack: 0
+    Quantity: 0
+    Icon: {fileID: 0}
+--- !u!114 &8524609205932142098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666066282010417482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3458758920248128067}
+          m_MethodName: OnClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
