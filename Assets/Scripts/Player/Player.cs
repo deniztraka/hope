@@ -30,8 +30,7 @@ public class Player : MonoBehaviour
         transform.position = PlayerDataModel.PlayerLastPosition;
     }
 
-    public bool PickUpItem(Item item){
-        
+    public bool PickUpItem(Item item){        
         return InventoryBehaviour.Add(item);
     }
 

@@ -11,19 +11,13 @@ namespace DTInventory.MonoBehaviours
 {
     public class SlotBehaviour : MonoBehaviour
     {
-        public string ItemId;
-        public string ItemName;
-        public Image ItemTexturePanel;
-
-        public Text ItemQuantityPanel;
-
         public bool IsSelected;
 
         public Sprite SelectedSprite;
         public Sprite Sprite;
 
         public bool HasItem;
-
+        public GameObject SlotItemPrefab;
         public Item Item;
         private ItemDatabase itemDatabase;
 
@@ -31,12 +25,8 @@ namespace DTInventory.MonoBehaviours
         // Start is called before the first frame update
         void Start()
         {
-            if (String.IsNullOrEmpty(ItemId))
-            {
-                return;
-            }
 
-            SetItem(ItemId);
+
         }
 
         // Update is called once per frame
@@ -64,45 +54,25 @@ namespace DTInventory.MonoBehaviours
             IsSelected = !IsSelected;
         }
 
-        private bool SetItem(string itemId)
+        private void SetItem(Item item, GameObject slotItem)
         {
-            ItemId = itemId;
-            var itemDatabase = gameObject.GetComponentInParent<InventoryBehavior>().ItemDatabase;
-            if (itemDatabase == null)
-            {
-                return false;
-            }
-
-            Item = itemDatabase.getItemByID(ItemId);
-            if (Item == null)
-            {
-                return false;
-            }
-
-            return true;
+            var slotItemBehaviour = slotItem.GetComponent<SlotItemBehaviour>();
+            slotItemBehaviour.Item = item;
+            slotItemBehaviour.SetUI();
         }
 
-        internal void SetItem(Item item)
+        internal GameObject AddItem(Item item)
         {
-            if (SetItem(item.Id))
+            if (item != null)
             {
-                var itemImage = ItemTexturePanel.GetComponent<Image>(); ;
-                itemImage.sprite = item.Icon;
-                itemImage.color = Color.white;
-
-                var itemQuantityText = ItemQuantityPanel.GetComponent<Text>(); ;
-                itemQuantityText.text = item.Quantity.ToString();
+                var itemDatabase = gameObject.GetComponentInParent<InventoryBehavior>().ItemDatabase;                
+                var slotWrapperPanel = transform.Find("SlotWrapperCanvas").Find("SlotWrapperPanel");
+                var slotItem = Instantiate(SlotItemPrefab, new Vector3(0,0,0), Quaternion.identity,slotWrapperPanel);                
+                SetItem(item, slotItem);
                 HasItem = true;
+                return slotItem;
             }
+            return null;
         }
-
-        internal void Stack(Item item)
-        {
-            Item.Quantity += item.Quantity;
-            var itemQuantityText = ItemQuantityPanel.GetComponent<Text>(); ;
-            itemQuantityText.text = Item.Quantity.ToString();
-        }
-
-        
     }
 }
