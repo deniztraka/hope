@@ -74,5 +74,19 @@ namespace DTInventory.MonoBehaviours
             }
             return null;
         }
+
+        internal void SetSelected(bool select)
+        {
+            var slotWrapperPanelImage = transform.Find("SlotWrapperCanvas").Find("SlotWrapperPanel").GetComponent<Image>();
+            if (!select)
+            {
+                slotWrapperPanelImage.sprite = Sprite;
+            }
+            else
+            {
+                slotWrapperPanelImage.sprite = SelectedSprite;
+            }
+            IsSelected = select;
+        }
     }
 }

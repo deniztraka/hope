@@ -292,11 +292,14 @@ namespace DTInventory.MonoBehaviours
         }
 
         private void UpdateSlot(GameObject slotGameObject)
-        {
+        {            
             //Updating HasItem property
             var slotBehaviour = slotGameObject.GetComponent<SlotBehaviour>();
             var slotItem = slotGameObject.transform.GetComponentInChildren<SlotItemBehaviour>();
             slotBehaviour.HasItem = slotItem != null;
+
+            //Updating Selection of slot
+            slotBehaviour.SetSelected(false);
         }
     }
 }
