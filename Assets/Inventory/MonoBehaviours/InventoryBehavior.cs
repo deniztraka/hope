@@ -96,7 +96,7 @@ namespace DTInventory.MonoBehaviours
         {
             var wrapperContentRectTransform = SlotsWrapper.GetComponent<RectTransform>();
 
-            wrapperContentRectTransform.sizeDelta = new Vector2(wrapperContentRectTransform.sizeDelta.x, (SizeX * SizeY / 4) * 70);
+            wrapperContentRectTransform.sizeDelta = new Vector2(wrapperContentRectTransform.sizeDelta.x, (SizeX * SizeY / 4) * 62);
         }
 
         public void ToggleActive()
