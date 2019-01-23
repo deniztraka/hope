@@ -232,16 +232,6 @@ MonoBehaviour:
   HasItem: 0
   SlotItemPrefab: {fileID: 6199861953044072572, guid: 0434a614363e0c048a1bd9b92904bc3d,
     type: 3}
-  Item:
-    Id: 
-    Name: 
-    Description: 
-    Type: 0
-    GameObject: {fileID: 0}
-    Weight: 0
-    MaxStack: 0
-    Quantity: 0
-    Icon: {fileID: 0}
 --- !u!114 &6450774555986867311
 MonoBehaviour:
   m_ObjectHideFlags: 0

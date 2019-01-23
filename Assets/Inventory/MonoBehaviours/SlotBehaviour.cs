@@ -64,6 +64,13 @@ namespace DTInventory.MonoBehaviours
             slotItemBehaviour.SetUI();
         }
 
+        public void DropItem(){
+            var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
+            slotItemBehaviour.DropItem();
+            HasItem = false;
+            ToggleSelect();
+        }
+
         internal GameObject AddItem(Item item)
         {
             if (item != null)

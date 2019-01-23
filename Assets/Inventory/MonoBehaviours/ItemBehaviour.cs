@@ -15,7 +15,7 @@ namespace DTInventory.MonoBehaviours
 
         public Item Item;        
 
-        void Start()
+        void Awake()
         {
             if (ItemDatabase == null)
             {
@@ -24,7 +24,6 @@ namespace DTInventory.MonoBehaviours
             }
 
             Item = ItemDatabase.getItemByID(Item.Id);    
-                    
         }
 
         public void OnClick(){
@@ -37,5 +36,9 @@ namespace DTInventory.MonoBehaviours
 
         }
 
+        internal void SetItemAmount(int quantity)
+        {
+            Item.Quantity = quantity;
+        }
     }
 }

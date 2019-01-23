@@ -121,6 +121,32 @@ namespace DTInventory.MonoBehaviours
             }
         }
 
+        public void DropSelected(){
+            var selectedSlot = GetSelectedSlot();
+            if(selectedSlot != null){
+                selectedSlot.DropItem();
+                //UpdateSlots();
+                selectedSlot.SetSelected(false);
+            }
+        }
+
+        private SlotBehaviour GetSelectedSlot()
+        {
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    var slotBehaviour = SlotGrid[x][y].GetComponent<SlotBehaviour>();
+                    if (slotBehaviour.IsSelected)
+                    {
+                        return slotBehaviour;
+                    }
+                }
+            }
+
+            return null;
+        }
+
         public void ToggleActive()
         {
             if (IsOpened)
