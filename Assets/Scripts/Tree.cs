@@ -44,7 +44,7 @@ public class Tree : MonoBehaviour, IDestructable
     public float volHighRange = 1f;
 
     public delegate void OnDeathEvent();
-    public event OnDeathEvent OnDeath;    
+    public event OnDeathEvent OnDeath;
 
     void Start()
     {
@@ -54,7 +54,8 @@ public class Tree : MonoBehaviour, IDestructable
         sineMovement.enabled = false;
     }
     public void TakeDamage(float damageAmount)
-    {
+    {        
+
         if (isDead || healthAmount <= 0)
         {
             return;
@@ -162,7 +163,7 @@ public class Tree : MonoBehaviour, IDestructable
     }
 
     private void DropItems()
-    {    
+    {
         // SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
         // var height = sr.sprite.textureRect.height / 100;//100 because we consider each unit is 100px
         // var initialPosition = transform.position;

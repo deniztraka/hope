@@ -30,6 +30,10 @@ namespace DTInventory.MonoBehaviours
 
         public Transform SlotsWrapper;
 
+        public Button DropButton;
+
+        public Button UnstackButton;
+
         public delegate void InventorySizeChangedEvent();
         public event InventorySizeChangedEvent OnInventorySizeChanged;
 
@@ -89,6 +93,9 @@ namespace DTInventory.MonoBehaviours
 
             gameObject.transform.localScale = new Vector3(0, 0, 0);
 
+            DropButton.interactable = false;
+            UnstackButton.interactable = false;
+
 
         }
 
@@ -97,6 +104,21 @@ namespace DTInventory.MonoBehaviours
             var wrapperContentRectTransform = SlotsWrapper.GetComponent<RectTransform>();
 
             wrapperContentRectTransform.sizeDelta = new Vector2(wrapperContentRectTransform.sizeDelta.x, (SizeX * SizeY / 4) * 62);
+        }
+
+        internal void UnselectSlotExcept(SlotBehaviour slotBehaviour)
+        {
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    var currentSlotBehaviour = SlotGrid[x][y].GetComponent<SlotBehaviour>();
+                    if (currentSlotBehaviour != slotBehaviour)
+                    {
+                        currentSlotBehaviour.SetSelected(false);
+                    }
+                }
+            }
         }
 
         public void ToggleActive()
@@ -168,14 +190,6 @@ namespace DTInventory.MonoBehaviours
                             return slotItemBehaviour;
                         }
                     }
-                    // if (slotBehaviour.HasItem && slotBehaviour.ItemId.Equals(item.Id))
-                    // {
-                    //     //in here we have same item
-                    //     //now we need to check MaxStack count on that item.                        
-                    //     if((slotBehaviour.Item.Quantity + item.Quantity) <= item.MaxStack){
-                    //         return slotBehaviour;
-                    //     }
-                    // }
                 }
             }
 
@@ -204,22 +218,13 @@ namespace DTInventory.MonoBehaviours
         {
             SlotBehaviour emptySlot = null;
             for (int x = 0; x < SlotGrid.Length; x++)
-            {
-                // if (emptySlot != null)
-                // {
-                //     break;
-                // }
+            {                
                 for (int y = 0; y < SlotGrid[x].Length; y++)
-                {
-                    // if (emptySlot != null)
-                    // {
-                    //     break;
-                    // }
+                {             
                     var slotBehaviour = SlotGrid[x][y].GetComponent<SlotBehaviour>();
                     if (!slotBehaviour.HasItem)
                     {
                         return slotBehaviour;
-
                     }
                 }
             }
@@ -292,7 +297,7 @@ namespace DTInventory.MonoBehaviours
         }
 
         private void UpdateSlot(GameObject slotGameObject)
-        {            
+        {
             //Updating HasItem property
             var slotBehaviour = slotGameObject.GetComponent<SlotBehaviour>();
             var slotItem = slotGameObject.transform.GetComponentInChildren<SlotItemBehaviour>();

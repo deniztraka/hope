@@ -17,15 +17,16 @@ namespace DTInventory.MonoBehaviours
         public Sprite Sprite;
 
         public bool HasItem;
-        public GameObject SlotItemPrefab;
-        public Item Item;
+        public GameObject SlotItemPrefab;        
         private ItemDatabase itemDatabase;
+
+        private InventoryBehavior InventoryBehavior;
 
 
         // Start is called before the first frame update
         void Start()
         {
-
+            InventoryBehavior = gameObject.GetComponentInParent<InventoryBehavior>();
 
         }
 
@@ -42,16 +43,18 @@ namespace DTInventory.MonoBehaviours
                 return;
             }
 
-            var slotWrapperPanelImage = transform.Find("SlotWrapperCanvas").Find("SlotWrapperPanel").GetComponent<Image>();
-            if (IsSelected)
-            {
-                slotWrapperPanelImage.sprite = Sprite;
-            }
-            else
-            {
-                slotWrapperPanelImage.sprite = SelectedSprite;
-            }
+             var slotItem = transform.GetComponentInChildren<SlotItemBehaviour>();
+
             IsSelected = !IsSelected;
+            SetSelected(IsSelected);
+            InventoryBehavior.DropButton.interactable = IsSelected;
+
+            if (IsSelected && slotItem.Item.Quantity > 1)
+            {
+                InventoryBehavior.UnstackButton.interactable = IsSelected;
+            }else {
+                InventoryBehavior.UnstackButton.interactable = false;
+            }
         }
 
         private void SetItem(Item item, GameObject slotItem)
@@ -65,9 +68,9 @@ namespace DTInventory.MonoBehaviours
         {
             if (item != null)
             {
-                var itemDatabase = gameObject.GetComponentInParent<InventoryBehavior>().ItemDatabase;                
+                var itemDatabase = InventoryBehavior.ItemDatabase;
                 var slotWrapperPanel = transform.Find("SlotWrapperCanvas").Find("SlotWrapperPanel");
-                var slotItem = Instantiate(SlotItemPrefab, new Vector3(0,0,0), Quaternion.identity,slotWrapperPanel);                
+                var slotItem = Instantiate(SlotItemPrefab, new Vector3(0, 0, 0), Quaternion.identity, slotWrapperPanel);
                 SetItem(item, slotItem);
                 HasItem = true;
                 return slotItem;
@@ -85,6 +88,7 @@ namespace DTInventory.MonoBehaviours
             else
             {
                 slotWrapperPanelImage.sprite = SelectedSprite;
+                InventoryBehavior.UnselectSlotExcept(this);
             }
             IsSelected = select;
         }

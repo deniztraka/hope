@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            return Application.persistentDataPath + "\\Save";
+            return Application.persistentDataPath + "/Save";
         }
     }
 
