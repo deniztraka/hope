@@ -106,7 +106,7 @@ public class SideScrollMap : MonoBehaviour
             var prefab = Resources.Load("Prefabs/" + generatedObject.Prefab, typeof(GameObject));
             if (prefab != null)
             {
-                Instantiate(prefab, generatedObject.Position, Quaternion.identity);
+                Instantiate(prefab, generatedObject.Position, Quaternion.identity, container.transform);
             }
         }
     }

@@ -75,6 +75,9 @@ namespace DTInventory.MonoBehaviours
         {
             if (item != null)
             {
+                if(InventoryBehavior == null){
+                    InventoryBehavior = gameObject.GetComponentInParent<InventoryBehavior>();
+                }
                 var itemDatabase = InventoryBehavior.ItemDatabase;
                 var slotWrapperPanel = transform.Find("SlotWrapperCanvas").Find("SlotWrapperPanel");
                 var slotItem = Instantiate(SlotItemPrefab, new Vector3(0, 0, 0), Quaternion.identity, slotWrapperPanel);
@@ -98,6 +101,12 @@ namespace DTInventory.MonoBehaviours
                 InventoryBehavior.UnselectSlotExcept(this);
             }
             IsSelected = select;
+        }
+
+        internal Item GetItem()
+        {
+            var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
+            return slotItemBehaviour.Item;
         }
     }
 }

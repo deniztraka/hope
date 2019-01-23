@@ -17,12 +17,14 @@ namespace DTInventory.MonoBehaviours
         [SerializeField]
         private int sizeY;
 
+        private bool isInitialized;
+
 
         public bool IsOpened;
 
         public GameObject[][] SlotGrid;
 
-        public Inventory Inventory;
+        public InventoryDataModel InventoryDataModel;
 
         public ItemDatabase ItemDatabase;
 
@@ -36,6 +38,32 @@ namespace DTInventory.MonoBehaviours
 
         public delegate void InventorySizeChangedEvent();
         public event InventorySizeChangedEvent OnInventorySizeChanged;
+
+        internal void LoadInventory()
+        {
+            
+            var playerObj = GameObject.FindGameObjectWithTag("Player");
+            var player = playerObj.GetComponent<Player>();
+
+            InventoryDataModel = player.PlayerDataModel.InventoryDataModel;   
+
+            Debug.Log("awake2");
+            if (InventoryDataModel == null)
+            {
+                return;
+            }
+
+            foreach (var item in InventoryDataModel.Items)
+            {
+                Add(item);
+            }
+        }
+
+        internal void LoadInventory(InventoryDataModel inventoryDataModel)
+        {
+            InventoryDataModel = inventoryDataModel;
+            LoadInventory();
+        }
 
         public int SizeX
         {
@@ -71,12 +99,35 @@ namespace DTInventory.MonoBehaviours
             }
         }
 
+
+        void Awake()
+        {
+            Debug.Log("awake");
+        }
+
         // Start is called before the first frame update
         void Start()
         {
-            Inventory = new Inventory();
-            SlotGrid = new GameObject[SizeX][];
+            Init();
 
+            gameObject.transform.localScale = new Vector3(0, 0, 0);
+
+            DropButton.interactable = false;
+            UnstackButton.interactable = false;
+
+            //FIX THIS
+            LoadInventory();
+        }
+
+        public void Init()
+        {
+            if(isInitialized){
+                return;
+            }          
+            
+                       
+
+            SlotGrid = new GameObject[SizeX][];
             OnInventorySizeChanged += InventorySizeChanged;
             for (int x = 0; x < SlotGrid.Length; x++)
             {
@@ -89,14 +140,30 @@ namespace DTInventory.MonoBehaviours
                     SlotGrid[x][y] = Instantiate(SlotPrefab, Vector3.zero, Quaternion.identity, SlotsWrapper);
                 }
             }
+
             InventorySizeChanged();
 
-            gameObject.transform.localScale = new Vector3(0, 0, 0);
+            isInitialized = true;
+        }
 
-            DropButton.interactable = false;
-            UnstackButton.interactable = false;
-
-
+        public void UpdateDataModel()
+        {
+            InventoryDataModel.Items = new List<Item>();
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    var currentSlotBehaviour = SlotGrid[x][y].GetComponent<SlotBehaviour>();
+                    if (currentSlotBehaviour.HasItem)
+                    {
+                        Item item = currentSlotBehaviour.GetItem();
+                        if (item != null)
+                        {
+                            InventoryDataModel.Items.Add(item);
+                        }
+                    }
+                }
+            }
         }
 
         private void InventorySizeChanged()
@@ -121,9 +188,11 @@ namespace DTInventory.MonoBehaviours
             }
         }
 
-        public void DropSelected(){
+        public void DropSelected()
+        {
             var selectedSlot = GetSelectedSlot();
-            if(selectedSlot != null){
+            if (selectedSlot != null)
+            {
                 selectedSlot.DropItem();
                 //UpdateSlots();
                 selectedSlot.SetSelected(false);
@@ -244,9 +313,9 @@ namespace DTInventory.MonoBehaviours
         {
             SlotBehaviour emptySlot = null;
             for (int x = 0; x < SlotGrid.Length; x++)
-            {                
+            {
                 for (int y = 0; y < SlotGrid[x].Length; y++)
-                {             
+                {
                     var slotBehaviour = SlotGrid[x][y].GetComponent<SlotBehaviour>();
                     if (!slotBehaviour.HasItem)
                     {

@@ -17,17 +17,20 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        EventManager.StartListening("OnBeforeSave", OnBeforeSave);
+        EventManager.StartListening("OnBeforeSave", OnBeforeSave);        
+    }
+
+    public void LoadValues()
+    {
+        transform.position = PlayerDataModel.PlayerLastPosition;        
+        
     }
 
     public void OnBeforeSave()
     {
         PlayerDataModel.PlayerLastPosition = transform.position;
-    }
-
-    public void LoadValues()
-    {
-        transform.position = PlayerDataModel.PlayerLastPosition;
+        InventoryBehaviour.UpdateDataModel();
+        PlayerDataModel.InventoryDataModel = InventoryBehaviour.InventoryDataModel;
     }
 
     public bool PickUpItem(Item item){        

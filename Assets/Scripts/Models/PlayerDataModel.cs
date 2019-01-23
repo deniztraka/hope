@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using DTInventory.Models;
 using UnityEngine;
 
 [Serializable]
@@ -11,12 +12,14 @@ public class PlayerDataModel : SaveDataModel
 {
     public Vector3 PlayerLastPosition;
     public Vector2 LastMapPosition;
+    public InventoryDataModel InventoryDataModel;
     public override void Init<T>(T saveDataModel)
     {
         var playerDataModel = saveDataModel as PlayerDataModel;
         SavePath = playerDataModel.SavePath;
         PlayerLastPosition = playerDataModel.PlayerLastPosition;
         LastMapPosition = playerDataModel.LastMapPosition;
+        InventoryDataModel = playerDataModel.InventoryDataModel;
     }
 
     public void OnBeforeSave(){
