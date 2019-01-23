@@ -47,7 +47,6 @@ namespace DTInventory.MonoBehaviours
 
             InventoryDataModel = player.PlayerDataModel.InventoryDataModel;   
 
-            Debug.Log("awake2");
             if (InventoryDataModel == null)
             {
                 return;
@@ -97,13 +96,7 @@ namespace DTInventory.MonoBehaviours
                     OnInventorySizeChanged();
                 }
             }
-        }
-
-
-        void Awake()
-        {
-            Debug.Log("awake");
-        }
+        }        
 
         // Start is called before the first frame update
         void Start()
