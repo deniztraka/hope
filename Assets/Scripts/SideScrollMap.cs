@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -36,23 +37,13 @@ public class SideScrollMap : MonoBehaviour
 
         }
 
-        // if (MapPositionX < 0 || MapPositionY < 0 || !IsVisitedBefore)
-        // {
-        //     //this is new map lets generate it
+        EventManager.StartListening("OnBeforeSave", OnBeforeSave);  
 
+    }
 
-        //     if (levelGenerationDataModel == null)
-        //     {
-        //         return;
-        //     }
-        //     CreateSideScrollMap(levelGenerationDataModel);
-        //     SaveSideScrollMap();
-        // }
-        // else
-        // {
-        //     LoadSideScrollMap(levelDataModel, levelGenerationDataModel);
-
-        // }
+    private void OnBeforeSave()
+    {
+        SaveSideScrollMap();
     }
 
     void Update()
@@ -129,14 +120,14 @@ public class SideScrollMap : MonoBehaviour
                 var probability = itemGenerationDataModel.Probability;
 
                 //check luck to instantiate object in the map
-                if (Random.Range(0, levelGenerationDataModel.IntensityLevel) < probability)
+                if (UnityEngine.Random.Range(0, levelGenerationDataModel.IntensityLevel) < probability)
                 {
                     //get random variant
-                    var variantIndex = Random.Range(0, itemGenerationDataModel.GameObjectVariants.Count);
+                    var variantIndex = UnityEngine.Random.Range(0, itemGenerationDataModel.GameObjectVariants.Count);
                     var gameObjectVariant = itemGenerationDataModel.GameObjectVariants[variantIndex];
 
                     //get random x position withing the map size
-                    var randomX = Random.Range(levelGenerationDataModel.LeftEdge, levelGenerationDataModel.RightEdge);
+                    var randomX = UnityEngine.Random.Range(levelGenerationDataModel.LeftEdge, levelGenerationDataModel.RightEdge);
 
 
                     //instantiate game object in random x position

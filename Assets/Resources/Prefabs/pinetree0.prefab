@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drops:
-  - DropRate: 0.5
+  - DropRate: 1
     Object: {fileID: 5446841501879131580, guid: b3dd7b979da7db04984731ae55d13559,
       type: 3}
     Quantity: 4
