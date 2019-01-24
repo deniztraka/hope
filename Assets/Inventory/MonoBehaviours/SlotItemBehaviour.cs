@@ -23,9 +23,7 @@ namespace DTInventory.MonoBehaviours
 
         internal void SetUI(Sprite icon)
         {
-            var itemQuantityText = ItemQuantityPanel.GetComponent<Text>();
-            itemQuantityText.text = Item.Quantity.ToString();
-
+            SetItemAmount(Item.Quantity);           
 
             var itemImage = ItemTexturePanel.GetComponent<Image>();
 
@@ -47,6 +45,13 @@ namespace DTInventory.MonoBehaviours
             var itemBehaviour = istantiatedGameObject.GetComponent<ItemBehaviour>();
             itemBehaviour.SetItemAmount(Item.Quantity);
             Destroy(gameObject);
+        }
+
+        internal void SetItemAmount(int newAmount)
+        {
+            var itemQuantityText = ItemQuantityPanel.GetComponent<Text>();
+            itemQuantityText.text = newAmount.ToString();
+            Item.Quantity = newAmount;
         }
     }
 }

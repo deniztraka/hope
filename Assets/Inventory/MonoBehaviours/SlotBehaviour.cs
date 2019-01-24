@@ -111,5 +111,11 @@ namespace DTInventory.MonoBehaviours
             var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
             return slotItemBehaviour.Item;
         }
+
+        internal void SetItemAmount(int newAmount)
+        {
+            var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
+            slotItemBehaviour.SetItemAmount(newAmount);
+        }
     }
 }

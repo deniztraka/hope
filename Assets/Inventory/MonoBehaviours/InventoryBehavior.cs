@@ -7,6 +7,7 @@ using UnityEngine.Events;
 using DTInventory.ScriptableObjects;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using DTInventory.UI;
 
 namespace DTInventory.MonoBehaviours
 {
@@ -18,6 +19,7 @@ namespace DTInventory.MonoBehaviours
         private int sizeY;
 
         private bool isInitialized;
+
 
 
         public bool IsOpened;
@@ -41,11 +43,11 @@ namespace DTInventory.MonoBehaviours
 
         internal void LoadInventory()
         {
-            
+
             var playerObj = GameObject.FindGameObjectWithTag("Player");
             var player = playerObj.GetComponent<Player>();
 
-            InventoryDataModel = player.PlayerDataModel.InventoryDataModel;   
+            InventoryDataModel = player.PlayerDataModel.InventoryDataModel;
 
             if (InventoryDataModel == null)
             {
@@ -96,7 +98,7 @@ namespace DTInventory.MonoBehaviours
                     OnInventorySizeChanged();
                 }
             }
-        }        
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -114,11 +116,12 @@ namespace DTInventory.MonoBehaviours
 
         public void Init()
         {
-            if(isInitialized){
+            if (isInitialized)
+            {
                 return;
-            }          
-            
-                       
+            }
+
+
 
             SlotGrid = new GameObject[SizeX][];
             OnInventorySizeChanged += InventorySizeChanged;
@@ -139,6 +142,11 @@ namespace DTInventory.MonoBehaviours
             isInitialized = true;
         }
 
+        internal void SetSelectedItemAmount(int newAmount)
+        {
+            var selectedSlot = GetSelectedSlot();
+            selectedSlot.SetItemAmount(newAmount);
+        }
         public void UpdateDataModel()
         {
             InventoryDataModel.Items = new List<Item>();
@@ -192,6 +200,33 @@ namespace DTInventory.MonoBehaviours
             }
         }
 
+        public void UnstackSelected()
+        {
+            var emptySlot = FindEmptySlot();
+            if (emptySlot == null)
+            {
+                return;
+            }
+
+            var selectedSlot = GetSelectedSlot();
+            if (selectedSlot == null)
+            {
+                return;
+            }
+
+            var item = selectedSlot.GetItem();
+            if (item == null || item.Quantity <= 1)
+            {
+                return;
+            }
+
+            var results = Resources.FindObjectsOfTypeAll<UnstackCanvasPopUp>();
+            var unstackCanvas = results[0].gameObject;
+            unstackCanvas.SetActive(true);
+            var unstackCanvasPopup = unstackCanvas.GetComponent<UnstackCanvasPopUp>();
+            unstackCanvasPopup.Init(item, this);
+        }
+
         private SlotBehaviour GetSelectedSlot()
         {
             for (int x = 0; x < SlotGrid.Length; x++)
@@ -232,14 +267,17 @@ namespace DTInventory.MonoBehaviours
             SizeY = y;
         }
 
-        public bool Add(Item item)
+        public bool Add(Item item, bool tryStacking = true)
         {
-            //Check for any available stack for this item
-            SlotItemBehaviour stackableSlotItem = CheckHasStackableItem(item);
-            if (stackableSlotItem)
+            if (tryStacking)
             {
-                stackableSlotItem.Stack(item);
-                return true;
+                //Check for any available stack for this item
+                SlotItemBehaviour stackableSlotItem = CheckHasStackableItem(item);
+                if (stackableSlotItem)
+                {
+                    stackableSlotItem.Stack(item);
+                    return true;
+                }
             }
 
             //check empty slot for this item

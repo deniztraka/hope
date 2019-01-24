@@ -77,7 +77,7 @@ public class SideScrollMap : MonoBehaviour
         levelDataModel.Position = player.PlayerDataModel.LastMapPosition;
         levelDataModel.IsVisitedBefore = true;
 
-        Debug.Log("generated objects count " + levelDataModel.GeneratedObjects.Count);
+        //Debug.Log("generated objects count " + levelDataModel.GeneratedObjects.Count);
     }
 
     private LevelGenerationDataModel GetLevelGenerationDataModel(SideScrollMapType sideScrollMapType)
@@ -95,7 +95,7 @@ public class SideScrollMap : MonoBehaviour
         {
             var alreadyGeneratedItemsForThisModel = levelDataModel.GeneratedObjects.FindAll(obj => obj.Type == probabilityDataModel.Type);
             var deltaCount = probabilityDataModel.Intensity - alreadyGeneratedItemsForThisModel.Count;
-            Debug.Log("deltacount " + deltaCount);
+            //Debug.Log("deltacount " + deltaCount);
             // trying to create game objects per amount of delta count
             for (int i = 0; i < deltaCount; i++)
             {

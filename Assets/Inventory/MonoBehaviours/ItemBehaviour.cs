@@ -36,7 +36,7 @@ namespace DTInventory.MonoBehaviours
 
         }
 
-        internal void SetItemAmount(int quantity)
+        public void SetItemAmount(int quantity)
         {
             Item.Quantity = quantity;
         }
