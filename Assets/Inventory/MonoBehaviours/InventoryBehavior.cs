@@ -56,7 +56,7 @@ namespace DTInventory.MonoBehaviours
 
             foreach (var item in InventoryDataModel.Items)
             {
-                Add(item,false);
+                Add(item, false);
             }
         }
 
@@ -145,7 +145,12 @@ namespace DTInventory.MonoBehaviours
         internal void SetSelectedItemAmount(int newAmount)
         {
             var selectedSlot = GetSelectedSlot();
-            selectedSlot.SetItemAmount(newAmount);
+            if (selectedSlot != null)
+            {
+                selectedSlot.SetItemAmount(newAmount);
+            }
+
+            UpdateSlots();
         }
         public void UpdateDataModel()
         {
@@ -287,7 +292,7 @@ namespace DTInventory.MonoBehaviours
                 return false;
             }
 
-            var addetSlotItem = emptySlot.AddItem(item);
+            var addetSlotItem = emptySlot.AddItem(item);            
 
             var desc = new DragAndDropCell.DropEventDescriptor();
             // Fill event descriptor
@@ -374,6 +379,9 @@ namespace DTInventory.MonoBehaviours
 
         void OnSimpleDragAndDropEvent(DragAndDropCell.DropEventDescriptor desc)
         {
+            UpdateSlots();
+
+            return;
             // Get control unit of source cell
             var sourceSheet = desc.sourceCell.GetComponentInParent<InventoryBehavior>();
             // Get control unit of destination cell
@@ -428,6 +436,10 @@ namespace DTInventory.MonoBehaviours
             var slotBehaviour = slotGameObject.GetComponent<SlotBehaviour>();
             var slotItem = slotGameObject.transform.GetComponentInChildren<SlotItemBehaviour>();
             slotBehaviour.HasItem = slotItem != null;
+
+            //Updating slot item icon
+            // var slotItemImage = slotItem.gameObject.GetComponent<Image>();
+            // slotItemImage.sprite = slotItem.Item.Icon;
 
             //Updating Selection of slot
             slotBehaviour.SetSelected(false);

@@ -51,10 +51,13 @@ namespace DTInventory.UI
             //prepare and add new item            
             var newItemToAdd = InventoryBehaviour.ItemDatabase.getItemByID(ItemToUnstack.Id);
             newItemToAdd.Quantity = (int)SelectedAmount;
+
+            InventoryBehaviour.SetSelectedItemAmount(amountLeft);
+
             InventoryBehaviour.Add(newItemToAdd, false);
 
             ////set amountLeft to selectedItem
-            InventoryBehaviour.SetSelectedItemAmount(amountLeft);
+            
             Cancel();
         }
 

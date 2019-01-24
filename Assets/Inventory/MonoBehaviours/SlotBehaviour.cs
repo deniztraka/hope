@@ -17,7 +17,7 @@ namespace DTInventory.MonoBehaviours
         public Sprite Sprite;
 
         public bool HasItem;
-        public GameObject SlotItemPrefab;        
+        public GameObject SlotItemPrefab;
         private ItemDatabase itemDatabase;
 
         private InventoryBehavior InventoryBehavior;
@@ -43,7 +43,7 @@ namespace DTInventory.MonoBehaviours
                 return;
             }
 
-             var slotItem = transform.GetComponentInChildren<SlotItemBehaviour>();
+            var slotItem = transform.GetComponentInChildren<SlotItemBehaviour>();
 
             IsSelected = !IsSelected;
             SetSelected(IsSelected);
@@ -52,7 +52,9 @@ namespace DTInventory.MonoBehaviours
             if (IsSelected && slotItem.Item.Quantity > 1)
             {
                 InventoryBehavior.UnstackButton.interactable = IsSelected;
-            }else {
+            }
+            else
+            {
                 InventoryBehavior.UnstackButton.interactable = false;
             }
         }
@@ -61,13 +63,17 @@ namespace DTInventory.MonoBehaviours
         {
             var slotItemBehaviour = slotItem.GetComponent<SlotItemBehaviour>();
             slotItemBehaviour.Item = item;
-             
+
             var dbItem = InventoryBehavior.ItemDatabase.getItemByID(item.Id);
 
             slotItemBehaviour.SetUI(dbItem.Icon);
+
+            
+
         }
 
-        public void DropItem(){
+        public void DropItem()
+        {
             var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
             slotItemBehaviour.DropItem();
             HasItem = false;
@@ -78,7 +84,8 @@ namespace DTInventory.MonoBehaviours
         {
             if (item != null)
             {
-                if(InventoryBehavior == null){
+                if (InventoryBehavior == null)
+                {
                     InventoryBehavior = gameObject.GetComponentInParent<InventoryBehavior>();
                 }
                 var itemDatabase = InventoryBehavior.ItemDatabase;
@@ -116,6 +123,13 @@ namespace DTInventory.MonoBehaviours
         {
             var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
             slotItemBehaviour.SetItemAmount(newAmount);
+        }
+
+        internal void RemoveItem()
+        {
+            HasItem = false;
+            var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
+            Destroy(slotItemBehaviour.gameObject);
         }
     }
 }

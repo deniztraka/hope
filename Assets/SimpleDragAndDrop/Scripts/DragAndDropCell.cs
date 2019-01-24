@@ -189,8 +189,13 @@ public class DragAndDropCell : MonoBehaviour, IDropHandler
                     Destroy(item.gameObject);                               // Destroy it
                 }
             }
-            UpdateMyItem();
-            UpdateBackgroundState();
+            if (gameObject != null)
+            {
+
+                UpdateMyItem();
+                UpdateBackgroundState();
+
+            }
             sourceCell.UpdateMyItem();
             sourceCell.UpdateBackgroundState();
         }
@@ -220,7 +225,7 @@ public class DragAndDropCell : MonoBehaviour, IDropHandler
             item.transform.SetParent(transform.Find("SlotWrapperCanvas").Find("SlotWrapperPanel"), false);
             item.transform.localPosition = Vector3.zero;
             item.MakeRaycast(true);
-            myDadItem = item;            
+            myDadItem = item;
         }
         UpdateBackgroundState();
     }
@@ -300,7 +305,10 @@ public class DragAndDropCell : MonoBehaviour, IDropHandler
             yield return new WaitForEndOfFrame();
         }
         desc.triggerType = TriggerType.DropEventEnd;
+
         SendNotification(desc);
+
+
     }
 
     /// <summary>
@@ -321,7 +329,7 @@ public class DragAndDropCell : MonoBehaviour, IDropHandler
     /// </summary>
     public void UpdateMyItem()
     {
-        myDadItem = GetComponentInChildren<DragAndDropItem>();        
+        myDadItem = GetComponentInChildren<DragAndDropItem>();
     }
 
     /// <summary>
@@ -365,30 +373,109 @@ public class DragAndDropCell : MonoBehaviour, IDropHandler
     /// </summary>
     /// <param name="firstCell"> Cell </param>
     /// <param name="secondCell"> Cell </param>
-    public void SwapItems(DragAndDropCell firstCell, DragAndDropCell secondCell)
+    public SwapType SwapItems(DragAndDropCell firstCell, DragAndDropCell secondCell)
     {
+        var swapType = SwapType.None;
+
         if ((firstCell != null) && (secondCell != null))
         {
-            DragAndDropItem firstItem = firstCell.GetItem();                // Get item from first cell
-            DragAndDropItem secondItem = secondCell.GetItem();              // Get item from second cell
-                                                                            // Swap items
-            if (firstItem != null)
+            DragAndDropItem firstDragAndDropItem = firstCell.GetItem();                // Get item from first cell
+            DragAndDropItem secondDragAndDropItem = secondCell.GetItem();              // Get item from second cell
+
+            //try stack
+            var isStacked = false;
+            if (firstDragAndDropItem != null && secondDragAndDropItem != null)
             {
-                firstItem.transform.SetParent(secondCell.transform, false);
-                firstItem.transform.localPosition = Vector3.zero;
-                firstItem.MakeRaycast(true);
+                var firstItemBehaviour = firstDragAndDropItem.GetComponent<SlotItemBehaviour>();
+                var secondItemBehaviour = secondDragAndDropItem.GetComponent<SlotItemBehaviour>();
+                if (firstItemBehaviour != null && secondItemBehaviour != null)
+                {
+                    if (firstItemBehaviour.Item.Id.Equals(secondItemBehaviour.Item.Id))
+                    {
+                        if (secondItemBehaviour.Item.Quantity < secondItemBehaviour.Item.MaxStack)
+                        {
+                            //requirements match for stack we can stack here 
+                            var stackableAmount = secondItemBehaviour.Item.MaxStack - secondItemBehaviour.Item.Quantity;
+
+                            if (firstItemBehaviour.Item.Quantity <= stackableAmount)
+                            {
+                                // all of them will be stacked to second cell
+                                var inventoryBehaviour = secondItemBehaviour.GetComponentInParent<InventoryBehavior>();
+                                var itemToStack = inventoryBehaviour.ItemDatabase.getItemByID(firstItemBehaviour.Item.Id);
+                                itemToStack.Quantity = firstItemBehaviour.Item.Quantity;
+                                secondItemBehaviour.Stack(itemToStack);
+
+
+
+                                //remove first Item slot
+                                var firstItemSlotBehaviour = firstItemBehaviour.GetComponentInParent<SlotBehaviour>();
+                                firstItemSlotBehaviour.RemoveItem();
+
+                                swapType = SwapType.FullyStacked;
+
+                            }
+                            else
+                            {
+                                var initialFirstAmount = firstItemBehaviour.Item.Quantity;
+                                var initialSecondAmount = secondItemBehaviour.Item.Quantity;
+
+                                secondItemBehaviour.Item.Quantity = firstItemBehaviour.Item.MaxStack;
+                                firstItemBehaviour.Item.Quantity = initialSecondAmount - (secondItemBehaviour.Item.MaxStack - initialFirstAmount);
+
+                                firstItemBehaviour.SetItemAmount(firstItemBehaviour.Item.Quantity);
+                                secondItemBehaviour.SetItemAmount(secondItemBehaviour.Item.Quantity);
+
+                                if (firstItemBehaviour.Item.Quantity == 0)
+                                {
+                                    var firstItemSlotBehaviour = firstItemBehaviour.GetComponentInParent<SlotBehaviour>();
+                                    firstItemSlotBehaviour.RemoveItem();
+                                }
+
+                                swapType = SwapType.PartiallyStacked;
+                            }
+
+
+                            isStacked = true;
+                            //stacking process is done here
+                        }
+                    }
+                }
             }
-            if (secondItem != null)
+
+            if (!isStacked)
             {
-                secondItem.transform.SetParent(firstCell.transform, false);
-                secondItem.transform.localPosition = Vector3.zero;
-                secondItem.MakeRaycast(true);
+                // Swap items
+                if (firstDragAndDropItem != null)
+                {
+                    firstDragAndDropItem.transform.SetParent(secondCell.transform, false);
+                    firstDragAndDropItem.transform.localPosition = Vector3.zero;
+                    firstDragAndDropItem.MakeRaycast(true);
+                }
+                if (secondDragAndDropItem != null)
+                {
+                    secondDragAndDropItem.transform.SetParent(firstCell.transform, false);
+                    secondDragAndDropItem.transform.localPosition = Vector3.zero;
+                    secondDragAndDropItem.MakeRaycast(true);
+                }
+
+                swapType = SwapType.Swapped;
             }
-            // Update states
+
             firstCell.UpdateMyItem();
-            secondCell.UpdateMyItem();
             firstCell.UpdateBackgroundState();
+
+            secondCell.UpdateMyItem();
             secondCell.UpdateBackgroundState();
+
         }
+        return swapType;
     }
+}
+
+public enum SwapType
+{
+    None,
+    FullyStacked,
+    PartiallyStacked,
+    Swapped
 }

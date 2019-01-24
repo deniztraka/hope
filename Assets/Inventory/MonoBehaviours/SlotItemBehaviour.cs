@@ -35,6 +35,10 @@ namespace DTInventory.MonoBehaviours
             var rectTransform = gameObject.GetComponent<RectTransform>();
             rectTransform.anchoredPosition3D = new Vector3(0f, 0f, 0f);
             rectTransform.anchoredPosition = new Vector2(0f, 0f);
+
+            var addetSlotBehaviour = gameObject.GetComponentInParent<SlotItemBehaviour>();
+            var slotItemImg = addetSlotBehaviour.gameObject.GetComponent<Image>();
+            slotItemImg.sprite = icon;
         }
 
         internal void DropItem()
