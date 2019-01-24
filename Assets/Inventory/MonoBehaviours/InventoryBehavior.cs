@@ -56,7 +56,7 @@ namespace DTInventory.MonoBehaviours
 
             foreach (var item in InventoryDataModel.Items)
             {
-                Add(item);
+                Add(item,false);
             }
         }
 
