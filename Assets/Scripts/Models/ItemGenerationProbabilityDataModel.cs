@@ -7,5 +7,10 @@ using UnityEngine;
 public class ItemGenerationProbabilityDataModel
 {
     public List<GameObject> GameObjectVariants;
+    public GameObjectType Type;
     public float Probability;
+
+    public float RegenerateProbabilty;
+
+    public int Intensity;
 }

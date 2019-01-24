@@ -8,4 +8,6 @@ public class GeneratedItemDataModel {
     public string Prefab;
 
     public Vector3 Position;
+
+    public GameObjectType Type;
 }

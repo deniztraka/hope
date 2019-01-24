@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 224561425}
   - component: {fileID: 7153038860866395416}
   - component: {fileID: 1647018500182227577}
+  - component: {fileID: 3445987921973412819}
   m_Layer: 11
   m_Name: pinetree0
   m_TagString: Untagged
@@ -341,3 +342,16 @@ MonoBehaviour:
   - DropRate: 0.8
     Object: {fileID: 666066282010417482, guid: e496560a84f358a49a402da55f11e512, type: 3}
     Quantity: 2
+--- !u!114 &3445987921973412819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329632252280550621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1dc37ab88a0a484182bb3b6b8859f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameObjectType: 0

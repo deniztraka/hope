@@ -18,8 +18,10 @@ MonoBehaviour:
     - {fileID: 722441725177680330, guid: fa8d3a04147762e4eb9c11238389a221, type: 3}
     - {fileID: 1007433112656698226, guid: 124fab453705a3647bf32b84e20cf734, type: 3}
     - {fileID: 6951258646913625678, guid: 1f95d66dc8c59b34186a557d9f9c120e, type: 3}
-    Probability: 30
-  IntensityLevel: 50
+    Type: 0
+    Probability: 0.75
+    RegenerateProbabilty: 0.175
+    Intensity: 50
   LevelStaticObject: {fileID: 412531582114592972, guid: 0cb9e92092bc40e4e9acfa0bcceea865,
     type: 3}
   LeftEdge: -108
