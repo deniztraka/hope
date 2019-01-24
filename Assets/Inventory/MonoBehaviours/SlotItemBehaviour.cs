@@ -21,13 +21,15 @@ namespace DTInventory.MonoBehaviours
             itemQuantityText.text = Item.Quantity.ToString();
         }
 
-        internal void SetUI()
+        internal void SetUI(Sprite icon)
         {
             var itemQuantityText = ItemQuantityPanel.GetComponent<Text>();
             itemQuantityText.text = Item.Quantity.ToString();
 
+
             var itemImage = ItemTexturePanel.GetComponent<Image>();
-            itemImage.sprite = Item.Icon;
+
+            itemImage.sprite = icon;
             var tempColor = itemImage.color;
             tempColor.a = 1f;
             itemImage.color = tempColor;

@@ -61,7 +61,10 @@ namespace DTInventory.MonoBehaviours
         {
             var slotItemBehaviour = slotItem.GetComponent<SlotItemBehaviour>();
             slotItemBehaviour.Item = item;
-            slotItemBehaviour.SetUI();
+             
+            var dbItem = InventoryBehavior.ItemDatabase.getItemByID(item.Id);
+
+            slotItemBehaviour.SetUI(dbItem.Icon);
         }
 
         public void DropItem(){

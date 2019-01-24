@@ -23,6 +23,7 @@ public class LevelDataModel : SaveDataModel
         Position = levelDataModel.Position;
         LevelType = levelDataModel.LevelType;
         GeneratedObjects = levelDataModel.GeneratedObjects;
+        IsVisitedBefore = levelDataModel.IsVisitedBefore;
     }
 
     public override ScriptableObject OnLoad()
