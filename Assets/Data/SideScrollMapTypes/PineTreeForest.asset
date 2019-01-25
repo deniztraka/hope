@@ -28,6 +28,12 @@ MonoBehaviour:
     Probability: 0.3
     RegenerateProbabilty: 0.1
     Intensity: 30
+  - GameObjectVariants:
+    - {fileID: 1376126904295559050, guid: c06d94c513c26aa4ab403cf98edb1f86, type: 3}
+    Type: 1
+    Probability: 0.3
+    RegenerateProbabilty: 0.1
+    Intensity: 25
   LevelStaticObject: {fileID: 412531582114592972, guid: 0cb9e92092bc40e4e9acfa0bcceea865,
     type: 3}
   LeftEdge: -108
