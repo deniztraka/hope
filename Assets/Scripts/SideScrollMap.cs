@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using DTObjects.Statics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -60,7 +61,6 @@ public class SideScrollMap : MonoBehaviour
         var levelDataModel = GameManager.Instance.Savables.Find(obj => obj.GetType() == typeof(LevelDataModel) && obj.name == string.Format("Level_{0}-{1}", lastMapPosition.x, lastMapPosition.y)) as LevelDataModel;
         var objectsContainer = GameObject.Find("ObjectsContainer");
         levelDataModel.GeneratedObjects = new List<GeneratedItemDataModel>();
-
 
         foreach (Transform child in objectsContainer.transform)
         {

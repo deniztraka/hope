@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DTComponents;
 using DTInventory.MonoBehaviours;
 using UnityEngine;
 
@@ -66,10 +67,10 @@ public class Tree : MonoBehaviour, IDestructable
         }
 
         var interactableComponent = GetComponent<Interactable>();
-        if (!interactableComponent.IsCloseEnough())
-        {
-            return;
-        }
+        // if (!interactableComponent.IsCloseEnough())
+        // {
+        //     return;
+        // }
 
         healthAmount -= damageAmount;
 

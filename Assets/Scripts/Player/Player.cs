@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.Events;
 using DTInventory.MonoBehaviours;
 using DTInventory.Models;
+using System;
 
 public class Player : MonoBehaviour
 {
     public PlayerDataModel PlayerDataModel;
     public InventoryBehavior InventoryBehaviour;
+
+    public int Damage = 20;
 
     void Awake()
     {
@@ -24,6 +27,11 @@ public class Player : MonoBehaviour
     {
         transform.position = PlayerDataModel.PlayerLastPosition;        
         
+    }
+
+    internal int GetCurrentDamage()
+    {
+        return Damage;
     }
 
     public void OnBeforeSave()

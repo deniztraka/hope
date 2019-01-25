@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IDestructable
+namespace DTInterfaces
 {
-    float HealthAmount{
-        get;
-        set;
-    }
+    public interface IDestructable
+    {
+        float HealthAmount
+        {
+            get;
+            set;
+        }
 
-    bool IsDead{
-        get;
-        set;
-    }
+        bool IsDead
+        {
+            get;
+            set;
+        }
 
-    void TakeDamage(float damageAmount);
+        void TakeDamage(float damageAmount);
+    }
 }
+
+

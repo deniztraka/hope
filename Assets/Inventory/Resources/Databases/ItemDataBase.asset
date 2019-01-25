@@ -33,3 +33,13 @@ MonoBehaviour:
     MaxStack: 50
     Quantity: 10
     Icon: {fileID: 21300000, guid: 1afbaa9a50ba730439ed00ca4f70f66b, type: 3}
+  - Id: 96d80179-c1f5-4fad-b246-b1a12a2c6586
+    Name: Carrot
+    Description: Carrot
+    Type: 2
+    GameObject: {fileID: 2681384347026260596, guid: c61c9123ceca6a54ca6f1696b45150dd,
+      type: 3}
+    Weight: 0.2
+    MaxStack: 50
+    Quantity: 1
+    Icon: {fileID: 21300000, guid: c82a8c152c940b942b005b98b63825c1, type: 3}
