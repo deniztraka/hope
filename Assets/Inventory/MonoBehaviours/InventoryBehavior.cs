@@ -38,6 +38,8 @@ namespace DTInventory.MonoBehaviours
 
         public Button UnstackButton;
 
+        public Button UseButton;
+
         public delegate void InventorySizeChangedEvent();
         public event InventorySizeChangedEvent OnInventorySizeChanged;
 
