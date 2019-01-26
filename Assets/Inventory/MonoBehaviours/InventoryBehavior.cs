@@ -20,7 +20,7 @@ namespace DTInventory.MonoBehaviours
 
         private bool isInitialized;
 
-
+        public Scrollbar InventoryScrollbar;
 
         public bool IsOpened;
 
@@ -176,7 +176,8 @@ namespace DTInventory.MonoBehaviours
         {
             var wrapperContentRectTransform = SlotsWrapper.GetComponent<RectTransform>();
 
-            wrapperContentRectTransform.sizeDelta = new Vector2(wrapperContentRectTransform.sizeDelta.x, (SizeX * SizeY / 4) * 62);
+            //wrapperContentRectTransform.sizeDelta = new Vector2(wrapperContentRectTransform.sizeDelta.x, ((SizeX * SizeY / SizeX) * 41)+60);
+            wrapperContentRectTransform.sizeDelta = new Vector2(wrapperContentRectTransform.sizeDelta.x, SizeY * 44);
         }
 
         internal void UnselectSlotExcept(SlotBehaviour slotBehaviour)
@@ -260,6 +261,7 @@ namespace DTInventory.MonoBehaviours
             else
             {
                 gameObject.transform.localScale = new Vector3(1, 1, 1);
+                InventoryScrollbar.value = 1;
                 //gameObject.SetActive(true);
             }
 
@@ -292,7 +294,7 @@ namespace DTInventory.MonoBehaviours
                 return false;
             }
 
-            var addetSlotItem = emptySlot.AddItem(item);            
+            var addetSlotItem = emptySlot.AddItem(item);
 
             var desc = new DragAndDropCell.DropEventDescriptor();
             // Fill event descriptor
