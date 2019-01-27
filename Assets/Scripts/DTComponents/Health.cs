@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace DTComponents
 {
-    public class Health : MonoBehaviour
+    public class Health : MonoBehaviour, IHealthComponent
     {
         public int MaxValue;
         public int CurrentValue;
@@ -26,6 +26,22 @@ namespace DTComponents
         private bool lockFlag;
 
         private bool deadPossible;
+
+        int IHealthComponent.MaxValue
+        {
+            get
+            {
+                return MaxValue;
+            }
+        }
+
+        int IHealthComponent.CurrentValue
+        {
+            get
+            {
+                return CurrentValue;
+            }
+        }
 
         void Start()
         {
