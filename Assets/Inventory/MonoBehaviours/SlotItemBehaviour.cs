@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DTComponents;
 using DTInventory.Models;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,7 +24,7 @@ namespace DTInventory.MonoBehaviours
 
         internal void SetUI(Sprite icon)
         {
-            SetItemAmount(Item.Quantity);           
+            SetItemAmount(Item.Quantity);
 
             var itemImage = ItemTexturePanel.GetComponent<Image>();
 
@@ -49,6 +50,24 @@ namespace DTInventory.MonoBehaviours
             var itemBehaviour = istantiatedGameObject.GetComponent<ItemBehaviour>();
             itemBehaviour.SetItemAmount(Item.Quantity);
             Destroy(gameObject);
+        }
+
+        internal bool UseItem()
+        {
+            var used = false;
+
+            var itemBehaviour = Item.GameObject.GetComponent<ItemBehaviour>();
+            var consumable = itemBehaviour.GetComponent<Consumable>();
+
+            if (Item.Quantity > 0 && consumable != null)
+            {
+                itemBehaviour.Use();
+                Item.Quantity--;
+                SetItemAmount(Item.Quantity);
+                used = true;
+            }            
+
+            return used;
         }
 
         internal void SetItemAmount(int newAmount)

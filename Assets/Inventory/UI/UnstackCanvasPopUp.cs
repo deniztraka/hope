@@ -56,7 +56,7 @@ namespace DTInventory.UI
 
             InventoryBehaviour.Add(newItemToAdd, false);
 
-            ////set amountLeft to selectedItem
+            InventoryBehaviour.DisableButtons();
             
             Cancel();
         }

@@ -139,5 +139,10 @@ namespace DTComponents
                 OnDeathEvent();
             }
         }
+
+        public void Modify(int value)
+        {
+            TakeDamage(-value);
+        }
     }
 }

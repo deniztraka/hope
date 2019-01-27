@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8210044695472327466}
   - component: {fileID: 103724116004300497}
   - component: {fileID: 4572101494402891466}
+  - component: {fileID: 8893716836526224829}
   m_Layer: 11
   m_Name: carrot
   m_TagString: Untagged
@@ -298,3 +299,20 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!114 &8893716836526224829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2681384347026260596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f8a316e2dfc1f4d8997d744624df13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Modifiers:
+  - Name: Health
+    Value: 5
+  - Name: Toughness
+    Value: 10

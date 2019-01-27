@@ -111,8 +111,8 @@ namespace DTInventory.MonoBehaviours
 
             DropButton.interactable = false;
             UnstackButton.interactable = false;
+            UseButton.interactable = false;
 
-            //FIX THIS
             LoadInventory();
         }
 
@@ -197,6 +197,25 @@ namespace DTInventory.MonoBehaviours
             }
         }
 
+        public void UseSelected()
+        {
+            var selectedSlot = GetSelectedSlot();
+            if (selectedSlot != null)
+            {
+                var isUsed = selectedSlot.UseItem();
+                if(!selectedSlot.HasItem){
+                    UseButton.interactable = false;
+                }
+            }
+        }
+
+        public void DisableButtons()
+        {
+            UseButton.interactable = false;
+            DropButton.interactable = false;
+            UnstackButton.interactable = false;
+        }
+
         public void DropSelected()
         {
             var selectedSlot = GetSelectedSlot();
@@ -205,6 +224,7 @@ namespace DTInventory.MonoBehaviours
                 selectedSlot.DropItem();
                 //UpdateSlots();
                 selectedSlot.SetSelected(false);
+                DisableButtons();
             }
         }
 
@@ -384,6 +404,7 @@ namespace DTInventory.MonoBehaviours
         void OnSimpleDragAndDropEvent(DragAndDropCell.DropEventDescriptor desc)
         {
             UpdateSlots();
+            DisableButtons();
 
             return;
             // Get control unit of source cell
