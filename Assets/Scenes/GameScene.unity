@@ -2371,7 +2371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1539455941, guid: c66be486906d7504e8e786cb06f34f27, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1539455941, guid: c66be486906d7504e8e786cb06f34f27, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2396,6 +2396,21 @@ PrefabInstance:
     - target: {fileID: 1539455941, guid: c66be486906d7504e8e786cb06f34f27, type: 3}
       propertyPath: m_Pivot.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 949453373037987231, guid: c66be486906d7504e8e786cb06f34f27,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 949453373037987231, guid: c66be486906d7504e8e786cb06f34f27,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.90012634
+      objectReference: {fileID: 0}
+    - target: {fileID: 949453373037987231, guid: c66be486906d7504e8e786cb06f34f27,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.6273585
       objectReference: {fileID: 0}
     - target: {fileID: 8826493089613064030, guid: c66be486906d7504e8e786cb06f34f27,
         type: 3}
@@ -2951,12 +2966,12 @@ PrefabInstance:
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -87609.76
+      value: -102467.5
       objectReference: {fileID: 0}
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 26548.428
+      value: 29377.5
       objectReference: {fileID: 0}
     - target: {fileID: 8585576158099552197, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
@@ -3331,7 +3346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1539455941, guid: c66be486906d7504e8e786cb06f34f27, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1539455941, guid: c66be486906d7504e8e786cb06f34f27, type: 3}
       propertyPath: m_AnchorMin.x
@@ -3814,7 +3829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1539455941, guid: c66be486906d7504e8e786cb06f34f27, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1539455941, guid: c66be486906d7504e8e786cb06f34f27, type: 3}
       propertyPath: m_AnchorMin.x
