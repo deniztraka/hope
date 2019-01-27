@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,54 +7,119 @@ namespace DTComponents
 {
     public class Health : MonoBehaviour
     {
-        public int MaxHealth;
-        public int CurrentHealth;
+        public int MaxValue;
+        public int CurrentValue;
+        public bool IsModifyOverTimeEnabled;
+        public float Frequency;
+        public int ModifyValue;
 
-        public delegate void DieHandler ();
-        public event DieHandler OnDeathEvent;
+        public delegate void DamageHandler();
+        public event DamageHandler OnDeathEvent;
+        public event DamageHandler OnAfterTookDamageEvent;
+        public event DamageHandler OnBeforeTookDamageEvent;
+        public event DamageHandler OnValueZeroOrBelowOnChangeEvent;
 
-        public delegate void DamageHandler ();
-        public event DamageHandler OnAfterTookDamage;
-        public event DamageHandler OnBeforeTookDamage;
+        private Toughness toughness;
+        private Energy energy;
 
         private bool isDead;
+        private bool lockFlag;
+
+        private bool deadPossible;
 
         void Start()
         {
-            CurrentHealth = MaxHealth;            
+            CurrentValue = MaxValue;
+            toughness = GetComponent<Toughness>();
+            energy = GetComponent<Energy>();
+            deadPossible = !IsModifyOverTimeEnabled;
+
+            //health ise toughness check et
+            if (typeof(Health) == this.GetType() && toughness && toughness != this)
+            {
+                toughness.OnValueZeroOrBelowOnChangeEvent += new Health.DamageHandler(RelatedToughnessValueChangedToZeroOrBelow);
+            }
+
+            //health ise energy check et
+            if (typeof(Health) == this.GetType() && energy && energy != this)
+            {
+                energy.OnValueZeroOrBelowOnChangeEvent += new Health.DamageHandler(RelatedEnergyValueChangedToZeroOrBelow);
+            }
         }
 
-        public void TakeDamage()
+        public void RelatedToughnessValueChangedToZeroOrBelow()
         {
-            if (isDead || CurrentHealth <= 0)
+            Debug.Log("getting damage from toughness");
+            TakeDamage(toughness.DecreaseHealthValueAmount);
+        }
+
+        public void RelatedEnergyValueChangedToZeroOrBelow()
+        {
+            Debug.Log("getting damage from energy");
+            TakeDamage(energy.DecreaseHealthValueAmount);
+        }
+
+        void FixedUpdate()
+        {
+            if (IsModifyOverTimeEnabled && !lockFlag)
+            {
+                lockFlag = true;
+                StartCoroutine(Modify());
+            }
+        }
+
+        private IEnumerator Modify()
+        {
+            yield return new WaitForSeconds(Frequency);
+
+            TakeDamage(-ModifyValue);
+
+            lockFlag = false;
+        }
+
+        public void TakeDamage(int? amount)
+        {
+            if (CurrentValue <= 0)
+            {
+                OnValueZeroOrBelowOnChange();
+            }
+
+            if (isDead)
             {
                 return;
             }
 
-            
-
-            if(OnBeforeTookDamage != null){
-                OnBeforeTookDamage();
+            if (OnBeforeTookDamageEvent != null)
+            {
+                OnBeforeTookDamageEvent();
             }
 
-            var playerObj = GameObject.FindGameObjectWithTag("Player");
-            var player = playerObj.GetComponent<Player>();
-            var damageAmount = player.GetCurrentDamage();
+            CurrentValue -= amount ?? ModifyValue;
+            CurrentValue = Mathf.Clamp(CurrentValue, 0, MaxValue);
 
-            CurrentHealth -= damageAmount;
-
-            if(OnAfterTookDamage != null){
-                OnAfterTookDamage();
+            if (OnAfterTookDamageEvent != null)
+            {
+                OnAfterTookDamageEvent();
             }
 
-            if(CurrentHealth <= 0){
+            if (CurrentValue <= 0)
+            {
                 OnDeath();
             }
         }
+        private void OnValueZeroOrBelowOnChange()
+        {
+            if (OnValueZeroOrBelowOnChangeEvent != null)
+            {
+                OnValueZeroOrBelowOnChangeEvent();
+            }
+        }
+
         private void OnDeath()
         {
-            isDead = true;
-            if(OnDeathEvent != null){
+            isDead = deadPossible;
+            if (isDead && OnDeathEvent != null)
+            {
                 OnDeathEvent();
             }
         }

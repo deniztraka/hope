@@ -24,7 +24,7 @@ namespace DTObjects.Statics
             interactionBehaviour = GetComponent<Interactable>();
             if (healthBehaviour)
             {
-                healthBehaviour.OnDeathEvent += new Health.DieHandler(OnDeath);
+                healthBehaviour.OnDeathEvent += new Health.DamageHandler(OnDeath);
             }
 
             if (interactionBehaviour)
@@ -35,7 +35,7 @@ namespace DTObjects.Statics
 
         protected virtual void OnClick()
         {            
-            healthBehaviour.TakeDamage();
+            healthBehaviour.TakeDamage(20);
         }
 
         protected virtual void OnDeath()

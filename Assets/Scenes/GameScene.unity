@@ -789,6 +789,9 @@ GameObject:
   - component: {fileID: 467350208}
   - component: {fileID: 467350207}
   - component: {fileID: 467350211}
+  - component: {fileID: 467350212}
+  - component: {fileID: 467350213}
+  - component: {fileID: 467350214}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -985,6 +988,59 @@ MonoBehaviour:
   PlayerDataModel: {fileID: 11400000, guid: 6daa6a84dd1c9b3408cc0c95d679a36f, type: 2}
   InventoryBehaviour: {fileID: 567490536}
   Damage: 20
+--- !u!114 &467350212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467350203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4452a9451f61c43a59330573278c27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxValue: 100
+  CurrentValue: 100
+  IsModifyOverTimeEnabled: 0
+  Frequency: 0
+  ModifyValue: 0
+--- !u!114 &467350213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467350203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb182e8b8207ee4dbaae52de5d47417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxValue: 100
+  CurrentValue: 100
+  IsModifyOverTimeEnabled: 1
+  Frequency: 1
+  ModifyValue: -1
+  DecreaseHealthValueAmount: 1
+--- !u!114 &467350214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467350203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6178fe0346be2b42a695132ff4975bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxValue: 100
+  CurrentValue: 100
+  IsModifyOverTimeEnabled: 1
+  Frequency: 5
+  ModifyValue: -1
+  DecreaseHealthValueAmount: 1
 --- !u!1 &505816965
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,7 +2439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1270726059
 Transform:
   m_ObjectHideFlags: 0
@@ -2695,6 +2751,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory
       objectReference: {fileID: 0}
+    - target: {fileID: 567490536, guid: fac55b3d0f413ea429096493f56039dd, type: 3}
+      propertyPath: sizeY
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1397278957, guid: fac55b3d0f413ea429096493f56039dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2739,9 +2799,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 567490536, guid: fac55b3d0f413ea429096493f56039dd, type: 3}
-      propertyPath: sizeY
-      value: 10
+    - target: {fileID: 1397278957, guid: fac55b3d0f413ea429096493f56039dd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397278957, guid: fac55b3d0f413ea429096493f56039dd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397278957, guid: fac55b3d0f413ea429096493f56039dd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6206673616157892101, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
@@ -2766,12 +2834,12 @@ PrefabInstance:
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -807.73004
+      value: -19904.795
       objectReference: {fileID: 0}
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 70.00003
+      value: 11291.567
       objectReference: {fileID: 0}
     - target: {fileID: 8585576158099552197, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
