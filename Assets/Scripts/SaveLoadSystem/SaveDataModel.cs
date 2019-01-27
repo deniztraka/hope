@@ -29,9 +29,11 @@ public abstract class SaveDataModel : ScriptableObject, ISavable
 
     public void OnSave()
     {        
+        var path = Application.persistentDataPath + SavePath;
+        Debug.Log(path + " | " + this.name);
         var jsonData = JsonUtility.ToJson(this);
         var bf = new BinaryFormatter();
-        using (var file = File.Open(Application.persistentDataPath + savePath, FileMode.OpenOrCreate, FileAccess.Write))
+        using (var file = File.Open(path, FileMode.OpenOrCreate, FileAccess.Write))
         {
             bf.Serialize(file, jsonData);
         }

@@ -11,32 +11,23 @@ namespace DTInventory.MonoBehaviours
 {
     public class SlotBehaviour : MonoBehaviour
     {
-        public string ItemId;
-        public string ItemName;
-        public Image ItemTexturePanel;
-
-        public Text ItemQuantityPanel;
-
         public bool IsSelected;
 
         public Sprite SelectedSprite;
         public Sprite Sprite;
 
         public bool HasItem;
-
-        public Item Item;
+        public GameObject SlotItemPrefab;
         private ItemDatabase itemDatabase;
+
+        private InventoryBehavior InventoryBehavior;
 
 
         // Start is called before the first frame update
         void Start()
         {
-            if (String.IsNullOrEmpty(ItemId))
-            {
-                return;
-            }
+            InventoryBehavior = gameObject.GetComponentInParent<InventoryBehavior>();
 
-            SetItem(ItemId);
         }
 
         // Update is called once per frame
@@ -52,57 +43,93 @@ namespace DTInventory.MonoBehaviours
                 return;
             }
 
+            var slotItem = transform.GetComponentInChildren<SlotItemBehaviour>();
+
+            IsSelected = !IsSelected;
+            SetSelected(IsSelected);
+            InventoryBehavior.DropButton.interactable = IsSelected;
+
+            if (IsSelected && slotItem.Item.Quantity > 1)
+            {
+                InventoryBehavior.UnstackButton.interactable = IsSelected;
+            }
+            else
+            {
+                InventoryBehavior.UnstackButton.interactable = false;
+            }
+        }
+
+        private void SetItem(Item item, GameObject slotItem)
+        {
+            var slotItemBehaviour = slotItem.GetComponent<SlotItemBehaviour>();
+            slotItemBehaviour.Item = item;
+
+            var dbItem = InventoryBehavior.ItemDatabase.getItemByID(item.Id);
+
+            slotItemBehaviour.SetUI(dbItem.Icon);
+
+            
+
+        }
+
+        public void DropItem()
+        {
+            var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
+            slotItemBehaviour.DropItem();
+            HasItem = false;
+            ToggleSelect();
+        }
+
+        internal GameObject AddItem(Item item)
+        {
+            if (item != null)
+            {
+                if (InventoryBehavior == null)
+                {
+                    InventoryBehavior = gameObject.GetComponentInParent<InventoryBehavior>();
+                }
+                var itemDatabase = InventoryBehavior.ItemDatabase;
+                var slotWrapperPanel = transform.Find("SlotWrapperCanvas").Find("SlotWrapperPanel");
+                var slotItem = Instantiate(SlotItemPrefab, new Vector3(0, 0, 0), Quaternion.identity, slotWrapperPanel);
+                SetItem(item, slotItem);
+                HasItem = true;
+                return slotItem;
+            }
+            return null;
+        }
+
+        internal void SetSelected(bool select)
+        {
             var slotWrapperPanelImage = transform.Find("SlotWrapperCanvas").Find("SlotWrapperPanel").GetComponent<Image>();
-            if (IsSelected)
+            if (!select)
             {
                 slotWrapperPanelImage.sprite = Sprite;
             }
             else
             {
                 slotWrapperPanelImage.sprite = SelectedSprite;
+                InventoryBehavior.UnselectSlotExcept(this);
             }
-            IsSelected = !IsSelected;
+            IsSelected = select;
         }
 
-        private bool SetItem(string itemId)
+        internal Item GetItem()
         {
-            ItemId = itemId;
-            var itemDatabase = gameObject.GetComponentInParent<InventoryBehavior>().ItemDatabase;
-            if (itemDatabase == null)
-            {
-                return false;
-            }
-
-            Item = itemDatabase.getItemByID(ItemId);
-            if (Item == null)
-            {
-                return false;
-            }
-
-            return true;
+            var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
+            return slotItemBehaviour.Item;
         }
 
-        internal void SetItem(Item item)
+        internal void SetItemAmount(int newAmount)
         {
-            if (SetItem(item.Id))
-            {
-                var itemImage = ItemTexturePanel.GetComponent<Image>(); ;
-                itemImage.sprite = item.Icon;
-                itemImage.color = Color.white;
-
-                var itemQuantityText = ItemQuantityPanel.GetComponent<Text>(); ;
-                itemQuantityText.text = item.Quantity.ToString();
-                HasItem = true;
-            }
+            var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
+            slotItemBehaviour.SetItemAmount(newAmount);
         }
 
-        internal void Stack(Item item)
+        internal void RemoveItem()
         {
-            Item.Quantity += item.Quantity;
-            var itemQuantityText = ItemQuantityPanel.GetComponent<Text>(); ;
-            itemQuantityText.text = Item.Quantity.ToString();
+            HasItem = false;
+            var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
+            Destroy(slotItemBehaviour.gameObject);
         }
-
-        
     }
 }

@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            return Application.persistentDataPath + "\\Save";
+            return Application.persistentDataPath + "/Save";
         }
     }
 
@@ -59,11 +59,12 @@ public class GameManager : MonoBehaviour
         PlayerDataModel.PlayerLastPosition = new Vector3(0f, -0.2183512f, -3f);
         PlayerDataModel.LastMapPosition = new Vector2(25,25);
         PlayerDataModel.SavePath = "/Save/Player/player.dat";
+        PlayerDataModel.InventoryDataModel = new DTInventory.Models.InventoryDataModel();
 
         FirstMapModel.IsVisitedBefore = false;
         FirstMapModel.SavePath = "/Save/Levels/Level_25-25.dat";
         FirstMapModel.Position = new Vector2(25,25);
-        FirstMapModel.GeneratedObjects = new List<GeneratedItemDataModel>();
+        FirstMapModel.GeneratedObjects = new List<GeneratedItemDataModel>();        
 
     }
 

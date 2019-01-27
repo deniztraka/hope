@@ -20,24 +20,27 @@ public class LevelDataModel : SaveDataModel
     {
         var levelDataModel = saveDataModel as LevelDataModel;
         SavePath = levelDataModel.SavePath;
-        Position = levelDataModel.Position;  
+        Position = levelDataModel.Position;
         LevelType = levelDataModel.LevelType;
-        GeneratedObjects = levelDataModel.GeneratedObjects;      
+        GeneratedObjects = levelDataModel.GeneratedObjects;
+        IsVisitedBefore = levelDataModel.IsVisitedBefore;
     }
 
     public override ScriptableObject OnLoad()
     {
+        var path = Application.persistentDataPath + SavePath;
+        Debug.Log(path + " | " + this.name);
         var deserializedObj = ScriptableObject.CreateInstance<LevelDataModel>();
-        if (File.Exists(Application.persistentDataPath + SavePath))
+        if (File.Exists(path))
         {
             var bf = new BinaryFormatter();
-            using (var file = File.Open(Application.persistentDataPath + SavePath, FileMode.Open))
+            using (var file = File.Open(path, FileMode.Open))
             {
                 var deserializedObjString = (System.String)bf.Deserialize(file);
                 JsonUtility.FromJsonOverwrite(deserializedObjString, deserializedObj);
             }
         }
 
-        return  deserializedObj;
+        return deserializedObj;
     }
 }

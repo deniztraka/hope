@@ -11,21 +11,21 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (DragableItemObject == null)
-        {
-            //DragableItemObject = Instantiate(GetItemObject());
-            DragableItemObject = Instantiate(gameObject);
-            DragableItemObject.transform.parent = GameObject.Find("UI").transform;
-            DragableItemObject.GetComponent<ItemDragHandler>().DragableItemObject = GetItemObject();
-        }
+        // if (DragableItemObject == null)
+        // {
+        //     //DragableItemObject = Instantiate(GetItemObject());
+        //     DragableItemObject = Instantiate(gameObject);
+        //     DragableItemObject.transform.parent = GameObject.Find("UI").transform;
+        //     DragableItemObject.GetComponent<ItemDragHandler>().DragableItemObject = GetItemObject();
+        // }
 
 
         
-        Touch touch = Input.GetTouch(0);
+        // Touch touch = Input.GetTouch(0);
 
-        //Update the Text on the screen depending on current position of the touch each frame
-        DragableItemObject.transform.position = touch.position;
-        ///gameObject.transform.parent = null;
+        // //Update the Text on the screen depending on current position of the touch each frame
+        // DragableItemObject.transform.position = touch.position;
+        // ///gameObject.transform.parent = null;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -40,11 +40,11 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
         //SetItemSprite();
     }
 
-    GameObject GetItemObject()
-    {
-        var slotBehaviour = transform.GetComponentInParent<SlotBehaviour>();
-        return slotBehaviour.Item.GameObject;        
-    }
+    // GameObject GetItemObject()
+    // {
+    //     // var slotBehaviour = transform.GetComponentInParent<SlotBehaviour>();
+    //     // return slotBehaviour.Item.GameObject;        
+    // }
 
     // Update is called once per frame
     void Update()

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6196029c2de8b6640ab59322874d7ea1, type: 3}
   m_Name: PlayerDataModel
   m_EditorClassIdentifier: 
-  savePath: 
+  savePath: /Save/Player/player.dat
   PlayerLastPosition: {x: 0, y: 0, z: 0}
   LastMapPosition: {x: 26, y: 25}
+  InventoryDataModel:
+    Items: []
