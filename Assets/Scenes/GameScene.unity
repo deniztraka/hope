@@ -1192,7 +1192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8207547, g: 0.73945355, b: 0.73945355, a: 1}
+  m_Color: {r: 0.6132076, g: 0.3615611, b: 0.3615611, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3243,12 +3243,12 @@ PrefabInstance:
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -154468.27
+      value: -163354.08
       objectReference: {fileID: 0}
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 32254.266
+      value: 32733.727
       objectReference: {fileID: 0}
     - target: {fileID: 8585576158099552197, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
