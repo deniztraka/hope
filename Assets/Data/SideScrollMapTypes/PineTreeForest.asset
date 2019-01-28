@@ -20,21 +20,25 @@ MonoBehaviour:
     - {fileID: 6730255295735904422, guid: e3e6bb94853b5a8479a2b47257e7f2fe, type: 3}
     Type: 0
     Probability: 0.75
+    BasePrefabName: pineTree
     RegenerateProbabilty: 0.175
     Intensity: 50
   - GameObjectVariants:
     - {fileID: 1253908162582164375, guid: 9a29ede4cee05e741a6a126784d87a70, type: 3}
     Type: 1
     Probability: 0.3
+    BasePrefabName: carrot
     RegenerateProbabilty: 0.1
     Intensity: 30
   - GameObjectVariants:
     - {fileID: 1376126904295559050, guid: c06d94c513c26aa4ab403cf98edb1f86, type: 3}
     Type: 1
     Probability: 0.3
+    BasePrefabName: mushroom
     RegenerateProbabilty: 0.1
     Intensity: 25
   LevelStaticObject: {fileID: 412531582114592972, guid: 0cb9e92092bc40e4e9acfa0bcceea865,
     type: 3}
+  FullyGenerationTimeInSeconds: 600
   LeftEdge: -108
   RightEdge: 108
