@@ -10,7 +10,8 @@ public class GameTime
     public int Minutes;
     public int Seconds;
 
-    public GameTime(int days, int hours, int minutes, int seconds){
+    public GameTime(int days, int hours, int minutes, int seconds)
+    {
         Days = days;
         Hours = hours;
         Minutes = minutes;
@@ -22,8 +23,6 @@ public class TimeOfTheDay : MonoBehaviour
 {
     public int DayLengthInSeconds;
     public bool isEnabled;
-    public float TimeMultiplier;
-
     public delegate void TimeOfTheDayHandler();
     public event TimeOfTheDayHandler OnAfterValueChangedEvent;
 
@@ -31,22 +30,15 @@ public class TimeOfTheDay : MonoBehaviour
     private int currentHour;
     private int currentMinute;
     private int currentSecond;
-
-    [SerializeField]
-    private int processFrequencyInSeconds;
-
-    [SerializeField]
+    private float processFrequencyInSeconds = 1;
     private int realGameSecondsPast;
-
     private float currentTimeOfDay;
 
-    // Start is called before the first frame update
     void Start()
     {
-        Init();
-
         if (isEnabled)
         {
+            Init();
             StartCoroutine(Process());
         }
     }
@@ -56,23 +48,9 @@ public class TimeOfTheDay : MonoBehaviour
         realGameSecondsPast = 0;
     }
 
-    public GameTime GetGameTime(){
-        return new GameTime(currentDay, currentHour, currentMinute, currentSecond);
-    }
-
-    // Update is called once per frame
-    void Update()
+    public GameTime GetGameTime()
     {
-        // This makes currentTimeOfDay go from 0 to 1 in the number of seconds we've specified.
-        // currentTimeOfDay += (Time.deltaTime / DayLengthInSeconds) * TimeMultiplier;
-        // currentHour = Mathf.FloorToInt(currentTimeOfDay* 24);
-
-        // // If currentTimeOfDay is 1 (midnight) set it to 0 again so we start a new day.
-        // if (currentTimeOfDay >= 1)
-        // {
-        //     currentDay++;
-        //     currentTimeOfDay = 0;
-        // }
+        return new GameTime(currentDay, currentHour, currentMinute, currentSecond);
     }
 
     private IEnumerator Process()
@@ -87,7 +65,6 @@ public class TimeOfTheDay : MonoBehaviour
 
     public void CalculateTimeOfTheDay()
     {
-        //Debug.Log(currentTimeOfDay);
         if (realGameSecondsPast > 0)
         {
 
@@ -115,9 +92,7 @@ public class TimeOfTheDay : MonoBehaviour
             {
                 OnAfterValueChangedEvent();
             }
-
         }
-
     }
 }
 

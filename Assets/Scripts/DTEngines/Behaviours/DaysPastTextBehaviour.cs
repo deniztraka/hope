@@ -3,28 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DaysPastTextBehaviour : MonoBehaviour
+public class DaysPastTextBehaviour : TimeOfDayUIBehaviour
 {
-    
-    private bool isInitialized;
-
-    public TimeOfTheDay TimeOfTheDay;
     public string Format;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (TimeOfTheDay != null)
-        {
-            TimeOfTheDay.OnAfterValueChangedEvent += new TimeOfTheDay.TimeOfTheDayHandler(UpdateText);
-        }
-
         if(string.IsNullOrEmpty(Format)){
             Format = "{1}:{2} - {0} days";
         }
     }
-    
-    private void UpdateText()
+
+    public override void UpdateMe()
     {
         if (TimeOfTheDay != null)
         {
