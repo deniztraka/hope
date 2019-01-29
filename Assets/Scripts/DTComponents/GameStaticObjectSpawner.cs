@@ -22,7 +22,7 @@ public class GameStaticObjectSpawner : MonoBehaviour
         if (sideScrollMap == null)
         {
             IsEnabled = false;
-            Debug.Log("ItemSpawner: Item Spawner is not working because it could not reach the SideScrollMap.");
+            // Debug.Log("ItemSpawner: Item Spawner is not working because it could not reach the SideScrollMap.");
             return;
         }
 
@@ -49,9 +49,9 @@ public class GameStaticObjectSpawner : MonoBehaviour
     public void ProcessGeneration()
     {
 
-        Debug.Log("-- Starting GameStaticObject spawning process.");
+        // Debug.Log("-- Starting GameStaticObject spawning process.");
 
-        Debug.Log("-- Getting already generated static item list.");
+        // Debug.Log("-- Getting already generated static item list.");
         //Get already generated Items
         var alreadyGeneratedItems = new List<GeneratedItemDataModel>();
         foreach (Transform child in objectsContainer.transform)
@@ -67,44 +67,44 @@ public class GameStaticObjectSpawner : MonoBehaviour
             );
         }
 
-        Debug.Log("-- Already generated objects count: " + alreadyGeneratedItems.Count);
+        // Debug.Log("-- Already generated objects count: " + alreadyGeneratedItems.Count);
 
-        Debug.Log("-- Iterating probModels");
+        // Debug.Log("-- Iterating probModels");
 
         //Iterate every prob model
         foreach (var probModel in levelGenerationDataModel.ItemGenerationProbabilityDataModels)
         {
-            Debug.Log("-- -- Iterating probModel: " + probModel.BasePrefabName.ToString());
+            // Debug.Log("-- -- Iterating probModel: " + probModel.BasePrefabName.ToString());
 
             var alreadyGeneratedItemsForThisModel = alreadyGeneratedItems.FindAll(obj => obj.Prefab.StartsWith(probModel.BasePrefabName));
             var deltaCount = probModel.Intensity - alreadyGeneratedItemsForThisModel.Count;
 
-            Debug.Log("-- -- Already generated items count for this model is: " + alreadyGeneratedItemsForThisModel.Count);
-            Debug.Log("-- -- Intensity delta count for this model is: " + deltaCount);
+            // Debug.Log("-- -- Already generated items count for this model is: " + alreadyGeneratedItemsForThisModel.Count);
+            // Debug.Log("-- -- Intensity delta count for this model is: " + deltaCount);
 
             //deltacount > 0 means we are under intensity level and we can try to instantiate item.
             if (deltaCount > 0)
             {
                 var gameObject = TryCreateItem(probModel);
-                if (gameObject != null)
-                {
-                    Debug.Log("-- -- GameObject is created for this probModel: " + probModel.BasePrefabName);
-                }
-                else
-                {
-                    Debug.Log("-- -- GameObject is not created for this probModel: " + probModel.BasePrefabName);
-                }
+                // if (gameObject != null)
+                // {
+                //     Debug.Log("-- -- GameObject is created for this probModel: " + probModel.BasePrefabName);
+                // }
+                // else
+                // {
+                //     Debug.Log("-- -- GameObject is not created for this probModel: " + probModel.BasePrefabName);
+                // }
             }
         }
 
-        Debug.Log("-- GameStaticObject spawning process is finished.");
+        // Debug.Log("-- GameStaticObject spawning process is finished.");
 
         lockFlag = false;
     }
 
     private GameObject TryCreateItem(ItemGenerationProbabilityDataModel probModel)
     {
-        Debug.Log("-- -- -- Trying the create item for this model: " + probModel.Type.ToString());
+        // Debug.Log("-- -- -- Trying the create item for this model: " + probModel.Type.ToString());
         return sideScrollMap.TryInstantiateGameObject(probModel, levelGenerationDataModel, objectsContainer, true);
     }
 }
