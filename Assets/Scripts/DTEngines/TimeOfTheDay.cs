@@ -3,12 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class GameTime
+{
+    public int Days;
+    public int Hours;
+    public int Minutes;
+    public int Seconds;
+
+    public GameTime(int days, int hours, int minutes, int seconds){
+        Days = days;
+        Hours = hours;
+        Minutes = minutes;
+        Seconds = seconds;
+    }
+}
+
 public class TimeOfTheDay : MonoBehaviour
 {
     public int DayLengthInSeconds;
     public bool isEnabled;
-
     public float TimeMultiplier;
+
+    public delegate void TimeOfTheDayHandler();
+    public event TimeOfTheDayHandler OnAfterValueChangedEvent;
 
     private int currentDay;
     private int currentHour;
@@ -37,6 +54,10 @@ public class TimeOfTheDay : MonoBehaviour
     private void Init()
     {
         realGameSecondsPast = 0;
+    }
+
+    public GameTime GetGameTime(){
+        return new GameTime(currentDay, currentHour, currentMinute, currentSecond);
     }
 
     // Update is called once per frame
@@ -90,38 +111,10 @@ public class TimeOfTheDay : MonoBehaviour
             currentMinute = (int)minutesx;
             currentSecond = (int)secondsx;
 
-            //Debug.Log(dayx + " days  | " + modx + " modx  | " + hourx + " hourx ");
-
-            // Debug.Log((int)dayx + " "
-            //       + "days " + (int)hourx + " "
-            //   + "hours " + (int)minutesx + " "
-            // + "minutes " + (int)secondsx + " "
-            //                 + "seconds ");
-
-
-
-
-
-            // var n = realGameSecondsPast;
-
-            // int day = n / (24 * 3600);
-
-            // n = n % (24 * 3600);
-            // int hour = n / 3600;
-
-            // n %= 3600;
-            // int minutes = n / 60;
-
-            // n %= 60;
-            // int seconds = n;
-
-            // Debug.Log(day + " "
-            //       + "days " + hour + " "
-            //   + "hours " + minutes + " "
-            // + "minutes " + seconds + " "
-            //                 + "seconds ");
-
-            //                 Debug.Log("---------------------------------------------------");
+            if (OnAfterValueChangedEvent != null)
+            {
+                OnAfterValueChangedEvent();
+            }
 
         }
 
