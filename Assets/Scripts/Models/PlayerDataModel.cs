@@ -10,6 +10,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "Player/PlayerDataModel", order = 1)]
 public class PlayerDataModel : SaveDataModel
 {
+    public int Health;
+    public int Toughness;
+    public int Energy;
     public Vector3 PlayerLastPosition;
     public Vector2 LastMapPosition;
     public InventoryDataModel InventoryDataModel;
@@ -20,10 +23,14 @@ public class PlayerDataModel : SaveDataModel
         PlayerLastPosition = playerDataModel.PlayerLastPosition;
         LastMapPosition = playerDataModel.LastMapPosition;
         InventoryDataModel = playerDataModel.InventoryDataModel;
+        Health = playerDataModel.Health;
+        Toughness = playerDataModel.Toughness;
+        Energy = playerDataModel.Energy;
     }
 
-    public void OnBeforeSave(){
-        
+    public void OnBeforeSave()
+    {
+
     }
 
     public override ScriptableObject OnLoad()
@@ -41,6 +48,6 @@ public class PlayerDataModel : SaveDataModel
             }
         }
 
-        return  deserializedObj;
+        return deserializedObj;
     }
 }

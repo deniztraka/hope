@@ -1101,8 +1101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4452a9451f61c43a59330573278c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxValue: 100
-  CurrentValue: 100
+  maxValue: 100
+  currentValue: 100
   IsModifyOverTimeEnabled: 0
   Frequency: 0
   ModifyValue: 0
@@ -1118,8 +1118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb182e8b8207ee4dbaae52de5d47417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxValue: 100
-  CurrentValue: 100
+  maxValue: 100
+  currentValue: 100
   IsModifyOverTimeEnabled: 1
   Frequency: 10
   ModifyValue: -1
@@ -1136,8 +1136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6178fe0346be2b42a695132ff4975bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxValue: 100
-  CurrentValue: 100
+  maxValue: 100
+  currentValue: 100
   IsModifyOverTimeEnabled: 1
   Frequency: 30
   ModifyValue: -1
@@ -3243,12 +3243,12 @@ PrefabInstance:
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -171839.27
+      value: -172912.5
       objectReference: {fileID: 0}
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40468.305
+      value: 41274.523
       objectReference: {fileID: 0}
     - target: {fileID: 8585576158099552197, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
@@ -4094,6 +4094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae9a6ae2b3cf5e47a4916a7b88ba515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsEnabled: 0
   EngineFrequency: 60
 --- !u!1001 &1800092722
 PrefabInstance:

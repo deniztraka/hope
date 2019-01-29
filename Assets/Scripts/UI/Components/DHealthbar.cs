@@ -44,9 +44,7 @@ namespace DTUI.Components
 
             var playerObj = GameObject.Find("Player");
             Health = (IHealthComponent)playerObj.GetComponent(BarType);
-
-
-            Health.OnAfterTookDamageEvent += new Health.DamageHandler(OnAfterValueChanged);
+            Health.OnAfterValueChangedEvent += new Health.DamageHandler(OnAfterValueChanged);
 
             // Set the minimum and maximum health on the healthbar to be equal to the 'minimumHealth' and 'maximumHealth' variables:
             healthbarDisplay.minValue = 0;
