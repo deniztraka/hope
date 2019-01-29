@@ -36,11 +36,20 @@ public class Player : MonoBehaviour
         if (!isFirstUpdatePast)
         {
             isFirstUpdatePast = true;
-            if (OnFirstUpdate != null)
-            {
-                OnFirstUpdate();
-            }
+            LoadStats();
         }
+    }
+
+    private void LoadStats()
+    {
+        var health = GetComponent<Health>();
+        health.CurrentValue = PlayerDataModel.Health;
+
+        var toughness = GetComponent<Toughness>();
+        toughness.CurrentValue = PlayerDataModel.Toughness;
+
+        var energy = GetComponent<Energy>();
+        energy.CurrentValue = PlayerDataModel.Energy;
     }
 
     public void LoadValues()

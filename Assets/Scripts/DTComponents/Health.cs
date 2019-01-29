@@ -14,9 +14,9 @@ namespace DTComponents
         private bool deadPossible;
 
         [SerializeField]
-        private int maxValue;
+        private int maxValue = 100;
         [SerializeField]
-        private int currentValue;
+        private int currentValue = 100;
         public bool IsModifyOverTimeEnabled;
         public float Frequency;
         public int ModifyValue;
@@ -58,17 +58,8 @@ namespace DTComponents
 
                 if (OnAfterValueChangedEvent != null)
                 {
-                    OnAfterValueChangedEvent();
+                    OnAfterValueChangedEvent();                    
                 }
-            }
-        }
-
-        public virtual void LoadValues()
-        {
-            if (this.GetType() == typeof(Health))
-            {
-                var player = GetComponent<Player>();
-                CurrentValue = player.PlayerDataModel.Health;
             }
         }
 
@@ -92,10 +83,7 @@ namespace DTComponents
             }
 
 
-            var player = GetComponent<Player>();
-            if (player != null){
-                player.OnFirstUpdate += new Player.PlayerEventHandler(LoadValues);
-            }
+            
 
         }
 

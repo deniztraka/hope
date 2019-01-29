@@ -154,8 +154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4452a9451f61c43a59330573278c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 5
-  CurrentHealth: 5
+  maxValue: 20
+  currentValue: 5
+  IsModifyOverTimeEnabled: 0
+  Frequency: 0
+  ModifyValue: 0
 --- !u!114 &1093319406266100586
 MonoBehaviour:
   m_ObjectHideFlags: 0
