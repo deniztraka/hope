@@ -3,29 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DaysPastTextBehaviour : TimeOfDayUIBehaviour
+namespace DTEngines.Behaviours
 {
-    public string Format;
-
-    // Start is called before the first frame update
-    void Start()
+    public class DaysPastTextBehaviour : TimeOfDayUIBehaviour
     {
-        if(string.IsNullOrEmpty(Format)){
-            Format = "{1}:{2} - {0} days";
-        }
-    }
+        public string Format;
 
-    public override void UpdateMe()
-    {
-        if (TimeOfTheDay != null)
+        // Start is called before the first frame update
+        void Start()
         {
-            var currentGameTime = TimeOfTheDay.GetGameTime();
-            var textComp = GetComponent<Text>();
-            textComp.text = string.Format(Format,
-            currentGameTime.Days,
-            currentGameTime.Hours.ToString().Length == 1 ? ("0" + currentGameTime.Hours.ToString()) : currentGameTime.Hours.ToString(),
-            currentGameTime.Minutes.ToString().Length == 1 ? ("0" + currentGameTime.Minutes.ToString()) : currentGameTime.Minutes.ToString(),            
-            currentGameTime.Seconds);
+            if (string.IsNullOrEmpty(Format))
+            {
+                Format = "{1}:{2} - {0} days";
+            }
+        }
+
+        public override void UpdateMe()
+        {
+            if (TimeOfTheDay != null)
+            {
+                var currentGameTime = TimeOfTheDay.GetGameTime();
+                var textComp = GetComponent<Text>();
+                textComp.text = string.Format(Format,
+                currentGameTime.Days,
+                currentGameTime.Hours.ToString().Length == 1 ? ("0" + currentGameTime.Hours.ToString()) : currentGameTime.Hours.ToString(),
+                currentGameTime.Minutes.ToString().Length == 1 ? ("0" + currentGameTime.Minutes.ToString()) : currentGameTime.Minutes.ToString(),
+                currentGameTime.Seconds);
+            }
         }
     }
 }

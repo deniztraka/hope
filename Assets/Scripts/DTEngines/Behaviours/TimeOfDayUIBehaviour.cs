@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public abstract class TimeOfDayUIBehaviour : MonoBehaviour
+namespace DTEngines.Behaviours
 {
-    public TimeOfTheDay TimeOfTheDay;
-
-    // Start is called before the first frame update
-    void Awake()
+    public abstract class TimeOfDayUIBehaviour : MonoBehaviour
     {
-        if (TimeOfTheDay != null)
+        public TimeOfTheDay TimeOfTheDay;
+
+        // Start is called before the first frame update
+        void Awake()
         {
-            TimeOfTheDay.OnAfterValueChangedEvent += new TimeOfTheDay.TimeOfTheDayHandler(UpdateMe);
+            if (TimeOfTheDay != null)
+            {
+                TimeOfTheDay.OnAfterValueChangedEvent += new TimeOfTheDay.TimeOfTheDayHandler(UpdateMe);
+            }
         }
+        public abstract void UpdateMe();
     }
-    public abstract void UpdateMe();
 }
