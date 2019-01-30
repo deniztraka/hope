@@ -30,8 +30,8 @@ namespace DTUI.Components
         public Color mediumHealthColor = new Color(0.9450285f, 1f, 0.4481132f);
         public Color lowHealthColor = new Color(1f, 0.259434f, 0.259434f);
 
-        private int healthPercentage = 100;
-        public int CurrentHealth;
+        private float healthPercentage = 100;
+        public float CurrentHealth;
 
         // Start is called before the first frame update
         void Start()
@@ -44,9 +44,7 @@ namespace DTUI.Components
 
             var playerObj = GameObject.Find("Player");
             Health = (IHealthComponent)playerObj.GetComponent(BarType);
-
-
-            Health.OnAfterTookDamageEvent += new Health.DamageHandler(OnAfterValueChanged);
+            Health.OnAfterValueChangedEvent += new Health.DamageHandler(OnAfterValueChanged);
 
             // Set the minimum and maximum health on the healthbar to be equal to the 'minimumHealth' and 'maximumHealth' variables:
             healthbarDisplay.minValue = 0;

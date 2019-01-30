@@ -98,5 +98,25 @@ PrefabInstance:
       propertyPath: CurrentHealth
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 7989472147217752595, guid: 6bea634c23b3ecc4387e32efcbc6b942,
+        type: 3}
+      propertyPath: MaxValue
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989472147217752595, guid: 6bea634c23b3ecc4387e32efcbc6b942,
+        type: 3}
+      propertyPath: CurrentValue
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989472147217752595, guid: 6bea634c23b3ecc4387e32efcbc6b942,
+        type: 3}
+      propertyPath: maxValue
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989472147217752595, guid: 6bea634c23b3ecc4387e32efcbc6b942,
+        type: 3}
+      propertyPath: currentValue
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bea634c23b3ecc4387e32efcbc6b942, type: 3}

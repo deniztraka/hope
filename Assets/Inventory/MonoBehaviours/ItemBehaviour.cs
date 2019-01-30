@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DTComponents;
 using DTInventory.Models;
 using DTInventory.ScriptableObjects;
 using Unity.Collections;
@@ -39,6 +40,19 @@ namespace DTInventory.MonoBehaviours
         public void SetItemAmount(int quantity)
         {
             Item.Quantity = quantity;
+        }
+
+        public virtual void Use(){
+            
+            switch (Item.Type)
+            {
+                case ItemType.Consumable:
+                var consumableComponent = GetComponent<Consumable>();
+                consumableComponent.Consume();
+                break;
+            }
+
+            Debug.Log("ıtem is used");
         }
     }
 }

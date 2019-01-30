@@ -15,6 +15,8 @@ public class LevelDataModel : SaveDataModel
 
     public Boolean IsVisitedBefore;
 
+    public long LastVisitTime;
+
     public List<GeneratedItemDataModel> GeneratedObjects;
     public override void Init<T>(T saveDataModel)
     {
@@ -23,7 +25,9 @@ public class LevelDataModel : SaveDataModel
         Position = levelDataModel.Position;
         LevelType = levelDataModel.LevelType;
         GeneratedObjects = levelDataModel.GeneratedObjects;
-        IsVisitedBefore = levelDataModel.IsVisitedBefore;
+        IsVisitedBefore = levelDataModel.IsVisitedBefore;        
+        LastVisitTime = levelDataModel.LastVisitTime;
+        
     }
 
     public override ScriptableObject OnLoad()

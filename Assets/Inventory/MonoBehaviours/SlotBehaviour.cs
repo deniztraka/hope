@@ -57,6 +57,10 @@ namespace DTInventory.MonoBehaviours
             {
                 InventoryBehavior.UnstackButton.interactable = false;
             }
+
+
+            InventoryBehavior.UseButton.interactable = slotItem.Item.Type == ItemType.Consumable && IsSelected;
+
         }
 
         private void SetItem(Item item, GameObject slotItem)
@@ -68,7 +72,7 @@ namespace DTInventory.MonoBehaviours
 
             slotItemBehaviour.SetUI(dbItem.Icon);
 
-            
+
 
         }
 
@@ -130,6 +134,21 @@ namespace DTInventory.MonoBehaviours
             HasItem = false;
             var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
             Destroy(slotItemBehaviour.gameObject);
+            SetSelected(false);
+        }
+
+        internal bool UseItem()
+        {
+            var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
+            var isUsed = slotItemBehaviour.UseItem();
+            if (isUsed)
+            {
+                var itemUsed = GetItem();
+                if(itemUsed.Quantity <= 0){
+                    RemoveItem();                 
+                }
+            }
+            return isUsed;
         }
     }
 }

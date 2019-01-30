@@ -57,14 +57,18 @@ public class GameManager : MonoBehaviour
         directory.CreateSubdirectory("Levels");
 
         PlayerDataModel.PlayerLastPosition = new Vector3(0f, -0.2183512f, -3f);
-        PlayerDataModel.LastMapPosition = new Vector2(25,25);
+        PlayerDataModel.LastMapPosition = new Vector2(25, 25);
         PlayerDataModel.SavePath = "/Save/Player/player.dat";
         PlayerDataModel.InventoryDataModel = new DTInventory.Models.InventoryDataModel();
+        PlayerDataModel.Health = 300;
+        PlayerDataModel.Toughness = 300;
+        PlayerDataModel.Energy = 300;
+        PlayerDataModel.RealGameSecondsPast = 540;
 
         FirstMapModel.IsVisitedBefore = false;
         FirstMapModel.SavePath = "/Save/Levels/Level_25-25.dat";
-        FirstMapModel.Position = new Vector2(25,25);
-        FirstMapModel.GeneratedObjects = new List<GeneratedItemDataModel>();        
+        FirstMapModel.Position = new Vector2(25, 25);
+        FirstMapModel.GeneratedObjects = new List<GeneratedItemDataModel>();
 
     }
 

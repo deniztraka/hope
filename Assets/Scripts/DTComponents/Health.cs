@@ -7,39 +7,59 @@ namespace DTComponents
 {
     public class Health : MonoBehaviour, IHealthComponent
     {
-        public int MaxValue;
-        public int CurrentValue;
-        public bool IsModifyOverTimeEnabled;
-        public float Frequency;
-        public int ModifyValue;
-
-        public delegate void DamageHandler();
-        public event DamageHandler OnDeathEvent;
-        public event DamageHandler OnAfterTookDamageEvent;
-        public event DamageHandler OnBeforeTookDamageEvent;
-        public event DamageHandler OnValueZeroOrBelowOnChangeEvent;
-
         private Toughness toughness;
         private Energy energy;
-
         private bool isDead;
         private bool lockFlag;
-
         private bool deadPossible;
 
-        int IHealthComponent.MaxValue
+        [SerializeField]
+        private float maxValue = 100;
+        [SerializeField]
+        private float currentValue = 100;
+        public bool IsModifyOverTimeEnabled;
+        public float Frequency;
+        public float ModifyValue;
+        public delegate void DamageHandler();
+        public event DamageHandler OnDeathEvent;
+        public event DamageHandler OnAfterValueChangedEvent;
+        public event DamageHandler OnBeforeValueChangedEvent;
+        public event DamageHandler OnValueZeroOrBelowOnChangeEvent;
+
+        public float MaxValue
         {
             get
             {
-                return MaxValue;
+                return maxValue;
+            }
+
+            set
+            {
+                maxValue = value;
             }
         }
 
-        int IHealthComponent.CurrentValue
+        public float CurrentValue
         {
             get
             {
-                return CurrentValue;
+                return currentValue;
+            }
+
+            set
+            {
+                if (OnBeforeValueChangedEvent != null)
+                {
+                    OnBeforeValueChangedEvent();
+                }
+
+                currentValue = value;
+                currentValue = Mathf.Clamp(currentValue, 0, MaxValue);
+
+                if (OnAfterValueChangedEvent != null)
+                {
+                    OnAfterValueChangedEvent();                    
+                }
             }
         }
 
@@ -61,6 +81,10 @@ namespace DTComponents
             {
                 energy.OnValueZeroOrBelowOnChangeEvent += new Health.DamageHandler(RelatedEnergyValueChangedToZeroOrBelow);
             }
+
+
+            
+
         }
 
         public void RelatedToughnessValueChangedToZeroOrBelow()
@@ -93,7 +117,11 @@ namespace DTComponents
             lockFlag = false;
         }
 
-        public void TakeDamage(int? amount)
+        public void Modify(float amount){
+            CurrentValue += amount;
+        }
+
+        public void TakeDamage(float? amount)
         {
             if (CurrentValue <= 0)
             {
@@ -105,18 +133,7 @@ namespace DTComponents
                 return;
             }
 
-            if (OnBeforeTookDamageEvent != null)
-            {
-                OnBeforeTookDamageEvent();
-            }
-
             CurrentValue -= amount ?? ModifyValue;
-            CurrentValue = Mathf.Clamp(CurrentValue, 0, MaxValue);
-
-            if (OnAfterTookDamageEvent != null)
-            {
-                OnAfterTookDamageEvent();
-            }
 
             if (CurrentValue <= 0)
             {
@@ -138,6 +155,11 @@ namespace DTComponents
             {
                 OnDeathEvent();
             }
+        }
+
+        public void Modify(int value)
+        {
+            TakeDamage(-value);
         }
     }
 }

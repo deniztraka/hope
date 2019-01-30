@@ -6,6 +6,6 @@ namespace DTComponents
 {
     public class Toughness : Health
     {
-        public int DecreaseHealthValueAmount;
+        public float DecreaseHealthValueAmount;                     
     }
 }

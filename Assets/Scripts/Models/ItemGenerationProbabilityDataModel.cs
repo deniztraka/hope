@@ -10,8 +10,7 @@ public class ItemGenerationProbabilityDataModel
     public List<GameObject> GameObjectVariants;
     public GameObjectType Type;
     public float Probability;
-
+    public string BasePrefabName;
     public float RegenerateProbabilty;
-
     public int Intensity;
 }

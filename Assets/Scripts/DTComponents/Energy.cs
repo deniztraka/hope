@@ -5,6 +5,6 @@ namespace DTComponents
 {
     public class Energy : Health
     {
-        public int DecreaseHealthValueAmount;
+        public float DecreaseHealthValueAmount;       
     }
 }
