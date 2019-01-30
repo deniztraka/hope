@@ -60,9 +60,9 @@ public class GameManager : MonoBehaviour
         PlayerDataModel.LastMapPosition = new Vector2(25, 25);
         PlayerDataModel.SavePath = "/Save/Player/player.dat";
         PlayerDataModel.InventoryDataModel = new DTInventory.Models.InventoryDataModel();
-        PlayerDataModel.Health = 100;
-        PlayerDataModel.Toughness = 100;
-        PlayerDataModel.Energy = 100;
+        PlayerDataModel.Health = 300;
+        PlayerDataModel.Toughness = 300;
+        PlayerDataModel.Energy = 300;
         PlayerDataModel.RealGameSecondsPast = 0;
 
         FirstMapModel.IsVisitedBefore = false;

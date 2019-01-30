@@ -14,19 +14,19 @@ namespace DTComponents
         private bool deadPossible;
 
         [SerializeField]
-        private int maxValue = 100;
+        private float maxValue = 100;
         [SerializeField]
-        private int currentValue = 100;
+        private float currentValue = 100;
         public bool IsModifyOverTimeEnabled;
         public float Frequency;
-        public int ModifyValue;
+        public float ModifyValue;
         public delegate void DamageHandler();
         public event DamageHandler OnDeathEvent;
         public event DamageHandler OnAfterValueChangedEvent;
         public event DamageHandler OnBeforeValueChangedEvent;
         public event DamageHandler OnValueZeroOrBelowOnChangeEvent;
 
-        public int MaxValue
+        public float MaxValue
         {
             get
             {
@@ -39,7 +39,7 @@ namespace DTComponents
             }
         }
 
-        public int CurrentValue
+        public float CurrentValue
         {
             get
             {
@@ -117,7 +117,11 @@ namespace DTComponents
             lockFlag = false;
         }
 
-        public void TakeDamage(int? amount)
+        public void Modify(float amount){
+            CurrentValue += amount;
+        }
+
+        public void TakeDamage(float? amount)
         {
             if (CurrentValue <= 0)
             {

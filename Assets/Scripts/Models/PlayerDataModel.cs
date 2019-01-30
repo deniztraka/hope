@@ -11,9 +11,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "Player/PlayerDataModel", order = 1)]
 public class PlayerDataModel : SaveDataModel
 {
-    public int Health;
-    public int Toughness;
-    public int Energy;
+    public float Health;
+    public float Toughness;
+    public float Energy;
     public Vector3 PlayerLastPosition;
     public Vector2 LastMapPosition;
     public InventoryDataModel InventoryDataModel;

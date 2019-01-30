@@ -30,8 +30,8 @@ namespace DTUI.Components
         public Color mediumHealthColor = new Color(0.9450285f, 1f, 0.4481132f);
         public Color lowHealthColor = new Color(1f, 0.259434f, 0.259434f);
 
-        private int healthPercentage = 100;
-        public int CurrentHealth;
+        private float healthPercentage = 100;
+        public float CurrentHealth;
 
         // Start is called before the first frame update
         void Start()

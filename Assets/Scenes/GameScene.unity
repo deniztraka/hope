@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18ac6e679f74863409371e3bcc039fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DayLengthInSeconds: 60
+  DayLengthInSeconds: 300
   isEnabled: 1
   RealGameSecondsPast: 0
 --- !u!1 &194442834
@@ -1242,11 +1242,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4452a9451f61c43a59330573278c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxValue: 100
-  currentValue: 100
-  IsModifyOverTimeEnabled: 0
-  Frequency: 0
-  ModifyValue: 0
+  maxValue: 300
+  currentValue: 300
+  IsModifyOverTimeEnabled: 1
+  Frequency: 1
+  ModifyValue: 0.5
 --- !u!114 &467350213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1259,10 +1259,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb182e8b8207ee4dbaae52de5d47417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxValue: 100
-  currentValue: 100
+  maxValue: 300
+  currentValue: 300
   IsModifyOverTimeEnabled: 1
-  Frequency: 10
+  Frequency: 1
   ModifyValue: -1
   DecreaseHealthValueAmount: 1
 --- !u!114 &467350214
@@ -1277,12 +1277,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6178fe0346be2b42a695132ff4975bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxValue: 100
-  currentValue: 100
+  maxValue: 300
+  currentValue: 300
   IsModifyOverTimeEnabled: 1
-  Frequency: 30
-  ModifyValue: -1
-  DecreaseHealthValueAmount: 1
+  Frequency: 1
+  ModifyValue: -0.5
+  DecreaseHealthValueAmount: 0.5
 --- !u!1 &470056829
 GameObject:
   m_ObjectHideFlags: 0
@@ -3698,12 +3698,12 @@ PrefabInstance:
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -573889.9
+      value: -584185.9
       objectReference: {fileID: 0}
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 121489.82
+      value: 129335.57
       objectReference: {fileID: 0}
     - target: {fileID: 8585576158099552197, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}

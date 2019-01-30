@@ -5,8 +5,8 @@ using UnityEngine;
 public interface IHealthComponent
 {
     event DTComponents.Health.DamageHandler OnAfterValueChangedEvent;
-    int MaxValue { get; set;}
-    int CurrentValue { get; set; }
+    float MaxValue { get; set;}
+    float CurrentValue { get; set; }
 
-    void Modify(int value);
+    void Modify(float value);
 }
