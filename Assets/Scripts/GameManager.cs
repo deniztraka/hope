@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         directory.CreateSubdirectory("Player");
         directory.CreateSubdirectory("Levels");
 
-        PlayerDataModel.PlayerLastPosition = new Vector3(0f, -0.2183512f, -3f);
+        PlayerDataModel.PlayerLastPosition = new Vector3(0f, 1.510419f, -3f);
         PlayerDataModel.LastMapPosition = new Vector2(25, 25);
         PlayerDataModel.SavePath = "/Save/Player/player.dat";
         PlayerDataModel.InventoryDataModel = new DTInventory.Models.InventoryDataModel();
