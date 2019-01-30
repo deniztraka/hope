@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
         PlayerDataModel.Health = 100;
         PlayerDataModel.Toughness = 100;
         PlayerDataModel.Energy = 100;
+        PlayerDataModel.RealGameSecondsPast = 0;
 
         FirstMapModel.IsVisitedBefore = false;
         FirstMapModel.SavePath = "/Save/Levels/Level_25-25.dat";

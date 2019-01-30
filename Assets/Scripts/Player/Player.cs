@@ -6,6 +6,7 @@ using DTInventory.MonoBehaviours;
 using DTInventory.Models;
 using System;
 using DTComponents;
+using DTEngines;
 
 public class Player : MonoBehaviour
 {
@@ -37,7 +38,14 @@ public class Player : MonoBehaviour
         {
             isFirstUpdatePast = true;
             LoadStats();
+            SetGameTime();
         }
+    }
+
+    private void SetGameTime()
+    {
+        var timeOfTheDay = GameObject.Find("TimeOfTheDay").GetComponent<TimeOfTheDay>();
+        timeOfTheDay.SetCurrentTime(PlayerDataModel.RealGameSecondsPast);
     }
 
     private void LoadStats()
@@ -70,6 +78,7 @@ public class Player : MonoBehaviour
         PlayerDataModel.Health = GetComponent<Health>().CurrentValue;
         PlayerDataModel.Toughness = GetComponent<Toughness>().CurrentValue;
         PlayerDataModel.Energy = GetComponent<Energy>().CurrentValue;
+        PlayerDataModel.RealGameSecondsPast = GameObject.Find("TimeOfTheDay").GetComponent<TimeOfTheDay>().RealGameSecondsPast;
     }
 
     public bool PickUpItem(Item item)

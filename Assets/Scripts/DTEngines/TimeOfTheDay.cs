@@ -35,7 +35,7 @@ namespace DTEngines
         private int currentMinute;
         private int currentSecond;
         private float processFrequencyInSeconds = 1;
-        private int realGameSecondsPast;
+        public long RealGameSecondsPast;
         private float currentTimeOfDay;
 
         void Start()
@@ -47,9 +47,14 @@ namespace DTEngines
             }
         }
 
+        internal void SetCurrentTime(long realGameSecondsPast)
+        {
+            RealGameSecondsPast = realGameSecondsPast;
+        }
+
         private void Init()
         {
-            realGameSecondsPast = 0;
+            RealGameSecondsPast = 0;
         }
 
         public GameTime GetGameTime()
@@ -63,18 +68,18 @@ namespace DTEngines
             {
                 yield return new WaitForSeconds((float)processFrequencyInSeconds);
                 CalculateTimeOfTheDay();
-                realGameSecondsPast++;
+                RealGameSecondsPast++;
             }
         }
 
         public void CalculateTimeOfTheDay()
         {
-            if (realGameSecondsPast > 0)
+            if (RealGameSecondsPast > 0)
             {
 
                 var ratio = DayLengthInSeconds / 86400f;
                 //how many seconds past according to game time.
-                var secondsPastInGame = realGameSecondsPast / ratio;
+                var secondsPastInGame = RealGameSecondsPast / ratio;
 
                 var dayx = secondsPastInGame / (24 * 3600);
 
