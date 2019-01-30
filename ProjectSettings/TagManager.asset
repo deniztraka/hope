@@ -17,9 +17,9 @@ TagManager:
   - background
   - player
   - objects
-  - 
-  - 
-  - 
+  - light sources
+  - ambient light
+  - light obstacles
   - 
   - 
   - 

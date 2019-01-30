@@ -312,7 +312,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Modifiers:
-  - Name: Health
-    Value: 5
   - Name: Toughness
-    Value: 10
+    Value: 2

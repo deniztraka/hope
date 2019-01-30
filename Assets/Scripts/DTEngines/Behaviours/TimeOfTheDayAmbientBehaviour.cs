@@ -24,6 +24,11 @@ namespace DTEngines.Behaviours
             ambientSpriteRenderer = GetComponent<SpriteRenderer>();
             targetColor = ambientSpriteRenderer.color;
             ratio = TimeOfTheDay.DayLengthInSeconds / 86400f;
+
+            if (TimeOfTheDay != null)
+            {
+                targetColor = AmbientHourColorsList[TimeOfTheDay.GetGameTime().Hours];
+            }
         }
         public override void UpdateMe()
         {

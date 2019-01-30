@@ -86,14 +86,14 @@ public class GameStaticObjectSpawner : MonoBehaviour
             if (deltaCount > 0)
             {
                 var gameObject = TryCreateItem(probModel);
-                // if (gameObject != null)
-                // {
-                //     Debug.Log("-- -- GameObject is created for this probModel: " + probModel.BasePrefabName);
-                // }
-                // else
-                // {
-                //     Debug.Log("-- -- GameObject is not created for this probModel: " + probModel.BasePrefabName);
-                // }
+                if (gameObject != null)
+                {
+                    Debug.Log("-- -- GameObject is created for this probModel: " + probModel.BasePrefabName);
+                }
+                else
+                {
+                    //Debug.Log("-- -- GameObject is not created for this probModel: " + probModel.BasePrefabName);
+                }
             }
         }
 
