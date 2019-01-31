@@ -53,3 +53,13 @@ MonoBehaviour:
     MaxStack: 10
     Quantity: 5
     Icon: {fileID: 21300000, guid: 1afbaa9a50ba730439ed00ca4f70f66b, type: 3}
+  - Id: 'd160fc0e-de1d-41de-8f69-4cd1e7df2caf '
+    Name: Shelter
+    Description: Shelter
+    Type: 12
+    GameObject: {fileID: 6080508970077171233, guid: a13ca50654a8bdc419e79b13d85a3514,
+      type: 3}
+    Weight: 10
+    MaxStack: 1
+    Quantity: 1
+    Icon: {fileID: 21300000, guid: f78b10474ac6d58479f62781ab471117, type: 3}

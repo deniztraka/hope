@@ -109,14 +109,20 @@ namespace DTInventory.MonoBehaviours
 
             gameObject.transform.localScale = new Vector3(0, 0, 0);
 
-            DropButton.interactable = false;
-            UnstackButton.interactable = false;
+            if (DropButton != null)
+            {
+                DropButton.interactable = false;
+            }
+            if (UnstackButton != null)
+            {
+                UnstackButton.interactable = false;
+            }
             UseButton.interactable = false;
 
             LoadInventory();
         }
 
-        public void Init()
+        public virtual void Init()
         {
             if (isInitialized)
             {
@@ -174,7 +180,7 @@ namespace DTInventory.MonoBehaviours
             }
         }
 
-        private void InventorySizeChanged()
+        internal void InventorySizeChanged()
         {
             var wrapperContentRectTransform = SlotsWrapper.GetComponent<RectTransform>();
 
@@ -203,7 +209,8 @@ namespace DTInventory.MonoBehaviours
             if (selectedSlot != null)
             {
                 var isUsed = selectedSlot.UseItem();
-                if(!selectedSlot.HasItem){
+                if (!selectedSlot.HasItem)
+                {
                     UseButton.interactable = false;
                 }
             }
@@ -212,8 +219,14 @@ namespace DTInventory.MonoBehaviours
         public void DisableButtons()
         {
             UseButton.interactable = false;
-            DropButton.interactable = false;
-            UnstackButton.interactable = false;
+            if (DropButton != null)
+            {
+                DropButton.interactable = false;
+            }
+            if (UnstackButton != null)
+            {
+                UnstackButton.interactable = false;
+            }
         }
 
         public void DropSelected()
@@ -283,7 +296,10 @@ namespace DTInventory.MonoBehaviours
             else
             {
                 gameObject.transform.localScale = new Vector3(1, 1, 1);
-                InventoryScrollbar.value = 1;
+                if (InventoryScrollbar != null)
+                {
+                    InventoryScrollbar.value = 1;
+                }
                 //gameObject.SetActive(true);
             }
 
@@ -401,11 +417,12 @@ namespace DTInventory.MonoBehaviours
             }
         }
 
-        void OnSimpleDragAndDropEvent(DragAndDropCell.DropEventDescriptor desc)
+        internal virtual void OnSimpleDragAndDropEvent(DragAndDropCell.DropEventDescriptor desc)
         {
             UpdateSlots();
             DisableButtons();
 
+            
             return;
             // Get control unit of source cell
             var sourceSheet = desc.sourceCell.GetComponentInParent<InventoryBehavior>();

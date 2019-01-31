@@ -13,6 +13,8 @@ namespace DTInventory.MonoBehaviours
     {
         public bool IsSelected;
 
+        public bool IsSelectable;
+
         public Sprite SelectedSprite;
         public Sprite Sprite;
 
@@ -38,6 +40,10 @@ namespace DTInventory.MonoBehaviours
 
         public void ToggleSelect()
         {
+            if(!IsSelectable){
+                return;
+            }
+
             if (!HasItem)
             {
                 return;
@@ -47,18 +53,34 @@ namespace DTInventory.MonoBehaviours
 
             IsSelected = !IsSelected;
             SetSelected(IsSelected);
-            InventoryBehavior.DropButton.interactable = IsSelected;
+            if (InventoryBehavior.DropButton != null)
+            {
+                InventoryBehavior.DropButton.interactable = IsSelected;
+            }
+
+
+            if (InventoryBehavior.DropButton != null)
+            {
+                InventoryBehavior.DropButton.interactable = IsSelected;
+            }
 
             if (IsSelected && slotItem.Item.Quantity > 1)
             {
-                InventoryBehavior.UnstackButton.interactable = IsSelected;
+                if (InventoryBehavior.UnstackButton != null)
+                {
+                   InventoryBehavior.UnstackButton.interactable = IsSelected;
+                }
+                
             }
             else
             {
-                InventoryBehavior.UnstackButton.interactable = false;
+                if (InventoryBehavior.UnstackButton != null)
+                {
+                   InventoryBehavior.UnstackButton.interactable = false;
+                }
+                
             }
-
-
+            
             InventoryBehavior.UseButton.interactable = slotItem.Item.Type == ItemType.Consumable && IsSelected;
 
         }
@@ -104,6 +126,10 @@ namespace DTInventory.MonoBehaviours
 
         internal void SetSelected(bool select)
         {
+            if(!IsSelectable){
+                return;
+            }
+            
             var slotWrapperPanelImage = transform.Find("SlotWrapperCanvas").Find("SlotWrapperPanel").GetComponent<Image>();
             if (!select)
             {
@@ -144,8 +170,9 @@ namespace DTInventory.MonoBehaviours
             if (isUsed)
             {
                 var itemUsed = GetItem();
-                if(itemUsed.Quantity <= 0){
-                    RemoveItem();                 
+                if (itemUsed.Quantity <= 0)
+                {
+                    RemoveItem();
                 }
             }
             return isUsed;
