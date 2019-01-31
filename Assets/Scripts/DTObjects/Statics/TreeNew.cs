@@ -44,6 +44,7 @@ namespace DTObjects.Statics
 
         protected override void OnDeath()
         {
+            
             Fall();
         }
         private void PlayChopSoundEffect()
