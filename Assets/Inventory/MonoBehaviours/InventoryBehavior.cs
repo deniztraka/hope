@@ -217,7 +217,7 @@ namespace DTInventory.MonoBehaviours
             }
         }
 
-        public void DisableButtons()
+        public virtual void DisableButtons()
         {
             UseButton.interactable = false;
             if (DropButton != null)

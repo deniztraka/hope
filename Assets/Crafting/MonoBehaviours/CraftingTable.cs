@@ -32,12 +32,14 @@ namespace DTCrafting.MonoBehaviours
 
         private void OnOutputItemRemoved()
         {
-            UseButton.interactable = false;
+            Debug.Log("Itemremoved");
+            //UseButton.interactable = false;
         }
 
         private void OnOutputItemAdded()
         {
-            UseButton.interactable = true;
+            Debug.Log("item added");
+            //UseButton.interactable = true;
         }
 
         public void Init()
@@ -92,7 +94,8 @@ namespace DTCrafting.MonoBehaviours
                     var dragDropItemComponent = OutputSlot.gameObject.GetComponentInChildren<DragAndDropItem>();
                     dragDropItemComponent.enabled = false;
                     OutputItemTitleText.text = itemToCraft.Name;
-                    OutputItemDescText.text = itemToCraft.Description;                    
+                    OutputItemDescText.text = itemToCraft.Description;   
+                    UseButton.interactable = true;                 
                 }
                 else if (itemAlreadyThere != null && !itemAlreadyThere.Id.Equals(itemToCraft.Id))
                 {
@@ -101,7 +104,8 @@ namespace DTCrafting.MonoBehaviours
                     var dragDropItemComponent = OutputSlot.gameObject.GetComponentInChildren<DragAndDropItem>();
                     dragDropItemComponent.enabled = false;
                     OutputItemTitleText.text = itemToCraft.Name;
-                    OutputItemDescText.text = itemToCraft.Description;                    
+                    OutputItemDescText.text = itemToCraft.Description;      
+                    UseButton.interactable = true;              
                 };
             }
             else
@@ -112,7 +116,7 @@ namespace DTCrafting.MonoBehaviours
                 {
                     OutputSlot.RemoveItem();
                 }
-                //UseButton.interactable = false;
+                UseButton.interactable = false;
             }
         }
 
@@ -156,6 +160,19 @@ namespace DTCrafting.MonoBehaviours
         public void CraftItem()
         {
 
+        }
+
+         public override void DisableButtons()
+        {
+            
+            if (DropButton != null)
+            {
+                DropButton.interactable = false;
+            }
+            if (UnstackButton != null)
+            {
+                UnstackButton.interactable = false;
+            }
         }
     }
 }
