@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1536,7 +1536,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467350203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 1.510419, z: -3}
+  m_LocalPosition: {x: -0.57, y: 1.510419, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1728623479}
@@ -1685,7 +1685,7 @@ MonoBehaviour:
   currentValue: 100
   IsModifyOverTimeEnabled: 1
   Frequency: 1
-  ModifyValue: 0.5
+  ModifyValue: 0.075
 --- !u!114 &467350213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1703,7 +1703,7 @@ MonoBehaviour:
   IsModifyOverTimeEnabled: 1
   Frequency: 1
   ModifyValue: -0.1388889
-  DecreaseHealthValueAmount: 0.1388889
+  DecreaseHealthValueAmount: -0.1388889
 --- !u!114 &467350214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1721,7 +1721,7 @@ MonoBehaviour:
   IsModifyOverTimeEnabled: 1
   Frequency: 1
   ModifyValue: -0.06944444
-  DecreaseHealthValueAmount: 0.06944444
+  DecreaseHealthValueAmount: -0.06944445
 --- !u!1 &470056829
 GameObject:
   m_ObjectHideFlags: 0
@@ -4388,12 +4388,12 @@ PrefabInstance:
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2287.3992
+      value: -52916.84
       objectReference: {fileID: 0}
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 3028.5552
+      value: 10209.298
       objectReference: {fileID: 0}
     - target: {fileID: 8585576158099552197, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}

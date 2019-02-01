@@ -87,7 +87,7 @@ namespace DTInventory.MonoBehaviours
 
             }
 
-            InventoryBehavior.UseButton.interactable = slotItem.Item.Type == ItemType.Consumable && IsSelected;
+            InventoryBehavior.UseButton.interactable = (slotItem.Item.Type == ItemType.Consumable || slotItem.Item.Type == ItemType.Blueprint) && IsSelected;
 
         }
 
