@@ -422,6 +422,16 @@ namespace DTInventory.MonoBehaviours
             UpdateSlots();
             DisableButtons();
 
+            if(desc != null && desc.triggerType == DragAndDropCell.TriggerType.DropEventEnd && desc.sourceCell != null){
+                if(gameObject.name.Equals("CraftMenu")){
+                    var inventoryBehaviour = desc.sourceCell.GetComponentInParent<InventoryBehavior>();
+                    inventoryBehaviour.UpdateSlots();
+                    inventoryBehaviour.DisableButtons();
+
+                    Debug.Log("invnetory state is refreshed.");
+                }                
+            }
+
             
             return;
             // Get control unit of source cell

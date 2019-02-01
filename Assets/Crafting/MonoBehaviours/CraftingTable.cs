@@ -8,7 +8,7 @@ namespace DTCrafting.MonoBehaviours
     public class CraftingTable : InventoryBehavior
     {
         // Start is called before the first frame update
-         void Start()
+        void Start()
         {
             Init();
 
@@ -16,9 +16,8 @@ namespace DTCrafting.MonoBehaviours
         }
 
         public void Init()
-        {    
+        {
             SlotGrid = new GameObject[SizeX][];
-            OnInventorySizeChanged += InventorySizeChanged;
             for (int x = 0; x < SlotGrid.Length; x++)
             {
                 if (SlotGrid[x] == null)
@@ -30,18 +29,16 @@ namespace DTCrafting.MonoBehaviours
                     var slotObj = Instantiate(SlotPrefab, Vector3.zero, Quaternion.identity, SlotsWrapper);
                     var slot = slotObj.GetComponent<SlotBehaviour>();
                     slot.IsSelectable = false;
-
                     SlotGrid[x][y] = slot.gameObject;
                 }
             }
-
-            InventorySizeChanged();
         }
 
-        internal override void OnSimpleDragAndDropEvent(DragAndDropCell.DropEventDescriptor desc){
+        internal override void OnSimpleDragAndDropEvent(DragAndDropCell.DropEventDescriptor desc)
+        {
             base.OnSimpleDragAndDropEvent(desc);
 
-            Debug.Log("check recipe database if crafting table has item.");            
+            Debug.Log("check recipe database if crafting table has item.");
         }
 
     }
