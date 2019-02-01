@@ -8,6 +8,7 @@ using DTInventory.ScriptableObjects;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using DTInventory.UI;
+using DTCrafting.MonoBehaviours;
 
 namespace DTInventory.MonoBehaviours
 {
@@ -419,20 +420,17 @@ namespace DTInventory.MonoBehaviours
 
         internal virtual void OnSimpleDragAndDropEvent(DragAndDropCell.DropEventDescriptor desc)
         {
+            //Debug.Log("updating slots:"+gameObject.name +" evenetName:"+desc.triggerType.ToString());
             UpdateSlots();
             DisableButtons();
 
-            if(desc != null && desc.triggerType == DragAndDropCell.TriggerType.DropEventEnd && desc.sourceCell != null){
-                if(gameObject.name.Equals("CraftMenu")){
-                    var inventoryBehaviour = desc.sourceCell.GetComponentInParent<InventoryBehavior>();
-                    inventoryBehaviour.UpdateSlots();
-                    inventoryBehaviour.DisableButtons();
-
-                    Debug.Log("invnetory state is refreshed.");
-                }                
+            if (desc.triggerType == DragAndDropCell.TriggerType.DropEventEnd && gameObject.name == "PlayerInventory")
+            {
+                var craftMenuObj = GameObject.Find("CraftMenu");
+                var craftingTable = craftMenuObj.GetComponent<CraftingTable>();
+                craftingTable.UpdateUI();
             }
 
-            
             return;
             // Get control unit of source cell
             var sourceSheet = desc.sourceCell.GetComponentInParent<InventoryBehavior>();
@@ -471,12 +469,13 @@ namespace DTInventory.MonoBehaviours
             }
         }
 
-        private void UpdateSlots()
+        internal void UpdateSlots()
         {
             for (int x = 0; x < SlotGrid.Length; x++)
             {
                 for (int y = 0; y < SlotGrid[x].Length; y++)
                 {
+                    //Debug.Log("updating: "+x + "," + y);
                     UpdateSlot(SlotGrid[x][y]);
                 }
             }
@@ -486,7 +485,9 @@ namespace DTInventory.MonoBehaviours
         {
             //Updating HasItem property
             var slotBehaviour = slotGameObject.GetComponent<SlotBehaviour>();
+
             var slotItem = slotGameObject.transform.GetComponentInChildren<SlotItemBehaviour>();
+            //Debug.Log("hasItem:"+(slotItem != null).ToString());
             slotBehaviour.HasItem = slotItem != null;
 
             //Updating slot item icon
@@ -495,6 +496,39 @@ namespace DTInventory.MonoBehaviours
 
             //Updating Selection of slot
             slotBehaviour.SetSelected(false);
+        }
+
+        public List<Item> GetItemsEach()
+        {
+            var items = new List<Item>();
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    var slot = SlotGrid[x][y].GetComponent<SlotBehaviour>();
+                    if (slot.HasItem)
+                    {
+                        var item = slot.GetItem();
+                        if (item != null)
+                        {
+                            for (int i = 0; i < item.Quantity; i++)
+                            {
+                                var copiedItem = item.getCopy<Item>();
+                                copiedItem.Quantity = 1;
+
+                                items.Add(copiedItem);
+                            }
+                        }
+                        else
+                        {
+                            slot.HasItem = false;
+                        }
+
+                    }
+                }
+            }
+
+            return items;
         }
     }
 }

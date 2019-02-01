@@ -40,7 +40,8 @@ namespace DTInventory.MonoBehaviours
 
         public void ToggleSelect()
         {
-            if(!IsSelectable){
+            if (!IsSelectable)
+            {
                 return;
             }
 
@@ -68,19 +69,19 @@ namespace DTInventory.MonoBehaviours
             {
                 if (InventoryBehavior.UnstackButton != null)
                 {
-                   InventoryBehavior.UnstackButton.interactable = IsSelected;
+                    InventoryBehavior.UnstackButton.interactable = IsSelected;
                 }
-                
+
             }
             else
             {
                 if (InventoryBehavior.UnstackButton != null)
                 {
-                   InventoryBehavior.UnstackButton.interactable = false;
+                    InventoryBehavior.UnstackButton.interactable = false;
                 }
-                
+
             }
-            
+
             InventoryBehavior.UseButton.interactable = slotItem.Item.Type == ItemType.Consumable && IsSelected;
 
         }
@@ -126,10 +127,11 @@ namespace DTInventory.MonoBehaviours
 
         internal void SetSelected(bool select)
         {
-            if(!IsSelectable){
+            if (!IsSelectable)
+            {
                 return;
             }
-            
+
             var slotWrapperPanelImage = transform.Find("SlotWrapperCanvas").Find("SlotWrapperPanel").GetComponent<Image>();
             if (!select)
             {
@@ -146,7 +148,12 @@ namespace DTInventory.MonoBehaviours
         internal Item GetItem()
         {
             var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
-            return slotItemBehaviour.Item;
+            if (slotItemBehaviour != null)
+            {
+                return slotItemBehaviour.Item;
+            }
+
+            return null;
         }
 
         internal void SetItemAmount(int newAmount)

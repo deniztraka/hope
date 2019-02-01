@@ -24,7 +24,7 @@ MonoBehaviour:
       MaxStack: 0
       Quantity: 0
       Icon: {fileID: 21300000, guid: 644eedd1be08b9b48bae16f0edd2cbec, type: 3}
-    Amount: 12
+    Amount: 4
   - Item:
       Id: a0351873-093c-40da-ab12-870e54632f30
       Name: 
@@ -36,7 +36,7 @@ MonoBehaviour:
       MaxStack: 0
       Quantity: 0
       Icon: {fileID: 0}
-    Amount: 50
+    Amount: 10
   OutputItem:
     Id: 'd160fc0e-de1d-41de-8f69-4cd1e7df2caf '
     Name: Shelter
