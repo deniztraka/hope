@@ -5,6 +5,7 @@ using DTInventory.MonoBehaviours;
 using DTCrafting.ScriptableObjects;
 using System;
 using UnityEngine.UI;
+using DTInventory.Models;
 
 namespace DTCrafting.MonoBehaviours
 {
@@ -159,7 +160,17 @@ namespace DTCrafting.MonoBehaviours
 
         public void CraftItem()
         {
-
+            var item = OutputSlot.GetItem();
+            var inventoryItemToAdd = item.getCopy<Item>();
+            var emptySlot = InventoryBehavior.FindEmptySlot();
+            if(emptySlot != null){
+                InventoryBehavior.Add(item);
+                //Remove required items from crafting table.                
+                SetCraftUI(null);
+            }else{
+                //popup inventory is not empty;
+            }
+            
         }
 
          public override void DisableButtons()

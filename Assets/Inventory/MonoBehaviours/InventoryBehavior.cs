@@ -386,7 +386,7 @@ namespace DTInventory.MonoBehaviours
             return hasEmptySlot;
         }
 
-        private SlotBehaviour FindEmptySlot()
+        public SlotBehaviour FindEmptySlot()
         {
             SlotBehaviour emptySlot = null;
             for (int x = 0; x < SlotGrid.Length; x++)
