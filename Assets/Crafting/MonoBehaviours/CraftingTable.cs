@@ -24,8 +24,20 @@ namespace DTCrafting.MonoBehaviours
         void Start()
         {
             Init();
+            OutputSlot.OnItemAdded += new SlotBehaviour.SlotEventHandler(OnOutputItemAdded);
+            OutputSlot.OnItemAdded += new SlotBehaviour.SlotEventHandler(OnOutputItemRemoved);
 
             //gameObject.transform.localScale = new Vector3(0, 0, 0);            
+        }
+
+        private void OnOutputItemRemoved()
+        {
+            UseButton.interactable = false;
+        }
+
+        private void OnOutputItemAdded()
+        {
+            UseButton.interactable = true;
         }
 
         public void Init()
@@ -60,7 +72,7 @@ namespace DTCrafting.MonoBehaviours
 
             if (desc.triggerType == DragAndDropCell.TriggerType.DropEventEnd)
             {
-                Debug.Log("check recipe database if crafting table has item.");
+                //Debug.Log("check recipe database if crafting table has item.");
                 var recipe = TryCraft();
                 SetCraftUI(recipe);
             }
@@ -74,15 +86,23 @@ namespace DTCrafting.MonoBehaviours
                 itemToCraft.Quantity = 1;
 
                 var itemAlreadyThere = OutputSlot.GetItem();
-                if (itemAlreadyThere == null || !itemAlreadyThere.Id.Equals(itemToCraft.Id))
+                if (itemAlreadyThere == null)
                 {
                     OutputSlot.AddItem(itemToCraft);
                     var dragDropItemComponent = OutputSlot.gameObject.GetComponentInChildren<DragAndDropItem>();
                     dragDropItemComponent.enabled = false;
                     OutputItemTitleText.text = itemToCraft.Name;
-                    OutputItemDescText.text = itemToCraft.Description;
-                    UseButton.interactable = true;
+                    OutputItemDescText.text = itemToCraft.Description;                    
                 }
+                else if (itemAlreadyThere != null && !itemAlreadyThere.Id.Equals(itemToCraft.Id))
+                {
+                    OutputSlot.RemoveItem();
+                    OutputSlot.AddItem(itemToCraft);
+                    var dragDropItemComponent = OutputSlot.gameObject.GetComponentInChildren<DragAndDropItem>();
+                    dragDropItemComponent.enabled = false;
+                    OutputItemTitleText.text = itemToCraft.Name;
+                    OutputItemDescText.text = itemToCraft.Description;                    
+                };
             }
             else
             {
@@ -92,7 +112,7 @@ namespace DTCrafting.MonoBehaviours
                 {
                     OutputSlot.RemoveItem();
                 }
-                UseButton.interactable = false;
+                //UseButton.interactable = false;
             }
         }
 
@@ -130,12 +150,12 @@ namespace DTCrafting.MonoBehaviours
         internal void UpdateUI()
         {
             var recipe = TryCraft();
-            SetCraftUI(recipe);
+            SetCraftUI(recipe);            
         }
 
         public void CraftItem()
         {
-            
+
         }
     }
 }

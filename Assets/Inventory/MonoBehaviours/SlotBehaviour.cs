@@ -25,6 +25,11 @@ namespace DTInventory.MonoBehaviours
         private InventoryBehavior InventoryBehavior;
 
 
+        public delegate void SlotEventHandler();
+        public event SlotEventHandler OnItemAdded;
+        public event SlotEventHandler OnItemRemoved;
+
+
         // Start is called before the first frame update
         void Start()
         {
@@ -120,6 +125,10 @@ namespace DTInventory.MonoBehaviours
                 var slotItem = Instantiate(SlotItemPrefab, new Vector3(0, 0, 0), Quaternion.identity, slotWrapperPanel);
                 SetItem(item, slotItem);
                 HasItem = true;
+
+                if(OnItemAdded!=null){
+                    OnItemAdded();
+                }
                 return slotItem;
             }
             return null;
@@ -168,6 +177,9 @@ namespace DTInventory.MonoBehaviours
             var slotItemBehaviour = transform.GetComponentInChildren<SlotItemBehaviour>();
             Destroy(slotItemBehaviour.gameObject);
             SetSelected(false);
+            if(OnItemRemoved != null){
+                OnItemRemoved();
+            }
         }
 
         internal bool UseItem()
