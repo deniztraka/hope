@@ -21,6 +21,8 @@ namespace DTCrafting.MonoBehaviours
         [SerializeField]
         private Text OutputItemDescText;
 
+        private CraftingRecipe tempRecipe;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -76,8 +78,8 @@ namespace DTCrafting.MonoBehaviours
             if (desc.triggerType == DragAndDropCell.TriggerType.DropEventEnd)
             {
                 //Debug.Log("check recipe database if crafting table has item.");
-                var recipe = TryCraft();
-                SetCraftUI(recipe);
+                tempRecipe = TryCraft();
+                SetCraftUI(tempRecipe);
             }
         }
 
@@ -95,8 +97,8 @@ namespace DTCrafting.MonoBehaviours
                     var dragDropItemComponent = OutputSlot.gameObject.GetComponentInChildren<DragAndDropItem>();
                     dragDropItemComponent.enabled = false;
                     OutputItemTitleText.text = itemToCraft.Name;
-                    OutputItemDescText.text = itemToCraft.Description;   
-                    UseButton.interactable = true;                 
+                    OutputItemDescText.text = itemToCraft.Description;
+                    UseButton.interactable = true;
                 }
                 else if (itemAlreadyThere != null && !itemAlreadyThere.Id.Equals(itemToCraft.Id))
                 {
@@ -105,8 +107,8 @@ namespace DTCrafting.MonoBehaviours
                     var dragDropItemComponent = OutputSlot.gameObject.GetComponentInChildren<DragAndDropItem>();
                     dragDropItemComponent.enabled = false;
                     OutputItemTitleText.text = itemToCraft.Name;
-                    OutputItemDescText.text = itemToCraft.Description;      
-                    UseButton.interactable = true;              
+                    OutputItemDescText.text = itemToCraft.Description;
+                    UseButton.interactable = true;
                 };
             }
             else
@@ -154,8 +156,8 @@ namespace DTCrafting.MonoBehaviours
 
         internal void UpdateUI()
         {
-            var recipe = TryCraft();
-            SetCraftUI(recipe);            
+            tempRecipe = TryCraft();
+            SetCraftUI(tempRecipe);
         }
 
         public void CraftItem()
@@ -163,19 +165,43 @@ namespace DTCrafting.MonoBehaviours
             var item = OutputSlot.GetItem();
             var inventoryItemToAdd = item.getCopy<Item>();
             var emptySlot = InventoryBehavior.FindEmptySlot();
-            if(emptySlot != null){
+            if (emptySlot != null)
+            {
                 InventoryBehavior.Add(item);
-                //Remove required items from crafting table.                
+                if (tempRecipe != null)
+                {
+                    RemoveRequiredItems(tempRecipe);
+                }
                 SetCraftUI(null);
-            }else{
+            }
+            else
+            {
                 //popup inventory is not empty;
             }
-            
+
         }
 
-         public override void DisableButtons()
+        private void RemoveRequiredItems(CraftingRecipe tempRecipe)
         {
-            
+            foreach (var requiredItem in tempRecipe.RequiredItems)
+            {
+                var item = ItemDatabase.getItemByID(requiredItem.Item.Id);
+                item.Quantity = requiredItem.Amount;
+
+                for (int i = 0; i < requiredItem.Amount; i++)
+                {
+                    var itemToRemove = item.getCopy<Item>();
+                    itemToRemove.Quantity = 1;
+                    RemoveItem(itemToRemove);
+                }
+
+
+            }
+        }
+
+        public override void DisableButtons()
+        {
+
             if (DropButton != null)
             {
                 DropButton.interactable = false;

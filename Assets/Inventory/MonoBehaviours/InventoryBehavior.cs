@@ -386,6 +386,35 @@ namespace DTInventory.MonoBehaviours
             return hasEmptySlot;
         }
 
+        internal void RemoveItem(Item item){
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    var slotBehaviour = SlotGrid[x][y].GetComponent<SlotBehaviour>();
+                    if (slotBehaviour.HasItem)
+                    {
+                        var itemToRemove = slotBehaviour.GetItem();
+                        if(itemToRemove.Id == item.Id){
+                            if(itemToRemove.Quantity <= item.Quantity){
+                                var finalQuantity = itemToRemove.Quantity - item.Quantity;
+                                if(finalQuantity == 0){
+                                    slotBehaviour.RemoveItem();
+
+                                }else{
+                                    slotBehaviour.SetItemAmount(finalQuantity);
+                                }
+                                
+                            }else{
+                                slotBehaviour.SetItemAmount(itemToRemove.Quantity-item.Quantity);
+                            }
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
         public SlotBehaviour FindEmptySlot()
         {
             SlotBehaviour emptySlot = null;
