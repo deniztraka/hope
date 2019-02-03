@@ -14,7 +14,7 @@ namespace DTInventory.MonoBehaviours
     {
         public ItemDatabase ItemDatabase;
 
-        public Item Item;        
+        public Item Item;
 
         void Awake()
         {
@@ -24,14 +24,16 @@ namespace DTInventory.MonoBehaviours
                 return;
             }
 
-            Item = ItemDatabase.getItemByID(Item.Id);    
+            Item = ItemDatabase.getItemByID(Item.Id);
         }
 
-        public void OnClick(){
+        public void OnClick()
+        {
             var playerObject = GameObject.FindGameObjectWithTag("Player");
             var player = playerObject.GetComponent<Player>();
             var pickupResult = player.PickUpItem(Item);
-            if(pickupResult){
+            if (pickupResult)
+            {
                 Destroy(gameObject);
             }
 
@@ -42,14 +44,19 @@ namespace DTInventory.MonoBehaviours
             Item.Quantity = quantity;
         }
 
-        public virtual void Use(){
-            
+        public virtual void Use()
+        {
+
             switch (Item.Type)
             {
                 case ItemType.Consumable:
-                var consumableComponent = GetComponent<Consumable>();
-                consumableComponent.Consume();
-                break;
+                    var consumableComponent = GetComponent<Consumable>();
+                    consumableComponent.Consume();
+                    break;
+                case ItemType.Blueprint:
+                    var bluePrintComponent = GetComponent<BluePrint>();
+                    bluePrintComponent.OnUse();
+                    break;
             }
 
             Debug.Log("ıtem is used");

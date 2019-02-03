@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0afb64121a72b9a4b82d97727f61bb19, type: 3}
+  m_Name: RecipeShelter
+  m_EditorClassIdentifier: 
+  RequiredItems:
+  - Item:
+      Id: a55925d2-6cf3-4c62-859a-8fdf726990d4
+      Name: 
+      Description: 
+      Type: 0
+      GameObject: {fileID: 5446841501879131580, guid: b3dd7b979da7db04984731ae55d13559,
+        type: 3}
+      Weight: 0
+      MaxStack: 0
+      Quantity: 0
+      Icon: {fileID: 21300000, guid: 644eedd1be08b9b48bae16f0edd2cbec, type: 3}
+    Amount: 4
+  - Item:
+      Id: a0351873-093c-40da-ab12-870e54632f30
+      Name: 
+      Description: 
+      Type: 0
+      GameObject: {fileID: 666066282010417482, guid: e496560a84f358a49a402da55f11e512,
+        type: 3}
+      Weight: 0
+      MaxStack: 0
+      Quantity: 0
+      Icon: {fileID: 0}
+    Amount: 10
+  OutputItem:
+    Id: 'd160fc0e-de1d-41de-8f69-4cd1e7df2caf '
+    Name: Shelter
+    Description: Shelter
+    Type: 12
+    GameObject: {fileID: 6080508970077171233, guid: a13ca50654a8bdc419e79b13d85a3514,
+      type: 3}
+    Weight: 0
+    MaxStack: 0
+    Quantity: 0
+    Icon: {fileID: 21300000, guid: f78b10474ac6d58479f62781ab471117, type: 3}

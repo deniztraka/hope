@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelected: 0
+  IsSelectable: 1
   SelectedSprite: {fileID: 21300000, guid: 83e23263a2f7af44ea7024aa17d87662, type: 3}
   Sprite: {fileID: 21300000, guid: 366f8d795ed21634ca42dad2102586b6, type: 3}
   HasItem: 0
