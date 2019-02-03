@@ -56,10 +56,9 @@ namespace DTInventory.MonoBehaviours
         {
             var used = false;
 
-            var itemBehaviour = Item.GameObject.GetComponent<ItemBehaviour>();
-            var consumable = itemBehaviour.GetComponent<Consumable>();
+            var itemBehaviour = Item.GameObject.GetComponent<ItemBehaviour>();                       
 
-            if (Item.Quantity > 0 && consumable != null)
+            if (Item.Quantity > 0 )
             {
                 itemBehaviour.Use();
                 Item.Quantity--;

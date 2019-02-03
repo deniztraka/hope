@@ -8,6 +8,7 @@ using DTInventory.ScriptableObjects;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using DTInventory.UI;
+using DTCrafting.MonoBehaviours;
 
 namespace DTInventory.MonoBehaviours
 {
@@ -109,14 +110,20 @@ namespace DTInventory.MonoBehaviours
 
             gameObject.transform.localScale = new Vector3(0, 0, 0);
 
-            DropButton.interactable = false;
-            UnstackButton.interactable = false;
+            if (DropButton != null)
+            {
+                DropButton.interactable = false;
+            }
+            if (UnstackButton != null)
+            {
+                UnstackButton.interactable = false;
+            }
             UseButton.interactable = false;
 
             LoadInventory();
         }
 
-        public void Init()
+        public virtual void Init()
         {
             if (isInitialized)
             {
@@ -174,7 +181,7 @@ namespace DTInventory.MonoBehaviours
             }
         }
 
-        private void InventorySizeChanged()
+        internal void InventorySizeChanged()
         {
             var wrapperContentRectTransform = SlotsWrapper.GetComponent<RectTransform>();
 
@@ -203,17 +210,24 @@ namespace DTInventory.MonoBehaviours
             if (selectedSlot != null)
             {
                 var isUsed = selectedSlot.UseItem();
-                if(!selectedSlot.HasItem){
+                if (!selectedSlot.HasItem)
+                {
                     UseButton.interactable = false;
                 }
             }
         }
 
-        public void DisableButtons()
+        public virtual void DisableButtons()
         {
             UseButton.interactable = false;
-            DropButton.interactable = false;
-            UnstackButton.interactable = false;
+            if (DropButton != null)
+            {
+                DropButton.interactable = false;
+            }
+            if (UnstackButton != null)
+            {
+                UnstackButton.interactable = false;
+            }
         }
 
         public void DropSelected()
@@ -283,7 +297,10 @@ namespace DTInventory.MonoBehaviours
             else
             {
                 gameObject.transform.localScale = new Vector3(1, 1, 1);
-                InventoryScrollbar.value = 1;
+                if (InventoryScrollbar != null)
+                {
+                    InventoryScrollbar.value = 1;
+                }
                 //gameObject.SetActive(true);
             }
 
@@ -369,7 +386,36 @@ namespace DTInventory.MonoBehaviours
             return hasEmptySlot;
         }
 
-        private SlotBehaviour FindEmptySlot()
+        internal void RemoveItem(Item item){
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    var slotBehaviour = SlotGrid[x][y].GetComponent<SlotBehaviour>();
+                    if (slotBehaviour.HasItem)
+                    {
+                        var itemToRemove = slotBehaviour.GetItem();
+                        if(itemToRemove.Id == item.Id){
+                            if(itemToRemove.Quantity <= item.Quantity){
+                                var finalQuantity = itemToRemove.Quantity - item.Quantity;
+                                if(finalQuantity == 0){
+                                    slotBehaviour.RemoveItem();
+
+                                }else{
+                                    slotBehaviour.SetItemAmount(finalQuantity);
+                                }
+                                
+                            }else{
+                                slotBehaviour.SetItemAmount(itemToRemove.Quantity-item.Quantity);
+                            }
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
+        public SlotBehaviour FindEmptySlot()
         {
             SlotBehaviour emptySlot = null;
             for (int x = 0; x < SlotGrid.Length; x++)
@@ -401,10 +447,18 @@ namespace DTInventory.MonoBehaviours
             }
         }
 
-        void OnSimpleDragAndDropEvent(DragAndDropCell.DropEventDescriptor desc)
+        internal virtual void OnSimpleDragAndDropEvent(DragAndDropCell.DropEventDescriptor desc)
         {
+            //Debug.Log("updating slots:"+gameObject.name +" evenetName:"+desc.triggerType.ToString());
             UpdateSlots();
             DisableButtons();
+
+            if (desc.triggerType == DragAndDropCell.TriggerType.DropEventEnd && gameObject.name == "PlayerInventory")
+            {
+                var craftMenuObj = GameObject.Find("CraftMenu");
+                var craftingTable = craftMenuObj.GetComponent<CraftingTable>();
+                craftingTable.UpdateUI();
+            }
 
             return;
             // Get control unit of source cell
@@ -444,12 +498,13 @@ namespace DTInventory.MonoBehaviours
             }
         }
 
-        private void UpdateSlots()
+        internal void UpdateSlots()
         {
             for (int x = 0; x < SlotGrid.Length; x++)
             {
                 for (int y = 0; y < SlotGrid[x].Length; y++)
                 {
+                    //Debug.Log("updating: "+x + "," + y);
                     UpdateSlot(SlotGrid[x][y]);
                 }
             }
@@ -459,7 +514,9 @@ namespace DTInventory.MonoBehaviours
         {
             //Updating HasItem property
             var slotBehaviour = slotGameObject.GetComponent<SlotBehaviour>();
+
             var slotItem = slotGameObject.transform.GetComponentInChildren<SlotItemBehaviour>();
+            //Debug.Log("hasItem:"+(slotItem != null).ToString());
             slotBehaviour.HasItem = slotItem != null;
 
             //Updating slot item icon
@@ -468,6 +525,39 @@ namespace DTInventory.MonoBehaviours
 
             //Updating Selection of slot
             slotBehaviour.SetSelected(false);
+        }
+
+        public List<Item> GetItemsEach()
+        {
+            var items = new List<Item>();
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    var slot = SlotGrid[x][y].GetComponent<SlotBehaviour>();
+                    if (slot.HasItem)
+                    {
+                        var item = slot.GetItem();
+                        if (item != null)
+                        {
+                            for (int i = 0; i < item.Quantity; i++)
+                            {
+                                var copiedItem = item.getCopy<Item>();
+                                copiedItem.Quantity = 1;
+
+                                items.Add(copiedItem);
+                            }
+                        }
+                        else
+                        {
+                            slot.HasItem = false;
+                        }
+
+                    }
+                }
+            }
+
+            return items;
         }
     }
 }

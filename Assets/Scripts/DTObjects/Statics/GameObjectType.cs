@@ -8,6 +8,7 @@ namespace DTObjects.Statics
     public enum GameObjectType
     {
         Tree,
-        Harvestable
+        Harvestable,
+        Usable
     }
 }
