@@ -8,5 +8,5 @@ public interface IHealthComponent
     float MaxValue { get; set;}
     float CurrentValue { get; set; }
 
-    void Modify(float value);
+    void Modify(float? value);
 }

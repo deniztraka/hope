@@ -34,11 +34,7 @@ namespace DTObjects.Statics
 
         protected override void OnClick()
         {
-            // var results = Resources.FindObjectsOfTypeAll<ExitGameCanvasPopUp>();
-            // var exitGameCanvas = results[0].gameObject;
-            // exitGameCanvas.SetActive(true);
-
-            base.OnClick();
+            base.OnClick();            
             StartCoroutine(WaitAndChoppedAnimation(0.5f));
         }
 

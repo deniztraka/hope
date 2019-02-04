@@ -11,7 +11,7 @@ namespace DTObjects.Statics
     {
         public GameObjectType Type;
         private Interactable interactionBehaviour;
-        private Health healthBehaviour;
+        public Health HealthBehaviour;
 
         void Start()
         {
@@ -20,11 +20,11 @@ namespace DTObjects.Statics
 
         protected void Init()
         {
-            healthBehaviour = GetComponent<Health>();
+            HealthBehaviour = GetComponent<Health>();
             interactionBehaviour = GetComponent<Interactable>();
-            if (healthBehaviour)
+            if (HealthBehaviour)
             {
-                healthBehaviour.OnDeathEvent += new Health.DamageHandler(OnDeath);
+                HealthBehaviour.OnDeathEvent += new Health.DamageHandler(OnDeath);
             }
 
             if (interactionBehaviour)
@@ -35,7 +35,7 @@ namespace DTObjects.Statics
 
         protected virtual void OnClick()
         {            
-            healthBehaviour.TakeDamage(20);
+            HealthBehaviour.Modify(-20);
         }
 
         protected virtual void OnDeath()
