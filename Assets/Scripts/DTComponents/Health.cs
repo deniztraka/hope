@@ -90,13 +90,13 @@ namespace DTComponents
         public void RelatedToughnessValueChangedToZeroOrBelow()
         {
             Debug.Log("getting damage from toughness");
-            TakeDamage(toughness.DecreaseHealthValueAmount);
+            Modify(toughness.DecreaseHealthValueAmount);
         }
 
         public void RelatedEnergyValueChangedToZeroOrBelow()
         {
             Debug.Log("getting damage from energy");
-            TakeDamage(energy.DecreaseHealthValueAmount);
+            Modify(energy.DecreaseHealthValueAmount);
         }
 
         void FixedUpdate()
@@ -104,24 +104,20 @@ namespace DTComponents
             if (IsModifyOverTimeEnabled && !lockFlag)
             {
                 lockFlag = true;
-                StartCoroutine(Modify());
+                StartCoroutine(ModifyOverTime());
             }
         }
 
-        private IEnumerator Modify()
+        private IEnumerator ModifyOverTime()
         {
             yield return new WaitForSeconds(Frequency);
 
-            TakeDamage(-ModifyValue);
+            Modify(ModifyValue);
 
             lockFlag = false;
         }
 
-        public void Modify(float amount){
-            CurrentValue += amount;
-        }
-
-        public void TakeDamage(float? amount)
+        public void Modify(float? amount)
         {
             if (CurrentValue <= 0)
             {
@@ -133,7 +129,7 @@ namespace DTComponents
                 return;
             }
 
-            CurrentValue -= amount ?? ModifyValue;
+            CurrentValue += amount ?? ModifyValue;
 
             if (CurrentValue <= 0)
             {
@@ -155,11 +151,6 @@ namespace DTComponents
             {
                 OnDeathEvent();
             }
-        }
-
-        public void Modify(int value)
-        {
-            TakeDamage(-value);
         }
     }
 }
