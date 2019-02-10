@@ -7,5 +7,7 @@ public enum MobileBehaviourStates
     Idling,    
     Walking,
     Running,
-    Atacking
+    Atacking,
+    Chaseing,
+    Escapeing
 }

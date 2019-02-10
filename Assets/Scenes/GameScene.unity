@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -700,11 +700,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7690603799873654660, guid: d1e3ed25c0c249d4188218288d23cb2e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 295879164112780086, guid: d1e3ed25c0c249d4188218288d23cb2e,
         type: 3}
       propertyPath: InventoryBehavior
@@ -948,6 +943,11 @@ PrefabInstance:
     - target: {fileID: 8990629985671937820, guid: d1e3ed25c0c249d4188218288d23cb2e,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690603799873654660, guid: d1e3ed25c0c249d4188218288d23cb2e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1217,7 +1217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 172461040}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1739,7 +1739,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467350203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.57, y: 1.510419, z: -3}
+  m_LocalPosition: {x: -0.32, y: 1.510419, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1728623479}
@@ -3485,7 +3485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 743617604}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4776,7 +4776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1270726059
 Transform:
   m_ObjectHideFlags: 0
@@ -5605,12 +5605,12 @@ PrefabInstance:
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -29597.953
+      value: -38184.69
       objectReference: {fileID: 0}
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 4250.9175
+      value: 7138.1514
       objectReference: {fileID: 0}
     - target: {fileID: 8585576158099552197, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
@@ -5764,8 +5764,9 @@ GameObject:
   - component: {fileID: 1522667393}
   - component: {fileID: 1522667392}
   - component: {fileID: 1522667391}
+  - component: {fileID: 1522667396}
   - component: {fileID: 1522667390}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5780,7 +5781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522667387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 172461040}
@@ -5848,6 +5849,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a78dca70d3c2754782c693ce1db577a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MovementSpeed: 5
+  RunningSpeed: 10
+  WalkingChance: 0.5
+  AttackRange: 3
+  currentBehaviour: 0
 --- !u!114 &1522667391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5960,6 +5966,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.17880401, y: 0.19991875}
   m_EdgeRadius: 0
+--- !u!114 &1522667396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522667387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e78aaecf3f31246a9e7fe5504ac27e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPeaceful: 0
+  WalkingChance: 0.5
+  AttackRange: 1
+  ChaseRange: 6
+  MinStateDecisionFrequency: 0
+  MaxStateDecisionFrequency: 3
+  StateChangingChance: 0.5
+  EscapeHealth: 40
+  CurrentState: 0
 --- !u!1 &1554146186
 GameObject:
   m_ObjectHideFlags: 0
@@ -7960,7 +7987,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2104822096}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Mobiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7975,7 +8002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104822095}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.05, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1522667388}

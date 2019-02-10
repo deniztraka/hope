@@ -6,77 +6,67 @@ using UnityEngine;
 
 namespace DTMobiles
 {
-    [RequireComponent(typeof(Health), typeof(CharacterController2D))]
+    [RequireComponent(typeof(MobileStateDecisionMaker), typeof(CharacterController2D))]
     public class BaseMobileBehaviour : MonoBehaviour
     {
-        private Health healthComponent;
-
-        private CharacterController2D controller2D;
-
-        private int currentDirection;
-        private float movementSpeed = 5;
-        private float runningSpeed = 10;
+        private MobileStateDecisionMaker mobileStateDecisionMaker;
         private float finalMovement;
+        private CharacterController2D controller2D;
+        private int currentDirection;
+        private Player player;
 
-        private MobileBehaviourStates currentBehaviour;
+        public float MovementSpeed = 5;
+        public float RunningSpeed = 10;
 
-        public float CurrentHealth
-        {
-            get { return healthComponent.CurrentValue; }
-        }
+
+        public MobileBehaviourStates currentBehaviour;
 
         void Start()
         {
-            healthComponent = GetComponent<Health>();
-            healthComponent.OnAfterValueChangedEvent += new Health.DamageHandler(OnHealthChanged);
-            healthComponent.OnDeathEvent += new Health.DamageHandler(OnDeath);
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
             controller2D = GetComponent<CharacterController2D>();
-            currentBehaviour = MobileBehaviourStates.Idling;
-            StartCoroutine(TryChangeState());
+            mobileStateDecisionMaker = GetComponent<MobileStateDecisionMaker>();
+
+            mobileStateDecisionMaker.OnStateChanged += new MobileStateDecisionMaker.MobileStateDecisionHandler(OnStateChanged);
         }
 
-        private IEnumerator TryChangeState()
+        private void OnStateChanged(MobileBehaviourStates newState)
         {
-            while (true)
+            if (newState == MobileBehaviourStates.Walking)
             {
-
-
-
-                yield return new WaitForSeconds(UnityEngine.Random.Range(0f, 3f));
-                Debug.Log("trychange");
-                if (currentBehaviour != MobileBehaviourStates.Atacking || currentBehaviour != MobileBehaviourStates.Running)
-                {
-                    currentBehaviour = UnityEngine.Random.value < 0.5f ? MobileBehaviourStates.Walking : MobileBehaviourStates.Idling;
-                    Debug.Log("changed to:" + currentBehaviour.ToString());
-                    if (currentBehaviour == MobileBehaviourStates.Idling)
-                    {
-                        currentDirection = UnityEngine.Random.value < 0.5f ? 1 : -1;
-                    }
-                }
+                currentDirection = UnityEngine.Random.value < 0.5 ? -1 : 1;
             }
         }
 
         void Update()
         {
+            currentBehaviour = mobileStateDecisionMaker.CurrentState;
             SetMovementSpeed();
         }
 
         private void SetMovementSpeed()
         {
+            var playerDistance = player.transform.position.x - transform.position.x;
+
             switch (currentBehaviour)
             {
                 case MobileBehaviourStates.Idling:
                     finalMovement = 0;
                     break;
                 case MobileBehaviourStates.Walking:
-                    finalMovement = movementSpeed;
+                    finalMovement = MovementSpeed;
                     break;
-                case MobileBehaviourStates.Running:
-                    finalMovement = runningSpeed;
+                case MobileBehaviourStates.Chaseing:
+                    finalMovement = RunningSpeed;
+                    currentDirection = playerDistance < 0 ? -1 : 1;
                     break;
                 case MobileBehaviourStates.Atacking:
                     finalMovement = 0;
+                    break;
+                case MobileBehaviourStates.Escapeing:
+                    finalMovement = RunningSpeed;
+                    currentDirection = playerDistance < 0 ? 1 : -1;
                     break;
             }
         }
@@ -86,17 +76,5 @@ namespace DTMobiles
             // Move our character
             controller2D.Move(finalMovement * currentDirection * Time.fixedDeltaTime, false, false);
         }
-
-        protected virtual void OnHealthChanged()
-        {
-            Debug.Log(gameObject.name + " health is changed.");
-        }
-
-        protected virtual void OnDeath()
-        {
-            Debug.Log(gameObject.name + " is dead.");
-        }
-
-
     }
 }
