@@ -17,7 +17,7 @@ namespace DTMobiles
 
         public float MovementSpeed = 5;
         public float RunningSpeed = 10;
-
+        public Animator animator;
 
         public MobileBehaviourStates currentBehaviour;
 
@@ -29,6 +29,8 @@ namespace DTMobiles
             mobileStateDecisionMaker = GetComponent<MobileStateDecisionMaker>();
 
             mobileStateDecisionMaker.OnStateChanged += new MobileStateDecisionMaker.MobileStateDecisionHandler(OnStateChanged);
+
+            animator = GetComponent<Animator>();
         }
 
         private void OnStateChanged(MobileBehaviourStates newState)
@@ -69,6 +71,8 @@ namespace DTMobiles
                     currentDirection = playerDistance < 0 ? 1 : -1;
                     break;
             }
+
+            animator.SetFloat("speed", finalMovement);
         }
 
         void FixedUpdate()

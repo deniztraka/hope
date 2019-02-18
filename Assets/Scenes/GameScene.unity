@@ -5605,12 +5605,12 @@ PrefabInstance:
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -38184.69
+      value: -57384.08
       objectReference: {fileID: 0}
     - target: {fileID: 4400006988652274287, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 7138.1514
+      value: 9652.439
       objectReference: {fileID: 0}
     - target: {fileID: 8585576158099552197, guid: fac55b3d0f413ea429096493f56039dd,
         type: 3}
@@ -5766,8 +5766,9 @@ GameObject:
   - component: {fileID: 1522667391}
   - component: {fileID: 1522667396}
   - component: {fileID: 1522667390}
+  - component: {fileID: 1522667397}
   m_Layer: 15
-  m_Name: Bat
+  m_Name: Chicken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5782,7 +5783,7 @@ Transform:
   m_GameObject: {fileID: 1522667387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.51, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 172461040}
   - {fileID: 743617604}
@@ -5826,7 +5827,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300008, guid: 2702b067a2561864bb336a27444fbacc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3dda3415c87239e4cb7b0378eb92df7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5849,10 +5850,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a78dca70d3c2754782c693ce1db577a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 5
-  RunningSpeed: 10
-  WalkingChance: 0.5
-  AttackRange: 3
+  MovementSpeed: 2.5
+  RunningSpeed: 6
   currentBehaviour: 0
 --- !u!114 &1522667391
 MonoBehaviour:
@@ -5937,7 +5936,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.08}
+  m_Offset: {x: -0.06, y: -0.28}
   serializedVersion: 2
   m_Radius: 0.09
 --- !u!61 &1522667395
@@ -5953,18 +5952,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0046797246, y: 0.030418634}
+  m_Offset: {x: 0, y: 0.05}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.84333336, y: 0.46666667}
+    oldSize: {x: 0.72, y: 0.76}
     newSize: {x: 0.84333336, y: 0.46666667}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17880401, y: 0.19991875}
+  m_Size: {x: 0.45, y: 0.51}
   m_EdgeRadius: 0
 --- !u!114 &1522667396
 MonoBehaviour:
@@ -5978,7 +5977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e78aaecf3f31246a9e7fe5504ac27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsPeaceful: 0
+  IsPeaceful: 1
   WalkingChance: 0.5
   AttackRange: 1
   ChaseRange: 6
@@ -5987,6 +5986,25 @@ MonoBehaviour:
   StateChangingChance: 0.5
   EscapeHealth: 40
   CurrentState: 0
+--- !u!95 &1522667397
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522667387}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b707d20c24d5f5a43a4aa2c84d66453d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1554146186
 GameObject:
   m_ObjectHideFlags: 0
