@@ -55,7 +55,7 @@ namespace DTUI.Components
             UpdateUI();
         }
 
-        private void OnAfterValueChanged()
+        private void OnAfterValueChanged(float beforeValue, float afterValue)
         {
             CurrentHealth = Health.CurrentValue;
             UpdateUI();

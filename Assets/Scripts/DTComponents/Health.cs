@@ -20,11 +20,13 @@ namespace DTComponents
         public bool IsModifyOverTimeEnabled;
         public float Frequency;
         public float ModifyValue;
-        public delegate void DamageHandler();
-        public event DamageHandler OnDeathEvent;
+        public delegate void DamageHandler(float beforeValue, float afterValue);
+
+        public delegate void DeathZeroHandler();
+        public event DeathZeroHandler OnDeathEvent;
         public event DamageHandler OnAfterValueChangedEvent;
         public event DamageHandler OnBeforeValueChangedEvent;
-        public event DamageHandler OnValueZeroOrBelowOnChangeEvent;
+        public event DeathZeroHandler OnValueZeroOrBelowOnChangeEvent;
 
         public float MaxValue
         {
@@ -48,17 +50,19 @@ namespace DTComponents
 
             set
             {
+                var tempValue = Mathf.Clamp(value, 0, MaxValue);
+                var tempCurrentValue = currentValue;
+
                 if (OnBeforeValueChangedEvent != null)
                 {
-                    OnBeforeValueChangedEvent();
+                    OnBeforeValueChangedEvent(currentValue, tempValue);
                 }
 
-                currentValue = value;
-                currentValue = Mathf.Clamp(currentValue, 0, MaxValue);
+                currentValue = tempValue;
 
                 if (OnAfterValueChangedEvent != null)
                 {
-                    OnAfterValueChangedEvent();                    
+                    OnAfterValueChangedEvent(tempCurrentValue, currentValue);
                 }
             }
         }
@@ -73,17 +77,17 @@ namespace DTComponents
             //health ise toughness check et
             if (typeof(Health) == this.GetType() && toughness && toughness != this)
             {
-                toughness.OnValueZeroOrBelowOnChangeEvent += new Health.DamageHandler(RelatedToughnessValueChangedToZeroOrBelow);
+                toughness.OnValueZeroOrBelowOnChangeEvent += new Health.DeathZeroHandler(RelatedToughnessValueChangedToZeroOrBelow);
             }
 
             //health ise energy check et
             if (typeof(Health) == this.GetType() && energy && energy != this)
             {
-                energy.OnValueZeroOrBelowOnChangeEvent += new Health.DamageHandler(RelatedEnergyValueChangedToZeroOrBelow);
+                energy.OnValueZeroOrBelowOnChangeEvent += new Health.DeathZeroHandler(RelatedEnergyValueChangedToZeroOrBelow);
             }
 
 
-            
+
 
         }
 
