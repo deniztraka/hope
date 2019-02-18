@@ -24,7 +24,7 @@ namespace DTObjects.Statics
             interactionBehaviour = GetComponent<Interactable>();
             if (HealthBehaviour)
             {
-                HealthBehaviour.OnDeathEvent += new Health.DamageHandler(OnDeath);
+                HealthBehaviour.OnDeathEvent += new Health.DeathZeroHandler(OnDeath);
             }
 
             if (interactionBehaviour)
