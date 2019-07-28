@@ -461,41 +461,41 @@ namespace DTInventory.MonoBehaviours
             }
 
             return;
-            // Get control unit of source cell
-            var sourceSheet = desc.sourceCell.GetComponentInParent<InventoryBehavior>();
-            // Get control unit of destination cell
-            var destinationSheet = desc.destinationCell.GetComponentInParent<InventoryBehavior>();
-            var actualItem = desc.item.GetComponent<SlotItemBehaviour>();
-            var icon = desc.item.GetComponent<Image>();
-            icon.sprite = actualItem.Item.Icon;
+            // // Get control unit of source cell
+            // var sourceSheet = desc.sourceCell.GetComponentInParent<InventoryBehavior>();
+            // // Get control unit of destination cell
+            // var destinationSheet = desc.destinationCell.GetComponentInParent<InventoryBehavior>();
+            // var actualItem = desc.item.GetComponent<SlotItemBehaviour>();
+            // var icon = desc.item.GetComponent<Image>();
+            // icon.sprite = actualItem.Item.Icon;
 
 
-            switch (desc.triggerType)                                               // What type event is?
-            {
-                case DragAndDropCell.TriggerType.DropRequest:                       // Request for item drag (note: do not destroy item on request)
-                    Debug.Log("Request " + actualItem.Item.Name + " from " + sourceSheet.name + " to " + destinationSheet.name);
-                    break;
-                case DragAndDropCell.TriggerType.DropEventEnd:                      // Drop event completed (successful or not)
-                    if (desc.permission == true)                                    // If drop successful (was permitted before)
-                    {
-                        Debug.Log("Successful drop " + actualItem.Item.Name + " from " + sourceSheet.name + " to " + destinationSheet.name);
-                        UpdateSlots();
-                    }
-                    else                                                            // If drop unsuccessful (was denied before)
-                    {
-                        Debug.Log("Denied drop " + actualItem.Item.Name + " from " + sourceSheet.name + " to " + destinationSheet.name);
-                    }
-                    break;
-                case DragAndDropCell.TriggerType.ItemAdded:                         // New item is added from application
-                    Debug.Log("Item " + actualItem.Item.Name + " added into " + destinationSheet.name);
-                    break;
-                case DragAndDropCell.TriggerType.ItemWillBeDestroyed:               // Called before item be destructed (can not be canceled)
-                    Debug.Log("Item " + actualItem.Item.Name + " will be destroyed from " + sourceSheet.name);
-                    break;
-                default:
-                    Debug.Log("Unknown drag and drop event");
-                    break;
-            }
+            // switch (desc.triggerType)                                               // What type event is?
+            // {
+            //     case DragAndDropCell.TriggerType.DropRequest:                       // Request for item drag (note: do not destroy item on request)
+            //         Debug.Log("Request " + actualItem.Item.Name + " from " + sourceSheet.name + " to " + destinationSheet.name);
+            //         break;
+            //     case DragAndDropCell.TriggerType.DropEventEnd:                      // Drop event completed (successful or not)
+            //         if (desc.permission == true)                                    // If drop successful (was permitted before)
+            //         {
+            //             Debug.Log("Successful drop " + actualItem.Item.Name + " from " + sourceSheet.name + " to " + destinationSheet.name);
+            //             UpdateSlots();
+            //         }
+            //         else                                                            // If drop unsuccessful (was denied before)
+            //         {
+            //             Debug.Log("Denied drop " + actualItem.Item.Name + " from " + sourceSheet.name + " to " + destinationSheet.name);
+            //         }
+            //         break;
+            //     case DragAndDropCell.TriggerType.ItemAdded:                         // New item is added from application
+            //         Debug.Log("Item " + actualItem.Item.Name + " added into " + destinationSheet.name);
+            //         break;
+            //     case DragAndDropCell.TriggerType.ItemWillBeDestroyed:               // Called before item be destructed (can not be canceled)
+            //         Debug.Log("Item " + actualItem.Item.Name + " will be destroyed from " + sourceSheet.name);
+            //         break;
+            //     default:
+            //         Debug.Log("Unknown drag and drop event");
+            //         break;
+            // }
         }
 
         internal void UpdateSlots()

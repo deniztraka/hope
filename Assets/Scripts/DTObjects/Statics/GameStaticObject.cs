@@ -34,7 +34,10 @@ namespace DTObjects.Statics
         }
 
         protected virtual void OnClick()
-        {            
+        {       
+            var player = GameObject.Find("Player");  
+            var animator = player.GetComponent<Animator>();             
+            animator.Play("Sit");            
             HealthBehaviour.Modify(-20);
         }
 

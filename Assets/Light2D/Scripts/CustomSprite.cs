@@ -82,7 +82,7 @@ namespace Light2D
             if (_meshRenderer == null)
             {
                 _meshRenderer = gameObject.AddComponent<MeshRenderer>();
-                _meshRenderer.castShadows = _meshRenderer.receiveShadows = false;
+                _meshRenderer.castShadows = _meshRenderer.receiveShadows = false;                
             }
 
             if (_meshFilter == null)

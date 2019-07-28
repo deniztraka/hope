@@ -45,7 +45,7 @@ namespace DTCrafting.MonoBehaviours
             //UseButton.interactable = true;
         }
 
-        public void Init()
+        public override void Init()
         {
             SlotGrid = new GameObject[SizeX][];
             for (int x = 0; x < SlotGrid.Length; x++)
@@ -130,7 +130,7 @@ namespace DTCrafting.MonoBehaviours
             var itemListEach = GetItemsEach();
             if (itemListEach.Count > 0)
             {
-                var canCraft = false;
+                //var canCraft = false;
                 foreach (var recipe in recipeList)
                 {
                     var hasAllItems = true;
