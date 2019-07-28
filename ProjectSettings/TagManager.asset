@@ -51,6 +51,12 @@ TagManager:
   - name: OnFloor
     uniqueID: 230271553
     locked: 0
+  - name: Floor
+    uniqueID: 2803871647
+    locked: 0
   - name: Player
     uniqueID: 448978399
+    locked: 0
+  - name: Foreground
+    uniqueID: 3652283993
     locked: 0
