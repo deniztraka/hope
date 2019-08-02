@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     float lastMoveDirection = 0f;
     bool jump = false;
     bool crouch = false;
+    public bool Attacking = false;
 
     void Start()
     {
@@ -71,10 +72,11 @@ public class PlayerMovement : MonoBehaviour
         {            
             crouch = !crouch;
         }
-        // else if (Input.GetButtonUp("Crouch"))
-        // {
-        //     crouch = false;
-        // }
+        
+        if (Input.GetButtonDown("Attack"))
+        {
+            Attacking = true;
+        }
     }
 
     void FixedUpdate()
@@ -85,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("horizontalMovement", horizontalMove);
         animator.SetBool("crouch", crouch);
+        animator.SetBool("attacking", Attacking);
 
         // if (lastMoveDirection != horizontalMove)
         // {

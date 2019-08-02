@@ -81,6 +81,11 @@ public class Player : MonoBehaviour
         PlayerDataModel.RealGameSecondsPast = GameObject.Find("TimeOfTheDay").GetComponent<TimeOfTheDay>().RealGameSecondsPast;
     }
 
+    public void Attack(){
+        var playerMovement = GetComponent<PlayerMovement>();
+        playerMovement.Attacking = false;
+    }
+
     public bool PickUpItem(Item item)
     {
         return InventoryBehaviour.Add(item);
