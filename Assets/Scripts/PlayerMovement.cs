@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +16,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        controller.OnCrouchEvent.AddListener(Ping);
+    }
+
+    private void Ping(bool arg0)
+    {
+        Debug.Log(arg0);
     }
 
     public void SetHorizontalMovement(float direction)
@@ -22,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         horizontalMove = direction * Speed;
         if (direction != 0)
         {
+            crouch = false;
             lastMoveDirection = direction;
         }
     }
@@ -60,13 +68,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
+        {            
+            crouch = !crouch;
         }
-        else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
-        }
+        // else if (Input.GetButtonUp("Crouch"))
+        // {
+        //     crouch = false;
+        // }
     }
 
     void FixedUpdate()
@@ -75,27 +83,38 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
 
-        if (horizontalMove != 0)
-        {
-            if (lastMoveDirection < 0)
-            {
-                animator.Play("WalkWest");
-            }
-            else if (lastMoveDirection > 0)
-            {
-                animator.Play("WalkEast");
-            }
-        }
-        else
-        {
-            if (lastMoveDirection < 0)
-            {
-                animator.Play("IdleWest");
-            }
-            else if (lastMoveDirection > 0)
-            {
-                animator.Play("IdleEast");
-            }
-        }
+        animator.SetFloat("horizontalMovement", horizontalMove);
+        animator.SetBool("crouch", crouch);
+
+        // if (lastMoveDirection != horizontalMove)
+        // {
+        //     Debug.Log(lastMoveDirection + "," + horizontalMove);
+        //     if (horizontalMove != 0)
+        //     {
+        //         if (lastMoveDirection < 0)
+        //         {
+        //             animator.Play("WalkWest");
+        //         }
+        //         else if (lastMoveDirection > 0)
+        //         {
+        //             animator.Play("WalkEast");
+        //         }
+        //     }
+        //     else
+        //     {
+        //         if (lastMoveDirection < 0)
+        //         {
+        //             animator.Play("IdleWest");
+        //         }
+        //         else if (lastMoveDirection > 0)
+        //         {
+        //             animator.Play("IdleEast");
+        //         }
+        //     }
+        // }
+
+        return;
+
+
     }
 }
