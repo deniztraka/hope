@@ -1,0 +1,302 @@
+fileFormatVersion: 2
+guid: c082c3c73b921a743a0388bb42491af8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4283913595889862615
+    second: survivor_Head
+  - first:
+      213: -5599135157929808498
+    second: survivor_RightArm
+  - first:
+      213: 6651792686276033463
+    second: survivor_LeftArm
+  - first:
+      213: -5081345009893489593
+    second: survivor_Hips
+  - first:
+      213: 6948110996496228283
+    second: survivor_Body
+  - first:
+      213: -202936222544802399
+    second: survivor_RightLeg
+  - first:
+      213: 1854631872868296651
+    second: survivor_LeftLeg
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: survivor_Head
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 42.64441
+        width: 61.672127
+        height: 64.35559
+      alignment: 9
+      pivot: {x: 0.47833604, y: 0.51830137}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209ad981ad2a5f24492b1b06c3c6eed0
+      internalID: -4283913595889862615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: survivor_RightArm
+      rect:
+        serializedVersion: 2
+        x: 55.285553
+        y: 58.509033
+        width: 27.450874
+        height: 45.97216
+      alignment: 9
+      pivot: {x: 0.49959964, y: 0.50010633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7030224899f342d459d649f599662148
+      internalID: -5599135157929808498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: survivor_LeftArm
+      rect:
+        serializedVersion: 2
+        x: 78.74042
+        y: 58.6
+        width: 26.759583
+        height: 45.800003
+      alignment: 9
+      pivot: {x: 0.49550784, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eeb02da89b48ea4790ac5527107f28e
+      internalID: 6651792686276033463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: survivor_Hips
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 47
+        width: 46
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d963995cd884f3b4cb77bf617123b93a
+      internalID: -5081345009893489593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: survivor_Body
+      rect:
+        serializedVersion: 2
+        x: 6.2037907
+        y: 0
+        width: 55.79268
+        height: 47.41102
+      alignment: 9
+      pivot: {x: 0.4982053, y: 0.48511928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b153e40c30d2f604d859e4c98d25a6de
+      internalID: 6948110996496228283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: survivor_RightLeg
+      rect:
+        serializedVersion: 2
+        x: 60.104645
+        y: 4.999999
+        width: 26.895355
+        height: 37.368214
+      alignment: 9
+      pivot: {x: 0.47946405, y: 0.49507317}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f906ad27822f5594d8202f1106e94849
+      internalID: -202936222544802399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: survivor_LeftLeg
+      rect:
+        serializedVersion: 2
+        x: 80.5956
+        y: 4.7545195
+        width: 26.15892
+        height: 37.613693
+      alignment: 9
+      pivot: {x: 0.47419405, y: 0.4983685}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f5d455bf7470d41b785abaceb2fd0e
+      internalID: 1854631872868296651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 464ea40bc6f2c284fa29a3326212447d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 636993524517994529
+  assetBundleName: 
+  assetBundleVariant: 

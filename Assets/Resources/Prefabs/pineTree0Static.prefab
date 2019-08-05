@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 864961803
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5e4eba07d6b45664fba61ba205ba8a13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
+  HealthBehaviour: {fileID: 0}
   audioSource: {fileID: 894546237649122580}
   chopAudioClip: {fileID: 8300000, guid: f22d409cec419464aaca4d0db81c25c8, type: 3}
   fallAudioClip: {fileID: 8300000, guid: f68516026d979a94782e998666cfd6fa, type: 3}
@@ -212,7 +213,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!82 &894546237649122580
 AudioSource:
   m_ObjectHideFlags: 0
