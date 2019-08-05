@@ -5,13 +5,8 @@ using UnityEngine;
 public class CharacterAnimatorHandler : MonoBehaviour
 {
     public static readonly string[] staticDirections = { "Static N", "Static NW", "Static W", "Static SW", "Static S", "Static SE", "Static E", "Static NE" };
-    public static readonly string[] runDirections = { "Run N", "Run NW", "Run W", "Run SW", "Run S", "Run SE", "Run E", "Run NE" };
-
-    public static readonly List<string> idleEastAnims = new List<string>(){ "Static SE", "Static E", "Static NE" };
-    public static readonly List<string> idleWestAnims = new List<string>(){ "Static NW", "Static W", "Static SW" };
-
-    public static readonly List<string> walkEastAnims = new List<string>(){ "Run SE", "Run E", "Run NE" };
-    public static readonly List<string> walkWestAnims = new List<string>(){ "Run NW", "Run W", "Run SW" };
+    public static readonly string[] staticDirectionsSimple = { "idle_north", "idle_west", "idle_south", "idle_east" };
+    public static readonly string[] walkingDirectionsSimple = { "walking_north", "walking_west", "walking_south", "walking_east" };
 
     Animator animator;
     int lastDirection;
@@ -22,10 +17,8 @@ public class CharacterAnimatorHandler : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-
     public void SetDirection(Vector2 direction)
     {
-
         //use the Run states by default
         string[] directionArray = null;
 
@@ -34,41 +27,20 @@ public class CharacterAnimatorHandler : MonoBehaviour
         {
             //if we are basically standing still, we'll use the Static states
             //we won't be able to calculate a direction if the user isn't pressing one, anyway!
-            directionArray = staticDirections;
+            directionArray = staticDirectionsSimple;
         }
         else
         {
             //we can calculate which direction we are going in
             //use DirectionToIndex to get the index of the slice from the direction vector
             //save the answer to lastDirection
-            directionArray = runDirections;
-            lastDirection = DirectionToIndex(direction, 8);
+            directionArray = walkingDirectionsSimple;
+            lastDirection = DirectionToIndex(direction, 4);
         }
-
-        var currentDirection = directionArray[lastDirection];
-        //Debug.Log(currentDirection);
-
+        
         //tell the animator to play the requested state
-        if (idleEastAnims.FindIndex(s => s.ToString().Equals(currentDirection)) > -1)
-        {
-            animator.Play("IdleEast");
-        }
-        else if (idleWestAnims.FindIndex(s => s.ToString().Equals(currentDirection)) > -1)
-        {
-            animator.Play("IdleWest");
-        }
-        else if (walkEastAnims.FindIndex(s => s.ToString().Equals(currentDirection)) > -1)
-        {
-            animator.Play("WalkEast");
-        }
-        else if (walkWestAnims.FindIndex(s => s.ToString().Equals(currentDirection)) > -1)
-        {
-            animator.Play("WalkWest");
-        }
-        //animator.Play(directionArray[lastDirection]);
+        animator.Play(directionArray[lastDirection]);
     }
-
-    //helper functions
 
     //this function converts a Vector2 direction to an index to a slice around a circle
     //this goes in a counter-clockwise direction.
@@ -77,7 +49,8 @@ public class CharacterAnimatorHandler : MonoBehaviour
         //get the normalized direction
         Vector2 normDir = dir.normalized;
         //calculate how many degrees one slice is
-        float step = 360f / sliceCount;
+        float step = 360f / sliceCount;       
+
         //calculate how many degress half a slice is.
         //we need this to offset the pie, so that the North (UP) slice is aligned in the center
         float halfstep = step / 2;
@@ -96,12 +69,6 @@ public class CharacterAnimatorHandler : MonoBehaviour
         //round it, and we have the answer!
         return Mathf.FloorToInt(stepCount);
     }
-
-
-
-
-
-
 
     //this function converts a string array to a int (animator hash) array.
     public static int[] AnimatorStringArrayToHashArray(string[] animationArray)

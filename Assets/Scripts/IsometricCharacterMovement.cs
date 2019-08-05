@@ -5,14 +5,13 @@ using UnityEngine;
 public class IsometricCharacterMovement : MonoBehaviour
 {
     public float movementSpeed = 1f;
-    CharacterAnimatorHandler characterAnimatorHandler;
+    public CharacterAnimatorHandler characterAnimatorHandler;
 
     Rigidbody2D rbody;
 
     private void Awake()
     {
-        rbody = GetComponent<Rigidbody2D>();
-        characterAnimatorHandler = GetComponentInChildren<CharacterAnimatorHandler>();
+        rbody = GetComponent<Rigidbody2D>();        
     }
 
 
@@ -21,7 +20,7 @@ public class IsometricCharacterMovement : MonoBehaviour
     {
         Vector2 currentPos = rbody.position;
         float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        float verticalInput = Input.GetAxis("Vertical");        
         Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
         //inputVector = Vector2.ClampMagnitude(inputVector, 1);
         Vector2 movement = inputVector * movementSpeed;
