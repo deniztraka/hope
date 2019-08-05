@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: Bind
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: Bones/survivor_Bone_Hips
+    localPosition: {x: 0.020000024, y: -0.13517359, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/survivor_Bone_Hips/survivor_Bone_Body
+    localPosition: {x: 0.040485963, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/survivor_Bone_Hips/survivor_Bone_Body/survivor_Bone_Head
+    localPosition: {x: 0.30097216, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/survivor_Bone_Hips/survivor_Bone_Body/survivor_Bone_Head/survivor_Bone_LeftArm_Upper
+    localPosition: {x: -0.041160643, y: -0.22679839, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.9997941, w: 0.020289773}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/survivor_Bone_Hips/survivor_Bone_Body/survivor_Bone_Head/survivor_Bone_LeftArm_Upper/survivor_Bone_LeftArm_Lower
+    localPosition: {x: 0.14999998, y: 0.000000059604645, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/survivor_Bone_Hips/survivor_Bone_Body/survivor_Bone_Head/survivor_Bone_RightArm_Upper
+    localPosition: {x: -0.041160583, y: 0.25459114, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.9999921, w: 0.0039847544}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/survivor_Bone_Hips/survivor_Bone_Body/survivor_Bone_Head/survivor_Bone_RightArm_Upper/survivor_Bone_RigtArm_Lower
+    localPosition: {x: 0.14999998, y: 0.000000059604645, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/survivor_Bone_Hips/survivor_Bone_RightLeg_Upper
+    localPosition: {x: 0.01, y: 0.11, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.9999976, w: 0.00218518}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/survivor_Bone_Hips/survivor_Bone_RightLeg_Upper/survivor_Bone_RightLeg_Lower
+    localPosition: {x: 0.12873891, y: -0.000000024214387, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/survivor_Bone_Hips/survivor_Bone_LeftLeg_Upper
+    localPosition: {x: 0.01, y: -0.11, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.99997854, w: 0.006554751}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/survivor_Bone_Hips/survivor_Bone_LeftLeg_Upper/survivor_Bone_LeftLeg_Lower
+    localPosition: {x: 0.12586637, y: 0.000000034458935, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}

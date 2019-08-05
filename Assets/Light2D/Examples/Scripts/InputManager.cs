@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -30,8 +31,8 @@ namespace Light2D.Examples
             if (Input.GetKeyDown(KeyCode.F1))
                 Time.timeScale = Time.timeScale > 0.5 ? 0 : 1;
 
-            if (Input.GetKeyDown(KeyCode.R))
-                Application.LoadLevel(0);
+            if (Input.GetKeyDown(KeyCode.R))                
+                SceneManager.LoadScene(0);//Application.LoadLevel(0);
 
             if(Input.GetKeyDown(KeyCode.C))
                 ControlledSpacecraft.DropFlares();
@@ -72,7 +73,7 @@ namespace Light2D.Examples
 
         public void Restart()
         {
-            Application.LoadLevel(0);
+             SceneManager.LoadScene(0);//Application.LoadLevel(0);
         }
     }
 }

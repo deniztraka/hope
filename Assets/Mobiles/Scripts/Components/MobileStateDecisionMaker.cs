@@ -84,7 +84,7 @@ public class MobileStateDecisionMaker : MonoBehaviour
         switch (CurrentState)
         {
             case MobileBehaviourStates.Idling:
-                if (!playerInChaceRange)
+                if (!playerInChaceRange || IsPeaceful)
                 {
                     CurrentState = UnityEngine.Random.value < StateChangingChance ? MobileBehaviourStates.Walking : MobileBehaviourStates.Idling;
                 }
@@ -94,7 +94,7 @@ public class MobileStateDecisionMaker : MonoBehaviour
                 }
                 break;
             case MobileBehaviourStates.Walking:
-                if (!playerInChaceRange)
+                if (!playerInChaceRange || IsPeaceful)
                 {
                     CurrentState = UnityEngine.Random.value < StateChangingChance ? MobileBehaviourStates.Walking : MobileBehaviourStates.Idling;
                 }

@@ -34,7 +34,8 @@ namespace DTObjects.Statics
 
         protected override void OnClick()
         {
-            base.OnClick();            
+            base.OnClick();          
+            
             StartCoroutine(WaitAndChoppedAnimation(0.5f));
         }
 
