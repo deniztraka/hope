@@ -1,0 +1,2059 @@
+fileFormatVersion: 2
+guid: 834e42cea7f39ca4ca3008644629a5f3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5340667304552955053
+    second: walking_south_0
+  - first:
+      213: -5325783505987067748
+    second: walking_south_1
+  - first:
+      213: -8618764742458768345
+    second: walking_south_2
+  - first:
+      213: 8479842199505265693
+    second: walking_south_3
+  - first:
+      213: -190262148930973324
+    second: walking_south_4
+  - first:
+      213: 1856125472023589421
+    second: walking_south_5
+  - first:
+      213: 8905706843034630853
+    second: walking_south_6
+  - first:
+      213: -7413731996835302757
+    second: walking_south_7
+  - first:
+      213: -5669821098486660651
+    second: walking_south_8
+  - first:
+      213: -2152475532919529150
+    second: walking_south_9
+  - first:
+      213: -6236376574644891932
+    second: walking_south_west_0
+  - first:
+      213: 1600671620505055156
+    second: walking_south_west_1
+  - first:
+      213: 5693907844898837225
+    second: walking_south_west_2
+  - first:
+      213: -1388881775065297024
+    second: walking_south_west_3
+  - first:
+      213: -5087995945606303595
+    second: walking_south_west_4
+  - first:
+      213: -3063361777245230939
+    second: walking_south_west_5
+  - first:
+      213: 8580832356366666095
+    second: walking_south_west_6
+  - first:
+      213: -7502523647984064790
+    second: walking_south_west_7
+  - first:
+      213: -7546208910481892147
+    second: walking_south_west_8
+  - first:
+      213: 7419966070000532195
+    second: walking_south_west_9
+  - first:
+      213: -7642818896433520368
+    second: walking_west_0
+  - first:
+      213: -4445475807665545557
+    second: walking_west_1
+  - first:
+      213: -4011169605650066022
+    second: walking_west_2
+  - first:
+      213: 4052040851082755640
+    second: walking_west_3
+  - first:
+      213: 9182762748537485774
+    second: walking_west_4
+  - first:
+      213: -6127965868488779988
+    second: walking_west_5
+  - first:
+      213: 6262515312149830701
+    second: walking_west_6
+  - first:
+      213: -6465600920615170876
+    second: walking_west_7
+  - first:
+      213: -3671778651038497595
+    second: walking_west_8
+  - first:
+      213: -6800528645965281066
+    second: walking_west_9
+  - first:
+      213: -7457620847293474470
+    second: walking_north_west_0
+  - first:
+      213: -4467613500026420453
+    second: walking_north_west_1
+  - first:
+      213: 6584956401952629618
+    second: walking_north_west_2
+  - first:
+      213: 2753714807915823149
+    second: walking_north_west_3
+  - first:
+      213: 2654374611602868867
+    second: walking_north_west_4
+  - first:
+      213: -2795669734445239852
+    second: walking_north_west_5
+  - first:
+      213: 7190453389107685886
+    second: walking_north_west_6
+  - first:
+      213: 3975718889341385207
+    second: walking_north_west_7
+  - first:
+      213: 3490696947186247210
+    second: walking_north_west_8
+  - first:
+      213: 3207098753582168857
+    second: walking_north_west_9
+  - first:
+      213: 7760046642621052450
+    second: walking_north_0
+  - first:
+      213: 8314610710590784169
+    second: walking_north_1
+  - first:
+      213: 8806132426378600585
+    second: walking_north_2
+  - first:
+      213: 7461790862933062023
+    second: walking_north_3
+  - first:
+      213: 4232292665064069295
+    second: walking_north_4
+  - first:
+      213: 3972343137415968959
+    second: walking_north_5
+  - first:
+      213: -7050619316717698554
+    second: walking_north_6
+  - first:
+      213: 773847866635823932
+    second: walking_north_7
+  - first:
+      213: 864858655826527610
+    second: walking_north_8
+  - first:
+      213: -9088372194026911739
+    second: walking_north_9
+  - first:
+      213: -7019223289354069645
+    second: walking_north_east_0
+  - first:
+      213: -2611635453118813668
+    second: walking_north_east_1
+  - first:
+      213: 2471037951911856421
+    second: walking_north_east_2
+  - first:
+      213: 5001308668890231656
+    second: walking_north_east_3
+  - first:
+      213: -9088134923453963943
+    second: walking_north_east_4
+  - first:
+      213: 1609012734323656450
+    second: walking_north_east_5
+  - first:
+      213: 2849097518683660776
+    second: walking_north_east_6
+  - first:
+      213: -8429408282034498345
+    second: walking_north_east_7
+  - first:
+      213: 6831215200641556474
+    second: walking_north_east_8
+  - first:
+      213: 5426124044870944431
+    second: walking_north_east_9
+  - first:
+      213: 6189990358445897235
+    second: walking_east_0
+  - first:
+      213: -566703548733482220
+    second: walking_east_1
+  - first:
+      213: -800807229761586716
+    second: walking_east_2
+  - first:
+      213: 9140178389190801936
+    second: walking_east_3
+  - first:
+      213: 6937107964819123815
+    second: walking_east_4
+  - first:
+      213: -4591827501381095162
+    second: walking_east_5
+  - first:
+      213: 8405617641005042835
+    second: walking_east_6
+  - first:
+      213: -6262421197303527610
+    second: walking_east_7
+  - first:
+      213: 4057613125459039807
+    second: walking_east_8
+  - first:
+      213: 3311002573742615810
+    second: walking_east_9
+  - first:
+      213: -8618043221463123045
+    second: walking_south_east_0
+  - first:
+      213: 3800312352748225217
+    second: walking_south_east_1
+  - first:
+      213: -3908986102386178288
+    second: walking_south_east_2
+  - first:
+      213: -4848979793049170313
+    second: walking_south_east_3
+  - first:
+      213: -2670978453998444233
+    second: walking_south_east_4
+  - first:
+      213: 5937522329329189261
+    second: walking_south_east_5
+  - first:
+      213: 2611623423984091997
+    second: walking_south_east_6
+  - first:
+      213: 2140822871089302
+    second: walking_south_east_7
+  - first:
+      213: 2195060699619340803
+    second: walking_south_east_8
+  - first:
+      213: 5214887581879905056
+    second: walking_south_east_9
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: walking_south_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 448
+        width: 25
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58a8e09e5527d141877b2397634f490
+      internalID: -5340667304552955053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 448
+        width: 24
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471936d91f3efae428b360b5570a9c3d
+      internalID: -5325783505987067748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 448
+        width: 25
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09339e3751dc6e048ad6d44aeb29e25e
+      internalID: -8618764742458768345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 448
+        width: 25
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29e6f2cd19f6644b9b7764253646d92
+      internalID: 8479842199505265693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_4
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 448
+        width: 25
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5bf0bf8fb770684380c159c5161fa47
+      internalID: -190262148930973324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_5
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 448
+        width: 25
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25fee55207a3164e8faf1738dcc165d
+      internalID: 1856125472023589421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 448
+        width: 25
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205a24fbcf527f5428d60fb2386ab3ca
+      internalID: 8905706843034630853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_7
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 448
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84fc3d54361ff54283bf1a863d1075f
+      internalID: -7413731996835302757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_8
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 447
+        width: 25
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb62759d81c2b74484102c9297dce65
+      internalID: -5669821098486660651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_9
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 448
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bce1abd2a2f1c0439f813830d06fc88
+      internalID: -2152475532919529150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_west_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 384
+        width: 27
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a37f26f865128459cbafd5912cdf87
+      internalID: -6236376574644891932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_west_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 384
+        width: 24
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e2e3ccb9b3a794ba782f97f73f87cb
+      internalID: 1600671620505055156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_west_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 384
+        width: 23
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775d8248f41c1e247b18a656927c6e5b
+      internalID: 5693907844898837225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_west_3
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 384
+        width: 23
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9692bc427797bf94f9428637aecf6968
+      internalID: -1388881775065297024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_west_4
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 384
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b2cd4581e033c43bd22200b557a59b
+      internalID: -5087995945606303595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_west_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 384
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f135e4d31a21c479042a45dbbbda40
+      internalID: -3063361777245230939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_west_6
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 384
+        width: 22
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d6ef396960b62459b4fd1a44422c70
+      internalID: 8580832356366666095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_west_7
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 383
+        width: 18
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb491212e557ee647a13bcff817dc95b
+      internalID: -7502523647984064790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_west_8
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 384
+        width: 20
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f422d2e7c1447ad40aa1a238020ee6a8
+      internalID: -7546208910481892147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_west_9
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 384
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cded9b761c8414ab2a0d22bad0cf98
+      internalID: 7419966070000532195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_west_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 321
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95de9c19e2cba024da07394ac4d65a4a
+      internalID: -7642818896433520368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_west_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 321
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bc7159ae33bfa49bc758070bfece6b
+      internalID: -4445475807665545557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_west_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 321
+        width: 18
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bcb59202c9ec844ba903c7d0a7e635a
+      internalID: -4011169605650066022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_west_3
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 321
+        width: 25
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77529456a173f5a419fb124282fea910
+      internalID: 4052040851082755640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_west_4
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 321
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60593acd40bfc4e4b858fa368ddc35e8
+      internalID: 9182762748537485774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_west_5
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 321
+        width: 40
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597ad00b5385bad40838211c092494a1
+      internalID: -6127965868488779988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_west_6
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 321
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10972c7981257148bfd51b5a7a81f2b
+      internalID: 6262515312149830701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_west_7
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 321
+        width: 20
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63bb6dd30a94f64291d3a68851b36df
+      internalID: -6465600920615170876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_west_8
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 321
+        width: 25
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418f389270a204244a94a728f8ea354a
+      internalID: -3671778651038497595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_west_9
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 321
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a69688cc942f748a7618a034aa91d2
+      internalID: -6800528645965281066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_west_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 256
+        width: 32
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e337ec3bb212d42a3c0be0cd5ad942
+      internalID: -7457620847293474470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_west_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 256
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df55beaadedd8e44cb294b2b06facccf
+      internalID: -4467613500026420453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_west_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 256
+        width: 22
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98cce97f3e635040833c4f1c166b68b
+      internalID: 6584956401952629618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_west_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 256
+        width: 25
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc05dea6e9f48db45988a23ede0ff508
+      internalID: 2753714807915823149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_west_4
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 257
+        width: 28
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f7fd8818b3429479cb647f275d602f
+      internalID: 2654374611602868867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_west_5
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 256
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a802436cf43fad043bbe4b85d8c4c4c1
+      internalID: -2795669734445239852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_west_6
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 257
+        width: 27
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f179ff235a2be14da7916bf957f89e4
+      internalID: 7190453389107685886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_west_7
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 256
+        width: 23
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cf5041682826b4fb9a2ad8e944e347
+      internalID: 3975718889341385207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_west_8
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 256
+        width: 22
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1003a758c7d4bdf488f6aba082e243ab
+      internalID: 3490696947186247210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_west_9
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 256
+        width: 28
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ebad5591d00ff469b0942733f3b3ed
+      internalID: 3207098753582168857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 192
+        width: 24
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e40c2f7ec0a710478ee27940ae91fe5
+      internalID: 7760046642621052450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 192
+        width: 25
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a533fb0af3d85784882e1f3b783415ec
+      internalID: 8314610710590784169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 192
+        width: 25
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5cfec36bb9abb445a225fe6ac2b012b
+      internalID: 8806132426378600585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 192
+        width: 25
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4dd11ee24cf83242926ea3669cb1650
+      internalID: 7461790862933062023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_4
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 192
+        width: 26
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f618b50a6c611bc4c9fe4537c6f0a901
+      internalID: 4232292665064069295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_5
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 192
+        width: 25
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab0a8bd8ee6ed4439fc3f2614996327
+      internalID: 3972343137415968959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 192
+        width: 25
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eca21d8364e6f14ca8f2c14db3d9dd3
+      internalID: -7050619316717698554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_7
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 192
+        width: 25
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937eeb42ca80fe343ad2a9cc9691400d
+      internalID: 773847866635823932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_8
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 192
+        width: 24
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f509ca5b450744fba26c5b2d70e9bd
+      internalID: 864858655826527610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_9
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 192
+        width: 23
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f06e9d5143e1ad4e8080aef42222561
+      internalID: -9088372194026911739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_east_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 129
+        width: 32
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743df8e724bef204d924899dec18291d
+      internalID: -7019223289354069645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_east_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 129
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1530574c9b5cd644faade617b776ae1f
+      internalID: -2611635453118813668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_east_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 129
+        width: 22
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f948bfe35d18d2f43834ce21f71ea329
+      internalID: 2471037951911856421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_east_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 129
+        width: 25
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef02329eefff954091dd68265f34789
+      internalID: 5001308668890231656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_east_4
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 129
+        width: 28
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2be48b41d1b1aa48bee6570e98bbbdd
+      internalID: -9088134923453963943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_east_5
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 129
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a9ed2818a7ad34bbc3066caffdc513
+      internalID: 1609012734323656450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_east_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 129
+        width: 27
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b1cb6b361b2054e9450b91d10f84d4
+      internalID: 2849097518683660776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_east_7
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 129
+        width: 23
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727f536c1076cf445a942ffb85d25717
+      internalID: -8429408282034498345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_east_8
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 129
+        width: 22
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04eedd3296da5834685a621b9d729c1c
+      internalID: 6831215200641556474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_north_east_9
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 129
+        width: 28
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5b3368ff63cdc46ae9b69ccd1d4b3a
+      internalID: 5426124044870944431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_east_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 65
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257ec7b1a0cc5b94697779dfba1893f0
+      internalID: 6189990358445897235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_east_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 65
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84a24a1e18b52b4faa82681de56b131
+      internalID: -566703548733482220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_east_2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 65
+        width: 18
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16cba10e0ba2dbf4db18b6a269003b44
+      internalID: -800807229761586716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_east_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 65
+        width: 25
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2487edef4b07e6c4ab9905388d0bad5c
+      internalID: 9140178389190801936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_east_4
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 65
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7d1510408ec244eb93512e386de225
+      internalID: 6937107964819123815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_east_5
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 65
+        width: 40
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4dd66050b8e7654882a1c657e9bc6c9
+      internalID: -4591827501381095162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_east_6
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 65
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20da96f7ac940704195b2be4db99a13e
+      internalID: 8405617641005042835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_east_7
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 65
+        width: 20
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723b3b6592c51d94c8ac9d630e15d37e
+      internalID: -6262421197303527610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_east_8
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 65
+        width: 25
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a24f2901688c243bf47cf6f9999da4
+      internalID: 4057613125459039807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_east_9
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 65
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291be2469a18130469552b93cb19dc5d
+      internalID: 3311002573742615810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_east_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1
+        width: 27
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cda63541d16b3d4fb7ed59798b6a6c0
+      internalID: -8618043221463123045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_east_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1
+        width: 24
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b256167be575549b81d15fe7ae8e7c
+      internalID: 3800312352748225217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_east_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1
+        width: 23
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1104266a4b8ad29468a942da209fa1a8
+      internalID: -3908986102386178288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_east_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1
+        width: 23
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24907b37a84be0f47856d1b5caf7e29c
+      internalID: -4848979793049170313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_east_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728ba995811c8dd419e5f00e47ed195c
+      internalID: -2670978453998444233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_east_5
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af74c688a325cb4ea543d3eca274668
+      internalID: 5937522329329189261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_east_6
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1
+        width: 22
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f57e29cf111ae34ab76008ca9f1cc56
+      internalID: 2611623423984091997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_east_7
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1
+        width: 18
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de45da5cbe49314d92e62d392f993f8
+      internalID: 2140822871089302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_east_8
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1
+        width: 20
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5f3d8f9e9f4464e98ade782b014481
+      internalID: 2195060699619340803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_south_east_9
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b4de5f62cf50149b1b83743506f1dd
+      internalID: 5214887581879905056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
