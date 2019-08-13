@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CharacterAnimatorHandler : MonoBehaviour
 {
-    public static readonly string[] staticDirections = { "Static N", "Static NW", "Static W", "Static SW", "Static S", "Static SE", "Static E", "Static NE" };
-    public static readonly string[] staticDirectionsSimple = { "idle_north", "idle_west", "idle_south", "idle_east" };
+    public static readonly string[] staticDirections = { "idle_north", "idle_north_west", "idle_west", "idle_south_west", "idle_south", "idle_south_east", "idle_east", "idle_north_east" };    
 
     public static readonly string[] walkingDirections = { "walking_north", "walking_north_west", "walking_west", "walking_south_west", "walking_south", "walking_south_east", "walking_east", "walking_north_east" };
 
@@ -46,14 +45,14 @@ public class CharacterAnimatorHandler : MonoBehaviour
 
         Debug.Log(lastDirection);
 
-        if (directionArray.Length -1 == lastDirection)
-        {
-            lastDirection = 0;
-        }
-        else
-        {
-            lastDirection++;
-        }
+        // if (directionArray.Length -1 == lastDirection)
+        // {
+        //     lastDirection = 0;
+        // }
+        // else
+        // {
+        //     lastDirection++;
+        // }
 
         //tell the animator to play the requested state
         var animationName = directionArray[lastDirection];
