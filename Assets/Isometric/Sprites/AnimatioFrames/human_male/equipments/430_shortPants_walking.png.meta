@@ -1,487 +1,490 @@
 fileFormatVersion: 2
-guid: 834e42cea7f39ca4ca3008644629a5f3
+guid: 7ff9b9ad5afaef44ebbc6ffafc460077
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5340667304552955053
-    second: walking_south_0
+      213: -6986081477808772556
+    second: shortPants_walking_south_0
   - first:
-      213: -5325783505987067748
-    second: walking_south_1
+      213: 5209811626684729249
+    second: shortPants_walking_south_1
   - first:
-      213: -8618764742458768345
-    second: walking_south_2
+      213: 5197673449006284958
+    second: shortPants_walking_south_2
   - first:
-      213: 8479842199505265693
-    second: walking_south_3
+      213: 8311724453984407043
+    second: shortPants_walking_south_3
   - first:
-      213: -190262148930973324
-    second: walking_south_4
+      213: -6656515179794588825
+    second: shortPants_walking_south_4
   - first:
-      213: 1856125472023589421
-    second: walking_south_5
+      213: -5625024370975273260
+    second: shortPants_walking_south_5
   - first:
-      213: 8905706843034630853
-    second: walking_south_6
+      213: -6781816010295697662
+    second: shortPants_walking_south_6
   - first:
-      213: -7413731996835302757
-    second: walking_south_7
+      213: 7975148127433433123
+    second: shortPants_walking_south_7
   - first:
-      213: -5669821098486660651
-    second: walking_south_8
+      213: -4983284553316570039
+    second: shortPants_walking_south_8
   - first:
-      213: -2152475532919529150
-    second: walking_south_9
+      213: 2972823315005396676
+    second: shortPants_walking_south_9
   - first:
-      213: -6236376574644891932
-    second: walking_south_west_0
+      213: -4577641296452013856
+    second: shortPants_walking_south_west_0
   - first:
-      213: 1600671620505055156
-    second: walking_south_west_1
+      213: 7739819376978053855
+    second: shortPants_walking_south_west_1
   - first:
-      213: 5693907844898837225
-    second: walking_south_west_2
+      213: 2712612195443582152
+    second: shortPants_walking_south_west_2
   - first:
-      213: -1388881775065297024
-    second: walking_south_west_3
+      213: 6512569523153646117
+    second: shortPants_walking_south_west_3
   - first:
-      213: -5087995945606303595
-    second: walking_south_west_4
+      213: -6231537114589829185
+    second: shortPants_walking_south_west_4
   - first:
-      213: -3063361777245230939
-    second: walking_south_west_5
+      213: -3098004440309964975
+    second: shortPants_walking_south_west_5
   - first:
-      213: 8580832356366666095
-    second: walking_south_west_6
+      213: -3287150131471062632
+    second: shortPants_walking_south_west_6
   - first:
-      213: -7502523647984064790
-    second: walking_south_west_7
+      213: 4792222953630806316
+    second: shortPants_walking_south_west_7
   - first:
-      213: -7546208910481892147
-    second: walking_south_west_8
+      213: -880899194374152424
+    second: shortPants_walking_south_west_8
   - first:
-      213: 7419966070000532195
-    second: walking_south_west_9
+      213: 6144703345074956754
+    second: shortPants_walking_south_west_9
   - first:
-      213: -7642818896433520368
-    second: walking_west_0
+      213: -8494010972680014031
+    second: shortPants_walking_west_0
   - first:
-      213: -4445475807665545557
-    second: walking_west_1
+      213: -9004879876726106543
+    second: shortPants_walking_west_1
   - first:
-      213: -4011169605650066022
-    second: walking_west_2
+      213: 2095083835959614178
+    second: shortPants_walking_west_2
   - first:
-      213: 4052040851082755640
-    second: walking_west_3
+      213: 4951633541731064410
+    second: shortPants_walking_west_3
   - first:
-      213: 9182762748537485774
-    second: walking_west_4
+      213: -8909991296829868458
+    second: shortPants_walking_west_4
   - first:
-      213: -6127965868488779988
-    second: walking_west_5
+      213: 6246700721401973594
+    second: shortPants_walking_west_5
   - first:
-      213: 6262515312149830701
-    second: walking_west_6
+      213: -4040181697885881196
+    second: shortPants_walking_west_6
   - first:
-      213: -6465600920615170876
-    second: walking_west_7
+      213: 128906675081225717
+    second: shortPants_walking_west_7
   - first:
-      213: -3671778651038497595
-    second: walking_west_8
+      213: 6276555141762712057
+    second: shortPants_walking_west_8
   - first:
-      213: -6800528645965281066
-    second: walking_west_9
+      213: -2372443396789931077
+    second: shortPants_walking_west_9
   - first:
-      213: -7457620847293474470
-    second: walking_north_west_0
+      213: 5264931931302206406
+    second: shortPants_walking_west_north_west_0
   - first:
-      213: -4467613500026420453
-    second: walking_north_west_1
+      213: 1864005166522522016
+    second: shortPants_walking_west_north_west_1
   - first:
-      213: 6584956401952629618
-    second: walking_north_west_2
+      213: 862591814522495228
+    second: shortPants_walking_west_north_west_2
   - first:
-      213: 2753714807915823149
-    second: walking_north_west_3
+      213: -1141095209872549595
+    second: shortPants_walking_west_north_west_3
   - first:
-      213: 2654374611602868867
-    second: walking_north_west_4
+      213: 5440351976490825977
+    second: shortPants_walking_west_north_west_4
   - first:
-      213: -2795669734445239852
-    second: walking_north_west_5
+      213: 1313532106535094799
+    second: shortPants_walking_west_north_west_5
   - first:
-      213: 7190453389107685886
-    second: walking_north_west_6
+      213: 2395757702155833147
+    second: shortPants_walking_west_north_west_6
   - first:
-      213: 3975718889341385207
-    second: walking_north_west_7
+      213: -7979953672039196158
+    second: shortPants_walking_west_north_west_7
   - first:
-      213: 3490696947186247210
-    second: walking_north_west_8
+      213: 9037343320175616716
+    second: shortPants_walking_west_north_west_8
   - first:
-      213: 3207098753582168857
-    second: walking_north_west_9
+      213: 1855251092613804422
+    second: shortPants_walking_west_north_west_9
   - first:
-      213: 7760046642621052450
-    second: walking_north_0
+      213: -2827040917291947550
+    second: shortPants_walking_north_0
   - first:
-      213: 8314610710590784169
-    second: walking_north_1
+      213: -6081007475358952010
+    second: shortPants_walking_north_1
   - first:
-      213: 8806132426378600585
-    second: walking_north_2
+      213: -2437507936753485208
+    second: shortPants_walking_north_2
   - first:
-      213: 7461790862933062023
-    second: walking_north_3
+      213: -2987623763374155836
+    second: shortPants_walking_north_3
   - first:
-      213: 4232292665064069295
-    second: walking_north_4
+      213: 2009959837555636044
+    second: shortPants_walking_north_4
   - first:
-      213: 3972343137415968959
-    second: walking_north_5
+      213: 5245780341654440061
+    second: shortPants_walking_north_5
   - first:
-      213: -7050619316717698554
-    second: walking_north_6
+      213: 177246672723462868
+    second: shortPants_walking_north_6
   - first:
-      213: 773847866635823932
-    second: walking_north_7
+      213: -3629855147226356335
+    second: shortPants_walking_north_7
   - first:
-      213: 864858655826527610
-    second: walking_north_8
+      213: -5524762425888499942
+    second: shortPants_walking_north_8
   - first:
-      213: -9088372194026911739
-    second: walking_north_9
+      213: -6708719521166624383
+    second: shortPants_walking_north_9
   - first:
-      213: -7019223289354069645
-    second: walking_north_east_0
+      213: 2282297683351421245
+    second: shortPants_walking_north_east_0
   - first:
-      213: -2611635453118813668
-    second: walking_north_east_1
+      213: -7120563807648822864
+    second: shortPants_walking_north_east_1
   - first:
-      213: 2471037951911856421
-    second: walking_north_east_2
+      213: 8540414660324196415
+    second: shortPants_walking_north_east_2
   - first:
-      213: 5001308668890231656
-    second: walking_north_east_3
+      213: -7662791550968033053
+    second: shortPants_walking_north_east_3
   - first:
-      213: -9088134923453963943
-    second: walking_north_east_4
+      213: 4483349262093671693
+    second: shortPants_walking_north_east_4
   - first:
-      213: 1609012734323656450
-    second: walking_north_east_5
+      213: -8013479348931814720
+    second: shortPants_walking_north_east_5
   - first:
-      213: 2849097518683660776
-    second: walking_north_east_6
+      213: 1622156483351472962
+    second: shortPants_walking_north_east_6
   - first:
-      213: -8429408282034498345
-    second: walking_north_east_7
+      213: -4909472945149996362
+    second: shortPants_walking_north_east_7
   - first:
-      213: 6831215200641556474
-    second: walking_north_east_8
+      213: -8466643976123684406
+    second: shortPants_walking_north_east_8
   - first:
-      213: 5426124044870944431
-    second: walking_north_east_9
+      213: 6010463277564979195
+    second: shortPants_walking_north_east_9
   - first:
-      213: 6189990358445897235
-    second: walking_east_0
+      213: -5946175338431757522
+    second: shortPants_walking_east_0
   - first:
-      213: -566703548733482220
-    second: walking_east_1
+      213: 3550821633869099440
+    second: shortPants_walking_east_1
   - first:
-      213: -800807229761586716
-    second: walking_east_2
+      213: 4635295205203715333
+    second: shortPants_walking_east_2
   - first:
-      213: 9140178389190801936
-    second: walking_east_3
+      213: -4375564986075891979
+    second: shortPants_walking_east_3
   - first:
-      213: 6937107964819123815
-    second: walking_east_4
+      213: 773442891010874887
+    second: shortPants_walking_east_4
   - first:
-      213: -4591827501381095162
-    second: walking_east_5
+      213: 2781939527146287071
+    second: shortPants_walking_east_5
   - first:
-      213: 8405617641005042835
-    second: walking_east_6
+      213: -3408510832835257493
+    second: shortPants_walking_east_6
   - first:
-      213: -6262421197303527610
-    second: walking_east_7
+      213: -5856682600012759510
+    second: shortPants_walking_east_7
   - first:
-      213: 4057613125459039807
-    second: walking_east_8
+      213: 8944312079149185557
+    second: shortPants_walking_east_8
   - first:
-      213: 3311002573742615810
-    second: walking_east_9
+      213: -4084254831476046560
+    second: shortPants_walking_east_9
   - first:
-      213: -8618043221463123045
-    second: walking_south_east_0
+      213: -9190421391547087201
+    second: shortPants_walking_south_east_0
   - first:
-      213: 3800312352748225217
-    second: walking_south_east_1
+      213: -7215198083983868962
+    second: shortPants_walking_south_east_1
   - first:
-      213: -3908986102386178288
-    second: walking_south_east_2
+      213: 786218343620444805
+    second: shortPants_walking_south_east_2
   - first:
-      213: -4848979793049170313
-    second: walking_south_east_3
+      213: 2894444392362548841
+    second: shortPants_walking_south_east_3
   - first:
-      213: -2670978453998444233
-    second: walking_south_east_4
+      213: 3335092550601582744
+    second: shortPants_walking_south_east_4
   - first:
-      213: 5937522329329189261
-    second: walking_south_east_5
+      213: 2121730276815378034
+    second: shortPants_walking_south_east_5
   - first:
-      213: 2611623423984091997
-    second: walking_south_east_6
+      213: -5872505283937337882
+    second: shortPants_walking_south_east_6
   - first:
-      213: 2140822871089302
-    second: walking_south_east_7
+      213: 1584636459492392122
+    second: shortPants_walking_south_east_7
   - first:
-      213: 2195060699619340803
-    second: walking_south_east_8
+      213: 881101577670146009
+    second: shortPants_walking_south_east_8
   - first:
-      213: 5214887581879905056
-    second: walking_south_east_9
+      213: -6572732903666627463
+    second: shortPants_walking_south_east_9
   - first:
-      213: -2987179049035696926
-    second: human_walking_south_0
+      213: 3833632590081189174
+    second: 430_shortPants_walking_south_0
   - first:
-      213: -4154626181522259262
-    second: human_walking_south_1
+      213: -8481969196727611923
+    second: 430_shortPants_walking_south_1
   - first:
-      213: -7423615830899905516
-    second: human_walking_south_2
+      213: -7933672001112212635
+    second: 430_shortPants_walking_south_2
   - first:
-      213: 4036955197636849006
-    second: human_walking_south_3
+      213: -1294480859121519576
+    second: 430_shortPants_walking_south_3
   - first:
-      213: -7918336409512017615
-    second: human_walking_south_4
+      213: -4003061966213264001
+    second: 430_shortPants_walking_south_4
   - first:
-      213: 1250286383453380257
-    second: human_walking_south_5
+      213: 4229026753170768988
+    second: 430_shortPants_walking_south_5
   - first:
-      213: -1129278912610544731
-    second: human_walking_south_6
+      213: 6723980208486387267
+    second: 430_shortPants_walking_south_6
   - first:
-      213: -7318767380291708578
-    second: human_walking_south_7
+      213: 8920477012637400528
+    second: 430_shortPants_walking_south_7
   - first:
-      213: -9034330975163978919
-    second: human_walking_south_8
+      213: -985761334890603754
+    second: 430_shortPants_walking_south_8
   - first:
-      213: -2642428139442013364
-    second: human_walking_south_9
+      213: 1506895135995853542
+    second: 430_shortPants_walking_south_9
   - first:
-      213: -5124289201191915044
-    second: human_walking_south_east_0
+      213: -2926236206077946043
+    second: 430_shortPants_walking_south_west_0
   - first:
-      213: -1930235783882692010
-    second: human_walking_south_east_1
+      213: 1043808740885897322
+    second: 430_shortPants_walking_south_west_1
   - first:
-      213: -5928401670940474306
-    second: human_walking_south_east_2
+      213: -3187618694291102851
+    second: 430_shortPants_walking_south_west_2
   - first:
-      213: 7920213161545077811
-    second: human_walking_south_east_3
+      213: -3431053821639937422
+    second: 430_shortPants_walking_south_west_3
   - first:
-      213: -7339789960609512856
-    second: human_walking_south_east_4
+      213: -3679202937414210736
+    second: 430_shortPants_walking_south_west_4
   - first:
-      213: -3870213730161113542
-    second: human_walking_south_east_5
+      213: -5580218078747535981
+    second: 430_shortPants_walking_south_west_5
   - first:
-      213: 2845055351820942817
-    second: human_walking_south_east_6
+      213: 6457411795089203875
+    second: 430_shortPants_walking_south_west_6
   - first:
-      213: -7153820737407336165
-    second: human_walking_south_east_7
+      213: 7355470041826635919
+    second: 430_shortPants_walking_south_west_7
   - first:
-      213: 6600077398928893513
-    second: human_walking_south_east_8
+      213: -3569676455504530765
+    second: 430_shortPants_walking_south_west_8
   - first:
-      213: 235649642366235954
-    second: human_walking_south_east_9
+      213: 9192480676316350484
+    second: 430_shortPants_walking_south_west_9
   - first:
-      213: -5477956327370342954
-    second: human_walking_west_0
+      213: -7352709096064315130
+    second: 430_shortPants_walking_west_0
   - first:
-      213: -4746828811307571421
-    second: human_walking_west_1
+      213: -465181503542525264
+    second: 430_shortPants_walking_west_1
   - first:
-      213: -5284588943388709596
-    second: human_walking_west_2
+      213: 6989259254484458238
+    second: 430_shortPants_walking_west_2
   - first:
-      213: -1203806322222879755
-    second: human_walking_west_3
+      213: -8314772610331252505
+    second: 430_shortPants_walking_west_3
   - first:
-      213: -3914506265682895674
-    second: human_walking_west_4
+      213: 2723405079593661419
+    second: 430_shortPants_walking_west_4
   - first:
-      213: 8378660296390570055
-    second: human_walking_west_5
+      213: -7187929606379688258
+    second: 430_shortPants_walking_west_5
   - first:
-      213: 411142423000485502
-    second: human_walking_west_6
+      213: 2663364602613573478
+    second: 430_shortPants_walking_west_6
   - first:
-      213: -4735865093386381836
-    second: human_walking_west_7
+      213: -451954015841270934
+    second: 430_shortPants_walking_west_7
   - first:
-      213: 5775138852116121991
-    second: human_walking_west_8
+      213: 3439064769909691654
+    second: 430_shortPants_walking_west_8
   - first:
-      213: -5002893338637462452
-    second: human_walking_west_9
+      213: -5483061328991066939
+    second: 430_shortPants_walking_west_9
   - first:
-      213: 6488151924631840843
-    second: human_walking_north_east_0
+      213: -5495331914265595416
+    second: 430_shortPants_walking_north_west_0
   - first:
-      213: 569266333002947385
-    second: human_walking_north_east_1
+      213: -7440986735887137981
+    second: 430_shortPants_walking_north_west_1
   - first:
-      213: -6897733205198649656
-    second: human_walking_north_east_2
+      213: 185046646028061696
+    second: 430_shortPants_walking_north_west_2
   - first:
-      213: -2586384623833860214
-    second: human_walking_north_east_3
+      213: -4728267218194362422
+    second: 430_shortPants_walking_north_west_3
   - first:
-      213: 2535759233234083600
-    second: human_walking_north_east_4
+      213: -2439088529143137872
+    second: 430_shortPants_walking_north_west_4
   - first:
-      213: 7523032632636293658
-    second: human_walking_north_east_5
+      213: -282145934458819353
+    second: 430_shortPants_walking_north_west_5
   - first:
-      213: -8239183757191127433
-    second: human_walking_north_east_6
+      213: 311562553194376856
+    second: 430_shortPants_walking_north_west_6
   - first:
-      213: 8476833325780642576
-    second: human_walking_north_east_7
+      213: 7723647517809021003
+    second: 430_shortPants_walking_north_west_7
   - first:
-      213: 8251169343298141034
-    second: human_walking_north_east_8
+      213: 5064953892305672035
+    second: 430_shortPants_walking_north_west_8
   - first:
-      213: 4955960376805333968
-    second: human_walking_north_east_9
+      213: -1675890591635146622
+    second: 430_shortPants_walking_north_west_9
   - first:
-      213: -2932211063069791834
-    second: human_walking_north_0
+      213: 8913010954706132126
+    second: 430_shortPants_walking_north_0
   - first:
-      213: -2869336661562543525
-    second: human_walking_north_1
+      213: -6037371652338959804
+    second: 430_shortPants_walking_north_1
   - first:
-      213: 7360225741440643000
-    second: human_walking_north_2
+      213: 4917905662848380824
+    second: 430_shortPants_walking_north_2
   - first:
-      213: 3882921947598419510
-    second: human_walking_north_3
+      213: -322309123943331993
+    second: 430_shortPants_walking_north_3
   - first:
-      213: 2851728680634062253
-    second: human_walking_north_4
+      213: 3263160037160732253
+    second: 430_shortPants_walking_north_4
   - first:
-      213: -2142857096672987936
-    second: human_walking_north_5
+      213: 1690498870121710774
+    second: 430_shortPants_walking_north_5
   - first:
-      213: 1338732104937415965
-    second: human_walking_north_6
+      213: 4302965773756079498
+    second: 430_shortPants_walking_north_6
   - first:
-      213: 517149227131002530
-    second: human_walking_north_7
+      213: -5019664139320142923
+    second: 430_shortPants_walking_north_7
   - first:
-      213: 7628430259261879182
-    second: human_walking_north_8
+      213: -8846153096928787423
+    second: 430_shortPants_walking_north_8
   - first:
-      213: 7176110640879688727
-    second: human_walking_north_9
+      213: -2238882790589574087
+    second: 430_shortPants_walking_north_9
   - first:
-      213: -1199353152554555135
-    second: human_walking_north_west_0
+      213: 5636132108042311934
+    second: 430_shortPants_walking_north_east_0
   - first:
-      213: -5290075667346023198
-    second: human_walking_north_west_1
+      213: -2108436707899152789
+    second: 430_shortPants_walking_north_east_1
   - first:
-      213: -2384263370291813838
-    second: human_walking_north_west_2
+      213: 4589326711708020417
+    second: 430_shortPants_walking_north_east_2
   - first:
-      213: 2575192889375678013
-    second: human_walking_north_west_3
+      213: -6920323618085759742
+    second: 430_shortPants_walking_north_east_3
   - first:
-      213: -62646380305730406
-    second: human_walking_north_west_4
+      213: 7406323834073200493
+    second: 430_shortPants_walking_north_east_4
   - first:
-      213: -3176025997367577767
-    second: human_walking_north_west_5
+      213: -6791422318185862584
+    second: 430_shortPants_walking_north_east_5
   - first:
-      213: -3187036093508491749
-    second: human_walking_north_west_6
+      213: -94145507713046089
+    second: 430_shortPants_walking_north_east_6
   - first:
-      213: -7211188128291195253
-    second: human_walking_north_west_7
+      213: -7377166170342058913
+    second: 430_shortPants_walking_north_east_7
   - first:
-      213: -3546515616688216632
-    second: human_walking_north_west_8
+      213: 3336712119468886039
+    second: 430_shortPants_walking_north_east_8
   - first:
-      213: 8351446488860763434
-    second: human_walking_north_west_9
+      213: -7089282447231729350
+    second: 430_shortPants_walking_north_east_9
   - first:
-      213: -7534114844813321950
-    second: human_walking_east_0
+      213: -7148663699166364089
+    second: 430_shortPants_walking_east_0
   - first:
-      213: -3458948154715232456
-    second: human_walking_east_1
+      213: 240819751531810470
+    second: 430_shortPants_walking_east_1
   - first:
-      213: -3280800296151265977
-    second: human_walking_east_2
+      213: 6336809152676846693
+    second: 430_shortPants_walking_east_2
   - first:
-      213: -2536177545927039896
-    second: human_walking_east_3
+      213: 1402498466603281204
+    second: 430_shortPants_walking_east_3
   - first:
-      213: -4362185025661008237
-    second: human_walking_east_4
+      213: 5492697740096285119
+    second: 430_shortPants_walking_east_4
   - first:
-      213: 7500999794198391827
-    second: human_walking_east_5
+      213: -5932785052051655240
+    second: 430_shortPants_walking_east_5
   - first:
-      213: 8350434964859688582
-    second: human_walking_east_6
+      213: -8639953222316156398
+    second: 430_shortPants_walking_east_6
   - first:
-      213: 1181364199427194757
-    second: human_walking_east_7
+      213: 5518150100856906847
+    second: 430_shortPants_walking_east_7
   - first:
-      213: 1179203260151064348
-    second: human_walking_east_8
+      213: -8088701653755490514
+    second: 430_shortPants_walking_east_7
   - first:
-      213: -931695951857423975
-    second: human_walking_east_9
+      213: 3617773489635536541
+    second: 430_shortPants_walking_east_9
   - first:
-      213: -5210727470078859397
-    second: human_walking_south_west_0
+      213: 7889108000882205952
+    second: 430_shortPants_walking_south_east_0
   - first:
-      213: 7447065480966529975
-    second: human_walking_south_west_1
+      213: 5471761743886365693
+    second: 430_shortPants_walking_south_east_1
   - first:
-      213: -7237890126406099547
-    second: human_walking_south_west_2
+      213: 7749569349382107747
+    second: 430_shortPants_walking_south_east_2
   - first:
-      213: 5569053306989165103
-    second: human_walking_south_west_3
+      213: 3493354466678460430
+    second: 430_shortPants_walking_south_east_3
   - first:
-      213: 7232766443162232760
-    second: human_walking_south_west_4
+      213: 6402478057655479965
+    second: 430_shortPants_walking_south_east_4
   - first:
-      213: 310009818019839826
-    second: human_walking_south_west_5
+      213: -8933036935342929713
+    second: 430_shortPants_walking_south_east_5
   - first:
-      213: 7681695498065759515
-    second: human_walking_south_west_6
+      213: 3506581411231813516
+    second: 430_shortPants_walking_south_east_6
   - first:
-      213: -6314497296470303350
-    second: human_walking_south_west_7
+      213: 1972020712701606998
+    second: 430_shortPants_walking_south_east_7
   - first:
-      213: -709011371802229333
-    second: human_walking_south_west_8
+      213: -6049950571151965783
+    second: 430_shortPants_walking_south_east_8
   - first:
-      213: 9073684184804734166
-    second: human_walking_south_west_9
+      213: 3790288213815513279
+    second: 430_shortPants_walking_south_east_9
+  - first:
+      213: -6049950571151965783
+    second: 430_shortPants_walking_east_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -602,7 +605,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: human_walking_south_east_0
+      name: 430_shortPants_walking_south_east_0
       rect:
         serializedVersion: 2
         x: 0
@@ -610,20 +613,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab47c179c8df8c94e9278f78d77e0844
-      internalID: -5124289201191915044
+      spriteID: 8a8008508803a754baf0def607e35f1e
+      internalID: 7889108000882205952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_east_1
+      name: 430_shortPants_walking_south_east_1
       rect:
         serializedVersion: 2
         x: 64
@@ -631,20 +634,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0106e31908be5c44e8903595dff34b7d
-      internalID: -1930235783882692010
+      spriteID: 7f105817e11f2204ba3199f9b17edab1
+      internalID: 5471761743886365693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_east_2
+      name: 430_shortPants_walking_south_east_2
       rect:
         serializedVersion: 2
         x: 128
@@ -652,20 +655,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7c9eb4d7b5a7584593cfa3caf567412
-      internalID: -5928401670940474306
+      spriteID: 498836a4a7059fb4eae9f1580cbe5d43
+      internalID: 7749569349382107747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_east_3
+      name: 430_shortPants_walking_south_east_3
       rect:
         serializedVersion: 2
         x: 192
@@ -673,20 +676,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 860857fd7fe033f47a7348ad58da8a2f
-      internalID: 7920213161545077811
+      spriteID: 5d2ec7d176f55e34a9dd8c2f47a40866
+      internalID: 3493354466678460430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_east_4
+      name: 430_shortPants_walking_south_east_4
       rect:
         serializedVersion: 2
         x: 256
@@ -694,20 +697,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffc1c932f5ac2ec438cfabd0a989f89b
-      internalID: -7339789960609512856
+      spriteID: aeaf27b0904b7c842be426a78ff58770
+      internalID: 6402478057655479965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_east_5
+      name: 430_shortPants_walking_south_east_5
       rect:
         serializedVersion: 2
         x: 320
@@ -715,20 +718,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e10ad3f81d9a838419e3c89af80e4215
-      internalID: -3870213730161113542
+      spriteID: 9262a63df4af8fa459cf59fcf1ea371d
+      internalID: -8933036935342929713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_east_6
+      name: 430_shortPants_walking_south_east_6
       rect:
         serializedVersion: 2
         x: 384
@@ -736,20 +739,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58d693890382858458ccc39f2bf7e69d
-      internalID: 2845055351820942817
+      spriteID: a3853a1ae60c82944b6db414b367e6ed
+      internalID: 3506581411231813516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_east_7
+      name: 430_shortPants_walking_south_east_7
       rect:
         serializedVersion: 2
         x: 448
@@ -757,20 +760,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fc3dc8bda9dab54786b5ed435c7a2fd
-      internalID: -7153820737407336165
+      spriteID: 3fc56fe819579954098e614e5bc5a0a6
+      internalID: 1972020712701606998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_east_8
+      name: 430_shortPants_walking_south_east_8
       rect:
         serializedVersion: 2
         x: 512
@@ -778,20 +781,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aafe9f100beff6c4390a6aeb52b57e6d
-      internalID: 6600077398928893513
+      spriteID: 8dd2a47a176551c4bb440adb1b40f266
+      internalID: -6049950571151965783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_east_9
+      name: 430_shortPants_walking_south_east_9
       rect:
         serializedVersion: 2
         x: 576
@@ -799,20 +802,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d84838cd7380ea4b85f8479d164ed45
-      internalID: 235649642366235954
+      spriteID: 45990fc693a232744a3be701b89bf191
+      internalID: 3790288213815513279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_0
+      name: 430_shortPants_walking_south_0
       rect:
         serializedVersion: 2
         x: 0
@@ -820,20 +823,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 605ceaf63fe875349ac6232701bb3846
-      internalID: -2987179049035696926
+      spriteID: e10d4a482383b514195dadffad3a5f0d
+      internalID: 3833632590081189174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_1
+      name: 430_shortPants_walking_south_1
       rect:
         serializedVersion: 2
         x: 64
@@ -841,20 +844,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87da98de61161454c8d45464607632c9
-      internalID: -4154626181522259262
+      spriteID: 978181c657fd7e949aacd4faaa8ab03b
+      internalID: -8481969196727611923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_2
+      name: 430_shortPants_walking_south_2
       rect:
         serializedVersion: 2
         x: 128
@@ -862,20 +865,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8ca32bca4f6cbe4ab4fdcc34a2c3bb1
-      internalID: -7423615830899905516
+      spriteID: a2f84dac0882e1747a10362722f0da72
+      internalID: -7933672001112212635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_3
+      name: 430_shortPants_walking_south_3
       rect:
         serializedVersion: 2
         x: 192
@@ -883,20 +886,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 590c9479f86d5a2419e739cd1279a986
-      internalID: 4036955197636849006
+      spriteID: cbcd4e492ac5d7b4abb942de4933a5c9
+      internalID: -1294480859121519576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_4
+      name: 430_shortPants_walking_south_4
       rect:
         serializedVersion: 2
         x: 256
@@ -904,20 +907,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a4b043ce23f12c4da98fbaa43bb619a
-      internalID: -7918336409512017615
+      spriteID: 0221c5bcfdf32cc4dbfad04bb1136ab1
+      internalID: -4003061966213264001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_5
+      name: 430_shortPants_walking_south_5
       rect:
         serializedVersion: 2
         x: 320
@@ -925,20 +928,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42ecd3451a2fdbf40b63fe8c99c46765
-      internalID: 1250286383453380257
+      spriteID: 8edc68517679fe54980e10ec76ecb79e
+      internalID: 4229026753170768988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_6
+      name: 430_shortPants_walking_south_6
       rect:
         serializedVersion: 2
         x: 384
@@ -946,20 +949,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21e6282c8e1d76f458c783525673794f
-      internalID: -1129278912610544731
+      spriteID: 2d07c8b2c1bbf0743bdc8be37a23f1fb
+      internalID: 6723980208486387267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_7
+      name: 430_shortPants_walking_south_7
       rect:
         serializedVersion: 2
         x: 448
@@ -967,20 +970,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d500e8ef8fb0bac4083fad4797401d3f
-      internalID: -7318767380291708578
+      spriteID: 4bb5a5aad11e1af44982baa458e73e97
+      internalID: 8920477012637400528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_8
+      name: 430_shortPants_walking_south_8
       rect:
         serializedVersion: 2
         x: 512
@@ -988,20 +991,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e70ebd7d88e2164db6461ff8641bbd4
-      internalID: -9034330975163978919
+      spriteID: ce8cae0a99b889a42ae1c2ca76cb15f2
+      internalID: -985761334890603754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_9
+      name: 430_shortPants_walking_south_9
       rect:
         serializedVersion: 2
         x: 576
@@ -1009,20 +1012,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cd388e25d4b89f4c9a84504e40bfa9d
-      internalID: -2642428139442013364
+      spriteID: 01a260b42745d424884d65a6e227642d
+      internalID: 1506895135995853542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_west_0
+      name: 430_shortPants_walking_south_west_0
       rect:
         serializedVersion: 2
         x: 0
@@ -1030,20 +1033,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 479a93023e8f9f64ba3a4e6568bd4174
-      internalID: -5210727470078859397
+      spriteID: c8d42d9d28c6677449e5e1355c40e066
+      internalID: -2926236206077946043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_west_1
+      name: 430_shortPants_walking_south_west_1
       rect:
         serializedVersion: 2
         x: 64
@@ -1051,20 +1054,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b356d57c6e4a9b43870cdcdb6b3535e
-      internalID: 7447065480966529975
+      spriteID: 3ede7748abd1c5649acb99290ae82318
+      internalID: 1043808740885897322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_west_2
+      name: 430_shortPants_walking_south_west_2
       rect:
         serializedVersion: 2
         x: 128
@@ -1072,20 +1075,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93462b4619049f644bb4b1e9a70914a2
-      internalID: -7237890126406099547
+      spriteID: 882a27c87339f1f47bb9efeff1634aac
+      internalID: -3187618694291102851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_west_3
+      name: 430_shortPants_walking_south_west_3
       rect:
         serializedVersion: 2
         x: 192
@@ -1093,20 +1096,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e4297368c0f96649b2c9bb094d21260
-      internalID: 5569053306989165103
+      spriteID: 07aabc29ed84ca14ba92e715d18cd0ad
+      internalID: -3431053821639937422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_west_4
+      name: 430_shortPants_walking_south_west_4
       rect:
         serializedVersion: 2
         x: 256
@@ -1114,20 +1117,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41240a95dc40278468eb61e66745ed4c
-      internalID: 7232766443162232760
+      spriteID: a1aa503da83bc2c4db19e5b612f751ec
+      internalID: -3679202937414210736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_west_5
+      name: 430_shortPants_walking_south_west_5
       rect:
         serializedVersion: 2
         x: 320
@@ -1135,20 +1138,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cae90a9ab42d7b944a12cb3c6511dd1f
-      internalID: 310009818019839826
+      spriteID: 35d44ffd26fdd7245bf51dbd9bd471de
+      internalID: -5580218078747535981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_west_6
+      name: 430_shortPants_walking_south_west_6
       rect:
         serializedVersion: 2
         x: 384
@@ -1156,20 +1159,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f872d5f305fa0434e94c329162d76d08
-      internalID: 7681695498065759515
+      spriteID: 0ee0550c665e5914fa600ba18aa2e02c
+      internalID: 6457411795089203875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_west_7
+      name: 430_shortPants_walking_south_west_7
       rect:
         serializedVersion: 2
         x: 448
@@ -1177,20 +1180,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0771204898cfafb4e88181aa882869c5
-      internalID: -6314497296470303350
+      spriteID: 67890c567bc6b0748939fdb9f4e24c9d
+      internalID: 7355470041826635919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_west_8
+      name: 430_shortPants_walking_south_west_8
       rect:
         serializedVersion: 2
         x: 512
@@ -1198,20 +1201,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9437203abcf42124d9b1074332ccb4d7
-      internalID: -709011371802229333
+      spriteID: a6ca0f048c1d7cf4f8d5d4e24fe92a19
+      internalID: -3569676455504530765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_south_west_9
+      name: 430_shortPants_walking_south_west_9
       rect:
         serializedVersion: 2
         x: 576
@@ -1219,20 +1222,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 471a3c8348790414bb8bfdab9de86c7d
-      internalID: 9073684184804734166
+      spriteID: 2c173dbe9a6d43a42b8d0a70eb4beac3
+      internalID: 9192480676316350484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_west_0
+      name: 430_shortPants_walking_west_0
       rect:
         serializedVersion: 2
         x: 0
@@ -1240,20 +1243,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4e5f61a0bacdb54690ab7ddf4afc289
-      internalID: -5477956327370342954
+      spriteID: 1adae186d1e933c48926c26229ff04b0
+      internalID: -7352709096064315130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_west_1
+      name: 430_shortPants_walking_west_1
       rect:
         serializedVersion: 2
         x: 64
@@ -1261,41 +1264,41 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 637925548b60d2b4aa10b3f7625c0488
-      internalID: -4746828811307571421
+      spriteID: 692223b5de7ff9f48a530b7eb6499ff9
+      internalID: -465181503542525264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_west_2
+      name: 430_shortPants_walking_west_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 127
         y: 256
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68cf56c0ff5a9c840bb80bdb79668f19
-      internalID: -5284588943388709596
+      spriteID: 6c5cee54eeb2c474c8a4322fccf50f42
+      internalID: 6989259254484458238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_west_3
+      name: 430_shortPants_walking_west_3
       rect:
         serializedVersion: 2
         x: 192
@@ -1303,20 +1306,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c379d6dcc63dde448a7bd9a5233b842a
-      internalID: -1203806322222879755
+      spriteID: ec202531df8179b4fb6fa497db79392e
+      internalID: -8314772610331252505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_west_4
+      name: 430_shortPants_walking_west_4
       rect:
         serializedVersion: 2
         x: 256
@@ -1324,20 +1327,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84eba59792dd95345aea47f290bbd9c0
-      internalID: -3914506265682895674
+      spriteID: a2d443fb75facca4b902e159e51a934f
+      internalID: 2723405079593661419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_west_5
+      name: 430_shortPants_walking_west_5
       rect:
         serializedVersion: 2
         x: 320
@@ -1345,20 +1348,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b837effcba1b4b4f8b7e59da87da080
-      internalID: 8378660296390570055
+      spriteID: e711024dd5a62d64ebdb53c319253136
+      internalID: -7187929606379688258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_west_6
+      name: 430_shortPants_walking_west_6
       rect:
         serializedVersion: 2
         x: 384
@@ -1366,20 +1369,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aca51e25bfd805e42a0aec460a3bf39e
-      internalID: 411142423000485502
+      spriteID: e488905ee34421749b696f29ac5a43f4
+      internalID: 2663364602613573478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_west_7
+      name: 430_shortPants_walking_west_7
       rect:
         serializedVersion: 2
         x: 448
@@ -1387,20 +1390,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d011d29be81fcd46b5ae01a4042c5c4
-      internalID: -4735865093386381836
+      spriteID: d26613f7e1037724d9ed6ec5aed93f0d
+      internalID: -451954015841270934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_west_8
+      name: 430_shortPants_walking_west_8
       rect:
         serializedVersion: 2
         x: 512
@@ -1408,20 +1411,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 648168e62c79e5f46a73e45247f7c9a1
-      internalID: 5775138852116121991
+      spriteID: d18fb54fb3bda17459e0d6a9d6e77431
+      internalID: 3439064769909691654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_west_9
+      name: 430_shortPants_walking_west_9
       rect:
         serializedVersion: 2
         x: 576
@@ -1429,20 +1432,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a49a37817fdef5047ad4684ddbff5366
-      internalID: -5002893338637462452
+      spriteID: ea25035f42cbc544b929bdf3dcf838f5
+      internalID: -5483061328991066939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_west_0
+      name: 430_shortPants_walking_north_west_0
       rect:
         serializedVersion: 2
         x: 0
@@ -1450,20 +1453,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5f44f5aed0fff842829101f857748d1
-      internalID: -1199353152554555135
+      spriteID: b60f23dcd5fdf144b9468bc0298715e6
+      internalID: -5495331914265595416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_west_1
+      name: 430_shortPants_walking_north_west_1
       rect:
         serializedVersion: 2
         x: 64
@@ -1471,20 +1474,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 783b5102972ceea47a5e1a0e933a8900
-      internalID: -5290075667346023198
+      spriteID: 58eb9f6ab94a99d48a2874a5d4a0550b
+      internalID: -7440986735887137981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_west_2
+      name: 430_shortPants_walking_north_west_2
       rect:
         serializedVersion: 2
         x: 128
@@ -1492,20 +1495,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 336b660afb08274408fe49f3b6f29203
-      internalID: -2384263370291813838
+      spriteID: 59fe3e842c49db848a8db910465f13fc
+      internalID: 185046646028061696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_west_3
+      name: 430_shortPants_walking_north_west_3
       rect:
         serializedVersion: 2
         x: 192
@@ -1513,20 +1516,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8684162641d6644db87469ee2a13646
-      internalID: 2575192889375678013
+      spriteID: 74a482d1f0fb1534db991758e958c1ab
+      internalID: -4728267218194362422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_west_4
+      name: 430_shortPants_walking_north_west_4
       rect:
         serializedVersion: 2
         x: 256
@@ -1534,20 +1537,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02ca686c175e04341ad120921834e76a
-      internalID: -62646380305730406
+      spriteID: a01cfb8e65c085145a7dcf50b5078611
+      internalID: -2439088529143137872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_west_5
+      name: 430_shortPants_walking_north_west_5
       rect:
         serializedVersion: 2
         x: 320
@@ -1555,20 +1558,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9bab2543529bab49b458f4f0dd5fc04
-      internalID: -3176025997367577767
+      spriteID: 577188af6e1a5ad459716053c8926547
+      internalID: -282145934458819353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_west_6
+      name: 430_shortPants_walking_north_west_6
       rect:
         serializedVersion: 2
         x: 384
@@ -1576,20 +1579,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f35aaa9dbba21d24295662336efd5f72
-      internalID: -3187036093508491749
+      spriteID: fe1ff4d0a16dd0d439010457083233fb
+      internalID: 311562553194376856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_west_7
+      name: 430_shortPants_walking_north_west_7
       rect:
         serializedVersion: 2
         x: 448
@@ -1597,20 +1600,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 782597375b9b3e040817889dbd83c2f3
-      internalID: -7211188128291195253
+      spriteID: a9a6204210f1410428834ada40468ad0
+      internalID: 7723647517809021003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_west_8
+      name: 430_shortPants_walking_north_west_8
       rect:
         serializedVersion: 2
         x: 512
@@ -1618,20 +1621,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5df4ad0e5c8f80e41866033f3c678dff
-      internalID: -3546515616688216632
+      spriteID: 57ed04aca7eb9ca40a9d102ea9fa0258
+      internalID: 5064953892305672035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_west_9
+      name: 430_shortPants_walking_north_west_9
       rect:
         serializedVersion: 2
         x: 576
@@ -1639,20 +1642,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd2d4ca1aadd8404e924f21fd798a759
-      internalID: 8351446488860763434
+      spriteID: 73036e1a9d3efff45b7776395d99722f
+      internalID: -1675890591635146622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_0
+      name: 430_shortPants_walking_north_0
       rect:
         serializedVersion: 2
         x: 0
@@ -1660,20 +1663,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2eb0589cad3710f41b5f85015013aa6d
-      internalID: -2932211063069791834
+      spriteID: 992fc41e15fa3b840b88190352e9ef1f
+      internalID: 8913010954706132126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_1
+      name: 430_shortPants_walking_north_1
       rect:
         serializedVersion: 2
         x: 64
@@ -1681,41 +1684,41 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f98e21fec89ab0243a98f12768295f6e
-      internalID: -2869336661562543525
+      spriteID: 0f278a1fb2ecf4a4290030c90f6fd006
+      internalID: -6037371652338959804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_2
+      name: 430_shortPants_walking_north_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 127
         y: 128
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1140533ff6cc8244bb31f0fc08bd9c87
-      internalID: 7360225741440643000
+      spriteID: 4cc3135664d36f4419b3476f2498e8d3
+      internalID: 4917905662848380824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_3
+      name: 430_shortPants_walking_north_3
       rect:
         serializedVersion: 2
         x: 192
@@ -1723,20 +1726,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ee0d4cb5b8937144acfe652079471f3
-      internalID: 3882921947598419510
+      spriteID: 362d02bcd44d1b14ba6b3661561185a3
+      internalID: -322309123943331993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_4
+      name: 430_shortPants_walking_north_4
       rect:
         serializedVersion: 2
         x: 256
@@ -1744,20 +1747,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f6b69eb87289e249abf169b2d276b14
-      internalID: 2851728680634062253
+      spriteID: f7e0cc2b80618e04b90022c2bd92dd75
+      internalID: 3263160037160732253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_5
+      name: 430_shortPants_walking_north_5
       rect:
         serializedVersion: 2
         x: 320
@@ -1765,20 +1768,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76f1f86696fd53b448f6ef0023d49f8f
-      internalID: -2142857096672987936
+      spriteID: 5428081ac6637e7478ee1fde2e95f139
+      internalID: 1690498870121710774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_6
+      name: 430_shortPants_walking_north_6
       rect:
         serializedVersion: 2
         x: 384
@@ -1786,20 +1789,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20989894813212b41bf8b5641cccaa7f
-      internalID: 1338732104937415965
+      spriteID: b7d97d018a1ff0a4c9f148b4cfb4f002
+      internalID: 4302965773756079498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_7
+      name: 430_shortPants_walking_north_7
       rect:
         serializedVersion: 2
         x: 448
@@ -1807,20 +1810,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1691ae9bf5c0de841823ac7c0b615cdc
-      internalID: 517149227131002530
+      spriteID: ff564568d3a43a24889cc096aec5d6c1
+      internalID: -5019664139320142923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_8
+      name: 430_shortPants_walking_north_8
       rect:
         serializedVersion: 2
         x: 512
@@ -1828,20 +1831,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3faafa0f355247458d6fd8abdca8103
-      internalID: 7628430259261879182
+      spriteID: 6fdd6ec30f61ef8419fb07f28b74bdde
+      internalID: -8846153096928787423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_9
+      name: 430_shortPants_walking_north_9
       rect:
         serializedVersion: 2
         x: 576
@@ -1849,20 +1852,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fb58564fa639cb44805899be60e920a
-      internalID: 7176110640879688727
+      spriteID: 0a0188d0542c2e148a44b12cb37073c8
+      internalID: -2238882790589574087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_east_0
+      name: 430_shortPants_walking_north_east_0
       rect:
         serializedVersion: 2
         x: 0
@@ -1870,20 +1873,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa83acbfacd48cd4ba5ffd1881b64797
-      internalID: 6488151924631840843
+      spriteID: c193533d5ceef9d44aa24b004c3eb319
+      internalID: 5636132108042311934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_east_1
+      name: 430_shortPants_walking_north_east_1
       rect:
         serializedVersion: 2
         x: 64
@@ -1891,20 +1894,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64ad69ec20f5fd44a9aec2b739cb05e7
-      internalID: 569266333002947385
+      spriteID: 3913d3deb4bbc8540bd62f2956314078
+      internalID: -2108436707899152789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_east_2
+      name: 430_shortPants_walking_north_east_2
       rect:
         serializedVersion: 2
         x: 128
@@ -1912,20 +1915,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3a2b6337a137624a84f2a58332359fc
-      internalID: -6897733205198649656
+      spriteID: b65cedeb2ff8224489be7ba74aecca97
+      internalID: 4589326711708020417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_east_3
+      name: 430_shortPants_walking_north_east_3
       rect:
         serializedVersion: 2
         x: 192
@@ -1933,20 +1936,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88addbd0add96a74ea22c264913bb55a
-      internalID: -2586384623833860214
+      spriteID: 3574d86ebf1e9164c9455df471564339
+      internalID: -6920323618085759742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_east_4
+      name: 430_shortPants_walking_north_east_4
       rect:
         serializedVersion: 2
         x: 256
@@ -1954,20 +1957,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c374994e37d1f104f82b5edb7bf40156
-      internalID: 2535759233234083600
+      spriteID: 8469f89ba37784e43a0a05d95e952bd2
+      internalID: 7406323834073200493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_east_5
+      name: 430_shortPants_walking_north_east_5
       rect:
         serializedVersion: 2
         x: 320
@@ -1975,20 +1978,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27e49548ccf69434897fe2ca17dc8c5a
-      internalID: 7523032632636293658
+      spriteID: 0c7fe3954fe5c09419ca6cfddae5087d
+      internalID: -6791422318185862584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_east_6
+      name: 430_shortPants_walking_north_east_6
       rect:
         serializedVersion: 2
         x: 384
@@ -1996,20 +1999,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62d418585d229704b9fab2100052b80e
-      internalID: -8239183757191127433
+      spriteID: 5de9ac9115806784a9b9206e7cda8d0d
+      internalID: -94145507713046089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_east_7
+      name: 430_shortPants_walking_north_east_7
       rect:
         serializedVersion: 2
         x: 448
@@ -2017,20 +2020,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10ccf28d3f4f886499e9881b3b6d65db
-      internalID: 8476833325780642576
+      spriteID: 599b123727ddb494489458a9f906e33f
+      internalID: -7377166170342058913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_east_8
+      name: 430_shortPants_walking_north_east_8
       rect:
         serializedVersion: 2
         x: 512
@@ -2038,20 +2041,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 588a0330a8f850e468bf6f6d45245b8c
-      internalID: 8251169343298141034
+      spriteID: 08ecae20dea9fda44ae69bdf87f6b761
+      internalID: 3336712119468886039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_north_east_9
+      name: 430_shortPants_walking_north_east_9
       rect:
         serializedVersion: 2
         x: 576
@@ -2059,20 +2062,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c037cacd8a4f8384ab668ab52ed1d60c
-      internalID: 4955960376805333968
+      spriteID: e7b9c83ccee4d92489d23056003b1a06
+      internalID: -7089282447231729350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_east_0
+      name: 430_shortPants_walking_east_0
       rect:
         serializedVersion: 2
         x: 0
@@ -2080,20 +2083,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d77a4b8908c3590449c807f308b514df
-      internalID: -7534114844813321950
+      spriteID: 47e955b4d4732fb4b9a4ae589c42dbc9
+      internalID: -7148663699166364089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_east_1
+      name: 430_shortPants_walking_east_1
       rect:
         serializedVersion: 2
         x: 64
@@ -2101,20 +2104,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7f95ea7c13e4774abbf674a4591bc76
-      internalID: -3458948154715232456
+      spriteID: 8f5a1d9b2890e404184e1cce129c1d2a
+      internalID: 240819751531810470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_east_2
+      name: 430_shortPants_walking_east_2
       rect:
         serializedVersion: 2
         x: 128
@@ -2122,41 +2125,41 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bff99c0648bdc443bf0f7668cdcbd71
-      internalID: -3280800296151265977
+      spriteID: ffe8ea717f3c7c146bdf4370524f6c4a
+      internalID: 6336809152676846693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_east_3
+      name: 430_shortPants_walking_east_3
       rect:
         serializedVersion: 2
-        x: 191
+        x: 192
         y: 0
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da6d10abdeff05d448e21aec5f986d32
-      internalID: -2536177545927039896
+      spriteID: 63729e26ea2e55046b08686d6063024b
+      internalID: 1402498466603281204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_east_4
+      name: 430_shortPants_walking_east_4
       rect:
         serializedVersion: 2
         x: 256
@@ -2164,20 +2167,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db5eeb1dd47107f48a5c8d1fdfaa8d95
-      internalID: -4362185025661008237
+      spriteID: a3ecbeccf602047498952cee8cd47633
+      internalID: 5492697740096285119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_east_5
+      name: 430_shortPants_walking_east_5
       rect:
         serializedVersion: 2
         x: 320
@@ -2185,20 +2188,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a28216828c5900499278d335a32eebf
-      internalID: 7500999794198391827
+      spriteID: 952f5aaf8524dc44799864a703cbfa4b
+      internalID: -5932785052051655240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_east_6
+      name: 430_shortPants_walking_east_6
       rect:
         serializedVersion: 2
         x: 384
@@ -2206,20 +2209,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c200e47e2244f6948a98a9e1d77da504
-      internalID: 8350434964859688582
+      spriteID: 5910e99d1d16ba442b6c0129a86a40f1
+      internalID: -8639953222316156398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_east_7
+      name: 430_shortPants_walking_east_7
       rect:
         serializedVersion: 2
         x: 448
@@ -2227,20 +2230,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c700bf00b62a30c4299d203c55d4374d
-      internalID: 1181364199427194757
+      spriteID: 6fdca94719e7ab843b433d048b78fd32
+      internalID: -8088701653755490514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_east_8
+      name: 430_shortPants_walking_east_8
       rect:
         serializedVersion: 2
         x: 512
@@ -2248,20 +2251,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a033afe74a619a64b8e82c0d2472b6bb
-      internalID: 1179203260151064348
+      spriteID: 8ba997f02eced8a489cc4e95d88f3f9d
+      internalID: -6049950571151965783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_walking_east_9
+      name: 430_shortPants_walking_east_9
       rect:
         serializedVersion: 2
         x: 576
@@ -2269,14 +2272,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b339e384a7abdb0469f1fea6beefa7be
-      internalID: -931695951857423975
+      spriteID: b01f4bd1efccad243875bf51c926a3ca
+      internalID: 3617773489635536541
       vertices: []
       indices: 
       edges: []
@@ -2284,7 +2287,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 8ce0f435135cb7c4f9c24eb325a55d30
     internalID: 0
     vertices: []
     indices: 

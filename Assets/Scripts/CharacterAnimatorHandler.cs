@@ -6,11 +6,14 @@ public class CharacterAnimatorHandler : MonoBehaviour
 {
     public static readonly string[] staticDirections = { "Static N", "Static NW", "Static W", "Static SW", "Static S", "Static SE", "Static E", "Static NE" };
     public static readonly string[] staticDirectionsSimple = { "idle_north", "idle_west", "idle_south", "idle_east" };
-    
-    public static readonly string[] walkingDirections = {"walking_north", "walking_north_west", "walking_west", "walking_south_west", "walking_south", "walking_south_east", "walking_east", "walking_north_east"};
+
+    public static readonly string[] walkingDirections = { "walking_north", "walking_north_west", "walking_west", "walking_south_west", "walking_south", "walking_south_east", "walking_east", "walking_north_east" };
 
     Animator animator;
     int lastDirection;
+    string lastAnimationName = "";
+
+    public GameObject pantsSlot;
 
     private void Awake()
     {
@@ -19,7 +22,8 @@ public class CharacterAnimatorHandler : MonoBehaviour
     }
 
 
-    public void SetDirection(Vector2 direction){
+    public void SetDirection(Vector2 direction)
+    {
 
         //use the Run states by default
         string[] directionArray = null;
@@ -40,15 +44,46 @@ public class CharacterAnimatorHandler : MonoBehaviour
             lastDirection = DirectionToIndex(direction, 8);
         }
 
+        Debug.Log(lastDirection);
+
+        if (directionArray.Length -1 == lastDirection)
+        {
+            lastDirection = 0;
+        }
+        else
+        {
+            lastDirection++;
+        }
+
         //tell the animator to play the requested state
-        animator.Play(directionArray[lastDirection]);
+        var animationName = directionArray[lastDirection];
+
+        if (lastAnimationName == animationName)
+        {
+            return;
+        }
+        //play base character animation
+        animator.Play(animationName, -1, 0);
+
+        //play pants animation if exists
+        if (pantsSlot != null)
+        {
+            var pantsAnimator = pantsSlot.GetComponentInChildren<Animator>();
+            if (pantsAnimator != null)
+            {
+                pantsAnimator.Play(animationName, -1, 0);
+            }
+        }
+
+        lastAnimationName = animationName;
     }
 
     //helper functions
 
     //this function converts a Vector2 direction to an index to a slice around a circle
     //this goes in a counter-clockwise direction.
-    public static int DirectionToIndex(Vector2 dir, int sliceCount){
+    public static int DirectionToIndex(Vector2 dir, int sliceCount)
+    {
         //get the normalized direction
         Vector2 normDir = dir.normalized;
         //calculate how many degrees one slice is
@@ -62,7 +97,8 @@ public class CharacterAnimatorHandler : MonoBehaviour
         //add the halfslice offset
         angle += halfstep;
         //if angle is negative, then let's make it positive by adding 360 to wrap it around.
-        if (angle < 0){
+        if (angle < 0)
+        {
             angle += 360;
         }
         //calculate the amount of steps required to reach this angle
