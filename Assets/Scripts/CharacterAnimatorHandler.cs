@@ -103,7 +103,13 @@ public class CharacterAnimatorHandler : MonoBehaviour
         //calculate the amount of steps required to reach this angle
         float stepCount = angle / step;
         //round it, and we have the answer!
-        return Mathf.FloorToInt(stepCount);
+        //we are adding 1 to make it same as ultima online map
+        var result = Mathf.FloorToInt(stepCount + 1);
+        if (result == 8)
+        {
+            result = 0;
+        }
+        return result;
     }
 
 
