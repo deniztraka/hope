@@ -43,17 +43,6 @@ public class CharacterAnimatorHandler : MonoBehaviour
             lastDirection = DirectionToIndex(direction, 8);
         }
 
-        Debug.Log(lastDirection);
-
-        // if (directionArray.Length -1 == lastDirection)
-        // {
-        //     lastDirection = 0;
-        // }
-        // else
-        // {
-        //     lastDirection++;
-        // }
-
         //tell the animator to play the requested state
         var animationName = directionArray[lastDirection];
 
