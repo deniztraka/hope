@@ -402,6 +402,11 @@ PrefabInstance:
       propertyPath: pantsSlot
       value: 
       objectReference: {fileID: 456387682}
+    - target: {fileID: 2479602705398915394, guid: 85e467acd1883d447ab0394a6df01187,
+        type: 3}
+      propertyPath: movementSpeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85e467acd1883d447ab0394a6df01187, type: 3}
 --- !u!1 &1248104554

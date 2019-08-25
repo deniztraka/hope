@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class IsometricCharacterMovement : MonoBehaviour
 {
+    public bool isRunning = false;
     public float movementSpeed = 1f;
     public CharacterAnimatorHandler characterAnimatorHandler;
 
@@ -23,9 +24,9 @@ public class IsometricCharacterMovement : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");        
         Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
         //inputVector = Vector2.ClampMagnitude(inputVector, 1);
-        Vector2 movement = inputVector * movementSpeed;
+        Vector2 movement = inputVector * movementSpeed * (isRunning ? 1.5f : 1f);
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
-        characterAnimatorHandler.SetDirection(movement);
+        characterAnimatorHandler.SetDirection(movement, isRunning);
         rbody.MovePosition(newPos);
     }
 }

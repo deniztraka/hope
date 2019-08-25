@@ -8,6 +8,8 @@ public class CharacterAnimatorHandler : MonoBehaviour
 
     public static readonly string[] walkingDirections = { "walking_north", "walking_north_west", "walking_west", "walking_south_west", "walking_south", "walking_south_east", "walking_east", "walking_north_east" };
 
+    public static readonly string[] runningDirections = { "running_north", "running_north_west", "running_west", "running_south_west", "running_south", "running_south_east", "running_east", "running_north_east" };
+
     Animator animator;
     int lastDirection;
     string lastAnimationName = "";
@@ -21,7 +23,7 @@ public class CharacterAnimatorHandler : MonoBehaviour
     }
 
 
-    public void SetDirection(Vector2 direction)
+    public void SetDirection(Vector2 direction, bool isRunning)
     {
 
         //use the Run states by default
@@ -45,6 +47,9 @@ public class CharacterAnimatorHandler : MonoBehaviour
 
         //tell the animator to play the requested state
         var animationName = directionArray[lastDirection];
+        if(isRunning){
+            animationName = animationName.Replace("walking","running");
+        }        
 
         if (lastAnimationName == animationName)
         {
