@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CharacterAnimatorHandler : MonoBehaviour
 {
-    public static readonly string[] staticDirections = { "idle_north", "idle_north_west", "idle_west", "idle_south_west", "idle_south", "idle_south_east", "idle_east", "idle_north_east" };    
+    public static readonly string[] staticDirections = { "human_base_m_idle_n", "human_base_m_idle_nw", "human_base_m_idle_w", "human_base_m_idle_sw", "human_base_m_idle_s", "human_base_m_idle_se", "human_base_m_idle_e", "human_base_m_idle_ne" };    
 
-    public static readonly string[] walkingDirections = { "walking_north", "walking_north_west", "walking_west", "walking_south_west", "walking_south", "walking_south_east", "walking_east", "walking_north_east" };
+    public static readonly string[] walkingDirections = { "human_base_m_walking_n", "human_base_m_walking_nw", "human_base_m_walking_w", "human_base_m_walking_sw", "human_base_m_walking_s", "human_base_m_walking_se", "human_base_m_walking_e", "human_base_m_walking_ne" };
 
-    public static readonly string[] runningDirections = { "running_north", "running_north_west", "running_west", "running_south_west", "running_south", "running_south_east", "running_east", "running_north_east" };
+    public static readonly string[] runningDirections = { "human_base_m_running_n", "human_base_m_running_nw", "human_base_m_running_w", "human_base_m_running_sw", "human_base_m_running_s", "human_base_m_running_se", "human_base_m_running_e", "human_base_m_running_ne" };
 
     Animator animator;
     int lastDirection;

@@ -1096,7 +1096,7 @@ TextureImporter:
     second: human_base_dying_ne_4
   - first:
       213: -8143776762637393761
-    second: human_everything__8_direction_base_128res_364
+    second: human_base_dying_ne_5
   - first:
       213: 6856365787587017433
     second: human_everything__8_direction_base_128res_365
@@ -1135,7 +1135,7 @@ TextureImporter:
     second: human_base_idling_se_3
   - first:
       213: 6679024908532442222
-    second: human_base_idling_se_
+    second: human_base_idling_se_4
   - first:
       213: 3120280002683685831
     second: human_base_idle_se
@@ -1153,7 +1153,7 @@ TextureImporter:
     second: human_base_idling_s_3
   - first:
       213: 185114895851279974
-    second: human_base_idling_s_
+    second: human_base_idling_s_4
   - first:
       213: -7575444053061945998
     second: human_base_idle_s
@@ -9029,7 +9029,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_everything__8_direction_base_128res_364
+      name: human_base_dying_ne_5
       rect:
         serializedVersion: 2
         x: 320
@@ -9302,7 +9302,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_base_idling_se_
+      name: human_base_idling_se_4
       rect:
         serializedVersion: 2
         x: 256
@@ -9428,7 +9428,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_base_idling_s_
+      name: human_base_idling_s_4
       rect:
         serializedVersion: 2
         x: 256
